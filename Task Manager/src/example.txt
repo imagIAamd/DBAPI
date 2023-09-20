@@ -1,6 +1,0 @@
-hello
-world
-but
-in
-multiple
-lines
