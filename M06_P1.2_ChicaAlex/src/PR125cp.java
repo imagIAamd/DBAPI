@@ -29,17 +29,19 @@ public class PR125cp {
                 }
 
                 File newFile = new File(copyPath);
-                newFile.createNewFile();
+                if(!newFile.exists()){
+                    System.out.println("el path de destí no existeix");
+                } else if (newFile.createNewFile()) {
+                    FileWriter fileWriter = new FileWriter(newFile.getPath());
+                    fileWriter.write(text);
+                    fileWriter.close();
 
-                FileWriter fileWriter = new FileWriter(newFile.getPath());
-                fileWriter.write(text);
-                fileWriter.close();
+                    System.out.println("S'ha copiat el fitxer amb path: " + filePath + " a " + copyPath);
+                }
 
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-
-            System.out.println("S'ha copiat el fitxer amb path: " + filePath + " a " + copyPath);
 
         }
 
