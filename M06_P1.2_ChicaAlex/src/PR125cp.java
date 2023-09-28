@@ -40,7 +40,7 @@ public class PR125cp {
                 }
 
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                System.out.println("an error happened\n\n");
             }
 
         }
