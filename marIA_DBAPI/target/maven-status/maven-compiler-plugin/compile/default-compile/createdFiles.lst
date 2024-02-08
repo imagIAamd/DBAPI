@@ -1,2 +1,3 @@
 cat/amd/dbapi/AppMain.class
+cat/amd/dbapi/persistance/SessionFactoryManager.class
 cat/amd/dbapi/DBAPI.class

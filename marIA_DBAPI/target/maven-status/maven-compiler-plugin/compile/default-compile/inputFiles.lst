@@ -1,2 +1,3 @@
 /home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/AppMain.java
 /home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/DBAPI.java
+/home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistance/SessionFactoryManager.java
