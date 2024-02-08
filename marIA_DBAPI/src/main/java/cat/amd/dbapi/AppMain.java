@@ -1,11 +1,9 @@
 package cat.amd.dbapi;
 
-import cat.amd.dbapi.persistance.SessionFactoryManager;
 import org.apache.commons.cli.*;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
-import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,8 +41,6 @@ public class AppMain {
      * @param args Main method args
      */
     public static void main(String[] args) {
-        // TODO implement main
-
         Options options = new Options();
 
         Option hostOption = new Option("h", "host", true, "Host address. Default value: 127.0.0.1");
@@ -75,7 +71,7 @@ public class AppMain {
                     "%sapplication.wadl\nPress \"Enter\" to stop it...", baseURI));
             System.in.read();
 
-            SessionFactoryManager.close();
+            //SessionFactoryManager.close(); // TODO uncomment when hibernate is implemented
             server.shutdownNow();
 
         } catch (ParseException e) {
