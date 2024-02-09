@@ -66,7 +66,7 @@ public class Configuration {
      *
      * @param property object to add
      */
-    public void setProperty(Property property) {
+    public void addProperty(Property property) {
         this.properties.add(property);
     }
 
