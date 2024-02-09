@@ -3,6 +3,9 @@ package cat.amd.dbapi.persistance;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
+import java.util.List;
+
+// TODO fix imports
 
 @Entity
 public class Configuration {
@@ -12,18 +15,11 @@ public class Configuration {
     private Long id;
     private String name;
 
-
-    /* TODO uncomment when 'Property' class exists
-
-    @OneToMany(mappedBy = "configuration", cascade = CascadeType.ALL, fetch =  FetchType.EAGER)
+    @OneToMany(mappedBy = "configuration", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Property> properties;
-
-    */
-
 
     /**
      * Empty constructor
-     *
      */
     public Configuration() {
         super();
@@ -36,16 +32,66 @@ public class Configuration {
      */
     public Configuration(String name) {
         this.name = name;
-
-
-        // TODO uncomment when 'Property' class exists
-        //this.properties = new ArrayList<>();
+        this.properties = new ArrayList<>();
     }
 
-    // TODO add getters and setters
+    // Getters & Setters
 
+    public Long getId() {
+        return id;
+    }
 
-    // TODO override toString method
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Property> getProperties() {
+        return properties;
+    }
+
+    public void setProperties(List<Property> properties) {
+        this.properties = properties;
+    }
+
+    /**
+     * Adds a 'Property' object to 'properties' list
+     *
+     * @param property object to add
+     */
+    public void setProperty(Property property) {
+        this.properties.add(property);
+    }
+
+    /**
+     * Custom toString() method
+     *
+     * @return String
+     */
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Configuration [id = ")
+                .append(", name = ")
+                .append(name).append(", properties = [ ");
+        for (Property property : properties) {
+            sb.append(property.toString()).append(", ");
+        }
+
+        if (!properties.isEmpty()) {
+            sb.setLength(sb.length() - 2);
+        }
+        sb.append("]]");
+
+        return sb.toString();
+    }
 
 
 }
