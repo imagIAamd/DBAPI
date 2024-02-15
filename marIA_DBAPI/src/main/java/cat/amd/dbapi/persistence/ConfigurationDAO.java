@@ -1,4 +1,4 @@
-package cat.amd.dbapi.persistance;
+package cat.amd.dbapi.persistence;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

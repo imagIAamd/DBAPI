@@ -1,4 +1,4 @@
-package cat.amd.dbapi.persistance;
+package cat.amd.dbapi.persistence;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;

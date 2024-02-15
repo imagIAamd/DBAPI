@@ -1,5 +1,9 @@
 package cat.amd.dbapi;
 
+import cat.amd.dbapi.persistence.Configuration;
+import cat.amd.dbapi.persistence.ConfigurationDAO;
+import cat.amd.dbapi.persistence.Property;
+import cat.amd.dbapi.persistence.SessionFactoryManager;
 import org.apache.commons.cli.*;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
@@ -18,7 +22,9 @@ public class AppMain {
      * Sets up and runs hibernate
      */
     public static void runHibernate() {
-        // TODO implement hibernate
+        Configuration configuration = ConfigurationDAO.findConfigurationByName("conf-0.1");
+        Property property = new Property("version", "0.1");
+        ConfigurationDAO.addPropertyToConfiguration(property, configuration);
     }
 
     /**
@@ -62,7 +68,7 @@ public class AppMain {
             int port = cmd.hasOption("port") ? Integer.parseInt(cmd.getOptionValue("port")) : 8080;
 
             logger.info("Running hibernate...");
-            // runHibernate(); // TODO Hibernate implementation missing;
+            runHibernate();
 
             logger.info("Running server...");
             final HttpServer server = runServer(host, port);
@@ -71,7 +77,7 @@ public class AppMain {
                     "%sapplication.wadl\nPress \"Enter\" to stop it...", baseURI));
             System.in.read();
 
-            //SessionFactoryManager.close(); // TODO uncomment when hibernate is implemented
+            SessionFactoryManager.close();
             server.shutdownNow();
 
         } catch (ParseException e) {

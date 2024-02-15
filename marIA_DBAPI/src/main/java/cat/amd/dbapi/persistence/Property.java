@@ -1,4 +1,4 @@
-package cat.amd.dbapi.persistance;
+package cat.amd.dbapi.persistence;
 
 import jakarta.persistence.*;
 

@@ -1,3 +1,6 @@
 /home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/AppMain.java
-/home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/DBAPI.java
-/home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistance/SessionFactoryManager.java
+/home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/DBapi.java
+/home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/Configuration.java
+/home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/ConfigurationDAO.java
+/home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/Property.java
+/home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/SessionFactoryManager.java
