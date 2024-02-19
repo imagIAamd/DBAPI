@@ -25,6 +25,6 @@
         <property name="hibernate.hbm2ddl.auto">create</property>
 
         <!-- Specify the mapping resources -->
-        <mapping class="cat.amd.dbapi.persistence.User"/>
+        <mapping class="cat.amd.dbapi.persistence.db.entities.User"/>
     </session-factory>
 </hibernate-configuration>

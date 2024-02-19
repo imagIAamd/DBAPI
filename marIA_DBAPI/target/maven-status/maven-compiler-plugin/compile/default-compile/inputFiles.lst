@@ -1,8 +1,8 @@
 /home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/AppMain.java
 /home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/DBapi.java
-/home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/Configuration.java
-/home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/ConfigurationDAO.java
-/home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/Property.java
 /home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/SessionFactoryManager.java
-/home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/User.java
-/home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/UserDAO.java
+/home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/db/entities/User.java
+/home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/db/managers/UserManager.java
+/home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/reference/Configuration.java
+/home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/reference/ConfigurationDAO.java
+/home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/reference/Property.java

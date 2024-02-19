@@ -1,5 +1,7 @@
-package cat.amd.dbapi.persistence;
+package cat.amd.dbapi.persistence.db.managers;
 
+import cat.amd.dbapi.persistence.SessionFactoryManager;
+import cat.amd.dbapi.persistence.db.entities.User;
 import cat.amd.dbapi.persistence.reference.Configuration;
 import cat.amd.dbapi.persistence.reference.Property;
 import org.hibernate.HibernateException;
@@ -9,8 +11,8 @@ import org.hibernate.query.Query;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class UserDAO {
-    private static final Logger logger = LoggerFactory.getLogger(UserDAO.class);
+public class UserManager {
+    private static final Logger logger = LoggerFactory.getLogger(UserManager.class);
 
     /**
      * Tries to find an existing user with 'nickname' String parameter.
@@ -19,7 +21,7 @@ public class UserDAO {
      * @param nickname configuration nickname
      * @return found or created user
      */
-    public static  User findUserByNickname(String nickname) {
+    public static User findUserByNickname(String nickname) {
         Session session = SessionFactoryManager.getSessionFactory().openSession();
         Transaction tx = null;
         User user = null;

@@ -1,4 +1,4 @@
-package cat.amd.dbapi.persistence;
+package cat.amd.dbapi.persistence.db.entities;
 
 import jakarta.persistence.*;
 
