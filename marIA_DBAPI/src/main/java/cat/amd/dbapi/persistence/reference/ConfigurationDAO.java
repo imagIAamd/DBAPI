@@ -1,6 +1,6 @@
 package cat.amd.dbapi.persistence.reference;
 
-import cat.amd.dbapi.persistence.SessionFactoryManager;
+import cat.amd.dbapi.persistence.db.managers.SessionFactoryManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.hibernate.Session;

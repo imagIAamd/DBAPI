@@ -1,7 +1,9 @@
 package cat.amd.dbapi;
 
-import cat.amd.dbapi.persistence.*;
+import cat.amd.dbapi.persistence.db.entities.Model;
 import cat.amd.dbapi.persistence.db.entities.User;
+import cat.amd.dbapi.persistence.db.managers.ModelManager;
+import cat.amd.dbapi.persistence.db.managers.SessionFactoryManager;
 import cat.amd.dbapi.persistence.db.managers.UserManager;
 import org.apache.commons.cli.*;
 import org.glassfish.grizzly.http.server.HttpServer;
@@ -21,8 +23,7 @@ public class AppMain {
      * Sets up and runs hibernate
      */
     public static void runHibernate() {
-        User testuser = UserManager.findUserByNickname("admin");
-        logger.info(testuser.toString());
+        Model ollama = ModelManager.findModelByName("llava");
     }
 
     /**

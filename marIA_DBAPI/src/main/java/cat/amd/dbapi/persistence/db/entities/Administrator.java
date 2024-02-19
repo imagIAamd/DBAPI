@@ -2,6 +2,10 @@ package cat.amd.dbapi.persistence.db.entities;
 
 import jakarta.persistence.*;
 
+/*
+    TODO create role tables and permission tables and relation tables between them
+ */
+
 @Entity
 public class Administrator {
 

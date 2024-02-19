@@ -1,6 +1,5 @@
 package cat.amd.dbapi.persistence.db.managers;
 
-import cat.amd.dbapi.persistence.SessionFactoryManager;
 import cat.amd.dbapi.persistence.db.entities.User;
 import cat.amd.dbapi.persistence.reference.Configuration;
 import cat.amd.dbapi.persistence.reference.Property;
@@ -18,7 +17,7 @@ public class UserManager {
      * Tries to find an existing user with 'nickname' String parameter.
      * If not found creates it.
      *
-     * @param nickname configuration nickname
+     * @param nickname user nickname
      * @return found or created user
      */
     public static User findUserByNickname(String nickname) {
@@ -51,38 +50,4 @@ public class UserManager {
         return user;
     }
 
-    /**
-     * Tries to delete Property with key 'key' from the 'configuration' Configuration
-     *
-     * @param key property key
-     * @param configuration configuration to delete from
-     * @return true if deleted, false if not found or not deleted
-     */
-    public static boolean deletePropertyFromConfiguration(String key, Configuration configuration) {
-        Transaction tx = null;
-        try (Session session = SessionFactoryManager.getSessionFactory().openSession()) {
-            tx = session.beginTransaction();
-            Property propertyToDelete = null;
-            for (Property property : configuration.getProperties()) {
-                if (property.getKey().equals(key)) {
-                    propertyToDelete = property;
-                    break;
-                }
-            }
-            if (propertyToDelete == null) {
-                return false;
-            }
-
-            session.remove(propertyToDelete);
-            tx.commit();
-            configuration.getProperties().remove(propertyToDelete);
-            logger.info("Property {} successfully deleted from {} configuration", key, configuration.getName());
-            return true;
-
-        } catch (HibernateException e) {
-            if (tx != null) tx.rollback();
-            logger.error("Error trying to delete the property from the configuration");
-            return  false;
-        }
-    }
 }
