@@ -1,5 +1,6 @@
-package cat.amd.dbapi.persistence;
+package cat.amd.dbapi.persistence.reference;
 
+import cat.amd.dbapi.persistence.reference.Configuration;
 import jakarta.persistence.*;
 
 @Entity

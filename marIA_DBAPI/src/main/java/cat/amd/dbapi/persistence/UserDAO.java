@@ -1,5 +1,7 @@
 package cat.amd.dbapi.persistence;
 
+import cat.amd.dbapi.persistence.reference.Configuration;
+import cat.amd.dbapi.persistence.reference.Property;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;

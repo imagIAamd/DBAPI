@@ -1,4 +1,4 @@
-package cat.amd.dbapi.persistence;
+package cat.amd.dbapi.persistence.reference;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
