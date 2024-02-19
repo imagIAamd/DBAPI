@@ -4,16 +4,21 @@ import jakarta.persistence.*;
 
 @Entity
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
     private long id;
+
     @Column(nullable = false)
     private String nickname;
+
     @Column(name = "phone_number", nullable = false)
     private String telephone;
+
     @Column(nullable = false)
     private String email;
+
     @Column(name = "access_key")
     private long accessKey;
 
