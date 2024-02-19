@@ -24,6 +24,7 @@ public class AppMain {
      */
     public static void runHibernate() {
         Model ollama = ModelManager.findModelByName("llava");
+        logger.info(ollama.toString());
     }
 
     /**
