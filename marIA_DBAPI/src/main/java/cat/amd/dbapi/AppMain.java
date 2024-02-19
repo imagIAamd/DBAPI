@@ -1,9 +1,6 @@
 package cat.amd.dbapi;
 
-import cat.amd.dbapi.persistence.Configuration;
-import cat.amd.dbapi.persistence.ConfigurationDAO;
-import cat.amd.dbapi.persistence.Property;
-import cat.amd.dbapi.persistence.SessionFactoryManager;
+import cat.amd.dbapi.persistence.*;
 import org.apache.commons.cli.*;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
@@ -22,9 +19,8 @@ public class AppMain {
      * Sets up and runs hibernate
      */
     public static void runHibernate() {
-        Configuration configuration = ConfigurationDAO.findConfigurationByName("conf-0.1");
-        Property property = new Property("version", "0.1");
-        ConfigurationDAO.addPropertyToConfiguration(property, configuration);
+        User testuser = UserDAO.findUserByNickname("admin");
+        logger.info(testuser.toString());
     }
 
     /**

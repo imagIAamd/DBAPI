@@ -4,3 +4,5 @@
 /home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/ConfigurationDAO.java
 /home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/Property.java
 /home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/SessionFactoryManager.java
+/home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/User.java
+/home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/UserDAO.java

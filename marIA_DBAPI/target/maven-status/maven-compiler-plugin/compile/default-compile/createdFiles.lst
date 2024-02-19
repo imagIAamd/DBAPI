@@ -2,5 +2,7 @@ cat/amd/dbapi/persistence/Configuration.class
 cat/amd/dbapi/persistence/SessionFactoryManager.class
 cat/amd/dbapi/persistence/Property.class
 cat/amd/dbapi/AppMain.class
+cat/amd/dbapi/persistence/User.class
 cat/amd/dbapi/persistence/ConfigurationDAO.class
 cat/amd/dbapi/DBapi.class
+cat/amd/dbapi/persistence/UserDAO.class
