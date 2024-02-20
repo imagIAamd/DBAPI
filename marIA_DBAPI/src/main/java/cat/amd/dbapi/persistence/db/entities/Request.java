@@ -1,11 +1,20 @@
 package cat.amd.dbapi.persistence.db.entities;
 
+import cat.amd.dbapi.persistence.db.managers.ModelManager;
+import cat.amd.dbapi.persistence.db.managers.UserManager;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
+import jakarta.ws.rs.DefaultValue;
+import org.json.JSONObject;
+
+import java.util.Map;
 
 @Entity
 public class Request {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "request_id")
     private long id;
 
@@ -25,6 +34,13 @@ public class Request {
 
     public Request() {
 
+    }
+    @JsonCreator
+    public Request(@JsonProperty("data") JSONObject data) {
+        this.user = UserManager.findUserByNickname("admin");
+        this.prompt = data.getString("prompt");
+        this.model = ModelManager.findModelByName("llava");
+        this.imagePath = "resources/test";
     }
 
     public Request(String prompt) {

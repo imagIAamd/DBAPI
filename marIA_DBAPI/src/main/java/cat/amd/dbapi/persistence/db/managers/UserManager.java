@@ -42,7 +42,7 @@ public class UserManager {
 
         } catch (HibernateException e) {
             if (tx != null) tx.rollback();;
-            logger.error("Error trying to find user with nickname '{}'", nickname);
+            logger.error("Error trying to find user with nickname '{}'", nickname, e);
         } finally {
             session.close();
         }

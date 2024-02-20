@@ -8,7 +8,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
-    private long id;
+    private Long id;
 
     @Column(nullable = false)
     private String nickname;
@@ -19,8 +19,8 @@ public class User {
     @Column(nullable = false)
     private String email;
 
-    @Column(name = "access_key")
-    private long accessKey;
+    @Column(name = "access_key", nullable = false)
+    private Long accessKey;
 
     /**
      * Empty constructor
@@ -52,11 +52,11 @@ public class User {
         this.email = email;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -84,11 +84,11 @@ public class User {
         this.email = email;
     }
 
-    public long getAccessKey() {
+    public Long getAccessKey() {
         return accessKey;
     }
 
-    public void setAccessKey(long accessKey) {
+    public void setAccessKey(Long accessKey) {
         this.accessKey = accessKey;
     }
 
