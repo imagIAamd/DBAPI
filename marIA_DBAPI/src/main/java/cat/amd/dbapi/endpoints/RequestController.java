@@ -23,7 +23,6 @@ public class RequestController {
 
         boolean inserted;
         Request request;
-        Long requestId;
 
         JSONObject requestJson = new JSONObject(data);
         System.out.println(data);
