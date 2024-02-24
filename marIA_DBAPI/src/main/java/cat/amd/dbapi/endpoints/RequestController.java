@@ -25,7 +25,6 @@ public class RequestController {
         Request request;
 
         JSONObject requestJson = new JSONObject(data);
-        System.out.println(data);
         request = new Request(requestJson);
         request = RequestManager.insertRequest(request);
 

@@ -1,0 +1,15 @@
+
+m
+=src/main/java/cat/amd/dbapi/persistence/db/entities/User.java,7\6\76ad579ed53fe1f2e0d12d5b279d9d3c27fd9ae1
+i
+9src/main/java/cat/amd/dbapi/endpoints/UserController.java,6\7\67da94e7123fe5da32f564c1a4a544e49c6a6473
+l
+<src/main/java/cat/amd/dbapi/endpoints/RequestController.java,2\1\2149ae9416d329dffd5dcc8277a2f4daa54edeb3
+v
+Fsrc/main/java/cat/amd/dbapi/persistence/db/entities/Administrator.java,5\6\564d3f350e0ff6ab31dfb2459415e20979663bb5
+w
+Gsrc/main/java/cat/amd/dbapi/persistence/db/managers/RequestManager.java,8\d\8d6539be7ed61d7f4d0b04f588be444f9c6abf5a
+p
+@src/main/java/cat/amd/dbapi/persistence/db/entities/Request.java,5\e\5ee012041f66683bfb223b1c114ec235d4f2c3be
+t
+Dsrc/main/java/cat/amd/dbapi/persistence/db/managers/UserManager.java,e\7\e7adbbf6b02d2ff072d43dd97169dfa5af9c3642

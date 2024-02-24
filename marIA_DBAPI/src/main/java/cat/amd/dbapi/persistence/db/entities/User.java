@@ -1,6 +1,8 @@
 package cat.amd.dbapi.persistence.db.entities;
 
+
 import jakarta.persistence.*;
+import org.json.JSONObject;
 
 @Entity
 public class User {
@@ -19,7 +21,7 @@ public class User {
     @Column(nullable = false)
     private String email;
 
-    @Column(name = "access_key", nullable = false)
+    @Column(name = "access_key")
     private Long accessKey;
 
     /**
@@ -50,6 +52,18 @@ public class User {
         this.nickname = nickname;
         this.telephone = telephone;
         this.email = email;
+    }
+
+    /**
+     * Constructor from JSON
+     *
+     * @param data JSON
+     */
+    public User(JSONObject data) {
+        data = data.getJSONObject("data");
+        this.nickname = data.getString("nickname");
+        this.telephone = data.getString("phone_number");
+        this.email = data.getString("email");
     }
 
     public Long getId() {

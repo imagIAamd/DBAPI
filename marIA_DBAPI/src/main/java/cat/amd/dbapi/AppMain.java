@@ -24,7 +24,7 @@ public class AppMain {
      */
     public static void runHibernate() {
         Model ollama = ModelManager.findModelByName("llava");
-        User admin = UserManager.findUserByNickname("admin");
+        User admin = UserManager.findUser("admin");
         logger.info(ollama.toString());
     }
 
