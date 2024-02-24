@@ -2,10 +2,12 @@ package cat.amd.dbapi.persistence.db.entities;
 
 import cat.amd.dbapi.persistence.db.managers.ModelManager;
 import cat.amd.dbapi.persistence.db.managers.UserManager;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import org.json.JSONObject;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 @Entity
 public class Request {
@@ -21,6 +23,9 @@ public class Request {
     @Column(name = "image", length = 2083)
     private String imagePath;
 
+    @Column(name = "request_date")
+    private String requestDate;
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
@@ -32,12 +37,16 @@ public class Request {
     public Request() {
 
     }
-    @JsonCreator
-    public Request(@JsonProperty("data") JSONObject data) {
+
+    public Request(JSONObject data) {
         this.user = UserManager.findUser("admin");
         this.prompt = data.getString("prompt");
         this.model = ModelManager.findModelByName("llava");
         this.imagePath = "resources/test";
+
+        LocalDate currentDate = LocalDate.now();
+        DateTimeFormatter sqlDateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        this.requestDate = currentDate.format(sqlDateFormat);
     }
 
     public Request(String prompt) {
