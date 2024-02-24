@@ -22,7 +22,7 @@ public class User {
     private String email;
 
     @Column(name = "access_key")
-    private Long accessKey;
+    private String accessKey;
 
     /**
      * Empty constructor
@@ -98,11 +98,11 @@ public class User {
         this.email = email;
     }
 
-    public Long getAccessKey() {
+    public String getAccessKey() {
         return accessKey;
     }
 
-    public void setAccessKey(Long accessKey) {
+    public void setAccessKey(String accessKey) {
         this.accessKey = accessKey;
     }
 

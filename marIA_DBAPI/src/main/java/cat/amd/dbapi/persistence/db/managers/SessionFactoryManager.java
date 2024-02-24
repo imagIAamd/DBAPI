@@ -9,7 +9,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class SessionFactoryManager {
-    private static final Logger logger = LoggerFactory.getLogger(SessionFactoryManager.class);
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(SessionFactoryManager.class);
+    private SessionFactoryManager() {
+
+    }
+
     private static final SessionFactory factory;
 
     static {
@@ -17,11 +22,11 @@ public class SessionFactoryManager {
             StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
                     .configure()
                     .build();
-
             Metadata metadata = new MetadataSources(registry).buildMetadata();
             factory = metadata.getSessionFactoryBuilder().build();
+
         } catch (Throwable e) {
-            logger.error("Error on sessionFactory object creation.", e);
+            LOGGER.error("Error on sessionFactory object creation.", e);
             throw new ExceptionInInitializerError(e);
         }
     }

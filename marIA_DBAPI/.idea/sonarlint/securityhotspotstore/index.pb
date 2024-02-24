@@ -13,3 +13,11 @@ p
 @src/main/java/cat/amd/dbapi/persistence/db/entities/Request.java,5\e\5ee012041f66683bfb223b1c114ec235d4f2c3be
 t
 Dsrc/main/java/cat/amd/dbapi/persistence/db/managers/UserManager.java,e\7\e7adbbf6b02d2ff072d43dd97169dfa5af9c3642
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+{
+Ksrc/main/java/cat/amd/dbapi/persistence/db/managers/AccessTokenManager.java,9\b\9b9560b793fb2661be95b25eb0963234abaf3861
+~
+Nsrc/main/java/cat/amd/dbapi/persistence/db/managers/SessionFactoryManager.java,f\0\f06a788621862f11c2d0e2b1e5ecd0c53ce6a33b
+y
+Isrc/main/java/cat/amd/dbapi/persistence/db/managers/AccessKeyManager.java,0\1\01ec017bc657fde9d623d2045d78afcd6a12ca3b

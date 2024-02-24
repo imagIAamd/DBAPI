@@ -61,11 +61,10 @@ public class UserManager {
      * @return user found
      */
     public static User findUser(User user) {
-        Session session = SessionFactoryManager.getSessionFactory().openSession();
         Transaction tx = null;
-        User foundUser;
 
-        try {
+        try (Session session = SessionFactoryManager.getSessionFactory().openSession()) {
+            User foundUser;
             tx = session.beginTransaction();
             Query<User> query = session.createQuery("FROM User WHERE telephone = :telephone", User.class);
             query.setParameter("telephone", user.getTelephone());
@@ -80,11 +79,9 @@ public class UserManager {
             }
 
         } catch (HibernateException e) {
-             if (tx != null) tx.rollback();
-             LOGGER.error("Error finding user", e);
+            if (tx != null) tx.rollback();
+            LOGGER.error("Error finding user", e);
 
-        } finally {
-            session.close();
         }
 
         return user;

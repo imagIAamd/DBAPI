@@ -7,7 +7,6 @@ import org.json.JSONObject;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
 @Entity
 public class Request {
@@ -91,6 +90,14 @@ public class Request {
 
     public void setModel(Model model) {
         this.model = model;
+    }
+
+    public String getRequestDate() {
+        return requestDate;
+    }
+
+    public void setRequestDate(String requestDate) {
+        this.requestDate = requestDate;
     }
 
     @Override
