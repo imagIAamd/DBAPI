@@ -3,5 +3,3 @@
 java:S2681,"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(äÒá8¤ê…ìİ1
 9
 java:S1116,"Remove this empty statement.(äÒá8Ğê…ìİ1
-Q
-java:S1874".Remove this use of "update"; it is deprecated.(˜Ò´øÿÿÿÿÿ8Öê…ìİ1

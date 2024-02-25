@@ -143,21 +143,9 @@ public class  UserManager {
         Transaction tx = null;
         Session session = SessionFactoryManager.getSessionFactory().openSession();
         try  {
-
             tx = session.beginTransaction();
-            User foundUser = new User();
-            Query<User> query = session.createQuery("FROM User WHERE nickname = :nickname", User.class);
-            query.setParameter("nickname", user.getNickname());
-            foundUser = query.uniqueResult();
+            session.merge(user);
 
-            if (foundUser != null) {
-                foundUser.setNickname(user.getNickname());
-                foundUser.setEmail(user.getEmail());
-                foundUser.setAccessKey(user.getAccessKey());
-
-                session.update(foundUser);
-                tx.commit();
-            }
 
         } catch (HibernateException e) {
             if (tx != null) tx.rollback();

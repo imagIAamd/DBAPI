@@ -10,6 +10,7 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import org.json.JSONObject;
 
+import java.util.Base64;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.UUID;
@@ -32,14 +33,12 @@ public class CommonManager {
 
         Date currentDate = new Date();
         Date expirationDate = calendar.getTime();
-        Algorithm algorithm = Algorithm.HMAC256(user.getNickname());
+
+        Algorithm algorithm = Algorithm.HMAC256(user.getTelephone());
 
         return JWT.create()
-                .withIssuer(user.getTelephone())
-                .withSubject("access token")
                 .withIssuedAt(currentDate)
                 .withExpiresAt(expirationDate)
-                .withJWTId(UUID.randomUUID().toString())
                 .sign(algorithm);
     }
 
@@ -51,9 +50,8 @@ public class CommonManager {
      * @throws JWTVerificationException if not valid throws exception
      */
     public static DecodedJWT verifyAccessKey(User user) throws JWTVerificationException {
-        Algorithm algorithm = Algorithm.HMAC256(user.getNickname());
+        Algorithm algorithm = Algorithm.HMAC256(user.getTelephone());
         JWTVerifier verifier = JWT.require(algorithm)
-                .withIssuer(user.getTelephone())
                 .build();
 
         return verifier.verify(user.getAccessKey());

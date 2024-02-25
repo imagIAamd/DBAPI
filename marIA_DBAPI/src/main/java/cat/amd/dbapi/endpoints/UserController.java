@@ -78,9 +78,9 @@ public class UserController {
 
         JSONObject responseData = new JSONObject();
         JSONObject requestJson = new JSONObject(data);
-        User foundUser = UserManager.findUserByTelephone(requestJson.getString(PHONE_NUMBER));
+        User user = UserManager.findUserByTelephone(requestJson.getString(PHONE_NUMBER));
 
-        if (foundUser == null) {
+        if (user == null) {
             return CommonManager.buildResponse(
                     Response.Status.BAD_REQUEST,
                     responseData,
@@ -88,12 +88,14 @@ public class UserController {
         }
 
         LOGGER.info("User validated");
-        CommonManager.generateAccessKey(foundUser);
+        user.setAccessKey(CommonManager.generateAccessKey(user));
+        UserManager.updateUser(user);
 
-        responseData.put(ACCESS_KEY, foundUser.getAccessKey())
-                .put(NICKNAME, foundUser.getNickname())
-                .put(PHONE_NUMBER, foundUser.getTelephone())
-                .put(EMAIL, foundUser.getEmail());
+
+        responseData.put(ACCESS_KEY, user.getAccessKey())
+                .put(NICKNAME, user.getNickname())
+                .put(PHONE_NUMBER, user.getTelephone())
+                .put(EMAIL, user.getEmail());
 
         return CommonManager.buildResponse(
                 Response.Status.OK,
