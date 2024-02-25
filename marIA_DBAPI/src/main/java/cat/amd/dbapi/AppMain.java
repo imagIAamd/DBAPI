@@ -23,9 +23,13 @@ public class AppMain {
      * Sets up and runs hibernate
      */
     public static void runHibernate() {
-        Model ollama = ModelManager.findModelByName("llava");
-        User admin = UserManager.findUser("admin");
-        logger.info(ollama.toString());
+        User defaultUser = new User();
+        defaultUser.setNickname("admin");
+        defaultUser.setTelephone("000000001");
+        defaultUser.setEmail("admin@localhost.net");
+        
+        ModelManager.findModelByName("llava");
+        UserManager.findUser(defaultUser);
     }
 
     /**

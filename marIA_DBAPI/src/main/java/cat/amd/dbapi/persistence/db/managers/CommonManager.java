@@ -6,14 +6,17 @@ import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.interfaces.DecodedJWT;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
+import org.json.JSONObject;
 
 import java.util.Calendar;
 import java.util.Date;
 import java.util.UUID;
 
-public class AccessKeyManager {
+public class CommonManager {
 
-    private AccessKeyManager() {
+    private CommonManager() {
 
     }
 
@@ -32,7 +35,7 @@ public class AccessKeyManager {
         Algorithm algorithm = Algorithm.HMAC256(user.getNickname());
 
         return JWT.create()
-                .withIssuer(user.getId().toString())
+                .withIssuer(user.getTelephone())
                 .withSubject("access token")
                 .withIssuedAt(currentDate)
                 .withExpiresAt(expirationDate)
@@ -50,10 +53,44 @@ public class AccessKeyManager {
     public static DecodedJWT verifyAccessKey(User user) throws JWTVerificationException {
         Algorithm algorithm = Algorithm.HMAC256(user.getNickname());
         JWTVerifier verifier = JWT.require(algorithm)
-                .withIssuer(user.getId().toString())
+                .withIssuer(user.getTelephone())
                 .build();
 
         return verifier.verify(user.getAccessKey());
+    }
+
+    /**
+     * Returns an OK response
+     *
+     * @param data custom response data
+     * @param status response status
+     * @param message response message
+     * @return built response
+     */
+    public static Response buildResponse(Response.Status status, JSONObject data, String message) {
+        JSONObject responseBody = buildDefaultResponseBody(status.toString(), message);
+        responseBody.put("data", data);
+
+        return Response.status(status)
+                .entity(responseBody.toString())
+                .type(MediaType.APPLICATION_JSON_TYPE)
+                .build();
+
+    }
+
+    /**
+     * Returns the default response body
+     *
+     * @param status response status
+     * @param message response message
+     * @return default response body
+     */
+    private static JSONObject buildDefaultResponseBody(String status, String message) {
+        JSONObject responseJSON = new JSONObject();
+        responseJSON.put("status", status)
+                .put("MESSAGE", message);
+
+        return responseJSON;
     }
 
 

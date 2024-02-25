@@ -25,6 +25,7 @@ public class ConfigurationDAO {
 
         try {
             tx = session.beginTransaction();
+            tx = session.beginTransaction();
             Query<Configuration> query = session.createQuery("FROM Configuration WHERE name = :name", Configuration.class);
             query.setParameter("name", name);
             configuration = query.uniqueResult();

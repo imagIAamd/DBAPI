@@ -15,9 +15,13 @@ t
 Dsrc/main/java/cat/amd/dbapi/persistence/db/managers/UserManager.java,e\7\e7adbbf6b02d2ff072d43dd97169dfa5af9c3642
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-{
-Ksrc/main/java/cat/amd/dbapi/persistence/db/managers/AccessTokenManager.java,9\b\9b9560b793fb2661be95b25eb0963234abaf3861
 ~
 Nsrc/main/java/cat/amd/dbapi/persistence/db/managers/SessionFactoryManager.java,f\0\f06a788621862f11c2d0e2b1e5ecd0c53ce6a33b
 y
 Isrc/main/java/cat/amd/dbapi/persistence/db/managers/AccessKeyManager.java,0\1\01ec017bc657fde9d623d2045d78afcd6a12ca3b
+w
+Gsrc/main/java/cat/amd/dbapi/persistence/reference/ConfigurationDAO.java,c\2\c2e38ee197ee3f888109f953df5767c2af1e3c81
+v
+Fsrc/main/java/cat/amd/dbapi/persistence/db/managers/CommonManager.java,d\c\dcf13c9a02a8bf957d0eae34e8fc902d7d786c45
+X
+(src/main/java/cat/amd/dbapi/AppMain.java,b\7\b770f1f5036522a24d59b59f0be5634041688d37

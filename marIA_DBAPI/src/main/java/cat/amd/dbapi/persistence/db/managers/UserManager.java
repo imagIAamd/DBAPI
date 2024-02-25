@@ -8,7 +8,7 @@ import org.hibernate.query.Query;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class UserManager {
+public class  UserManager {
 
     private UserManager() {
 
@@ -38,9 +38,6 @@ public class UserManager {
                 user = new User(nickname);
                 session.merge(user);
                 tx.commit();
-                LOGGER.info("New User created with nickname '{}'", nickname);
-            } else {
-                LOGGER.info("Found user with nickname: {}", nickname);
             }
 
         } catch (HibernateException e) {
@@ -61,20 +58,22 @@ public class UserManager {
      * @return user found
      */
     public static User findUser(User user) {
+        final String telephone = user.getTelephone();
         Transaction tx = null;
 
         try (Session session = SessionFactoryManager.getSessionFactory().openSession()) {
             User foundUser;
             tx = session.beginTransaction();
             Query<User> query = session.createQuery("FROM User WHERE telephone = :telephone", User.class);
-            query.setParameter("telephone", user.getTelephone());
+            query.setParameter("telephone", telephone);
             foundUser = query.uniqueResult();
-            LOGGER.info("The phone number '{}' is already registered", user.getTelephone());
 
             if (foundUser == null) {
                 session.merge(user);
                 tx.commit();
-                LOGGER.info("New User created with nickname '{}'", user.getNickname());
+
+            } else {
+                return null;
 
             }
 
@@ -86,5 +85,90 @@ public class UserManager {
 
         return user;
     }
+
+    /**
+     * Finds a user by its registered phone number for validation purposes
+     *
+     * @param telephone received telephone
+     * @return found user
+     */
+    public static User findUserByTelephone(String telephone) {
+        Transaction tx = null;
+        User user = null;
+
+        try (Session session = SessionFactoryManager.getSessionFactory().openSession()) {
+            tx = session.beginTransaction();
+            Query<User> query = session.createQuery("FROM User WHERE telephone = :telephone", User.class);
+            query.setParameter("telephone", telephone);
+            user = query.uniqueResult();
+
+        } catch (HibernateException e) {
+            if (tx != null) tx.rollback();
+            LOGGER.error("Error finding user", e);
+        }
+
+        return user;
+    }
+
+    /**
+     * Checks if a user exists
+     *
+     * @param user user to check
+     * @return true if exists, else false
+     */
+    public static boolean userExists(User user) {
+        Transaction tx = null;
+        boolean exists = false;
+
+        try (Session session = SessionFactoryManager.getSessionFactory().openSession()) {
+            User foundUser;
+            tx = session.beginTransaction();
+            Query<User> query = session.createQuery("FROM User WHERE telephone = :telephone", User.class);
+            query.setParameter("telephone", user.getTelephone());
+            foundUser = query.uniqueResult();
+
+            if (foundUser != null) {
+                exists = true;
+            }
+
+        } catch (HibernateException e) {
+            if (tx != null) tx.rollback();
+
+        }
+
+        return exists;
+    }
+
+    public static void updateUser(User user) {
+        Transaction tx = null;
+        Session session = SessionFactoryManager.getSessionFactory().openSession();
+        try  {
+
+            tx = session.beginTransaction();
+            User foundUser = new User();
+            Query<User> query = session.createQuery("FROM User WHERE nickname = :nickname", User.class);
+            query.setParameter("nickname", user.getNickname());
+            foundUser = query.uniqueResult();
+
+            if (foundUser != null) {
+                foundUser.setNickname(user.getNickname());
+                foundUser.setEmail(user.getEmail());
+                foundUser.setAccessKey(user.getAccessKey());
+
+                session.update(foundUser);
+                tx.commit();
+            }
+
+        } catch (HibernateException e) {
+            if (tx != null) tx.rollback();
+            LOGGER.error("Error updating user", e);
+        }
+
+        finally {
+            session.close();
+        }
+    }
+
+
 
 }

@@ -1,0 +1,14 @@
+
+n	java:S135A"YReduce the total number of break and continue statements in this loop to use at most one.(îÖ´è
+‘
+java:S2681+"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(äÒá
+O
+java:S1118":Add a private constructor to hide the implicit public one.(Ô&
+G
+java:S1874#",Remove this use of "save"; it is deprecated.(Ñåäşÿÿÿÿ
+2
+java:S1116+"Remove this empty statement.(äÒá
+I
+java:S1874F".Remove this use of "update"; it is deprecated.(”±È‹øÿÿÿÿ
+G
+java:S1874M",Remove this use of "save"; it is deprecated.(Ê£üÿÿÿÿÿ
