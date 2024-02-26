@@ -4,13 +4,11 @@ import cat.amd.dbapi.persistence.db.managers.RequestManager;
 import jakarta.persistence.*;
 import org.json.JSONObject;
 
-import static cat.amd.dbapi.Constants.MAX_RESPONSE_LENGTH;
-
 @Entity
-public class Response {
+public class APIResponse {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "response_id")
     private Long id;
 
@@ -21,11 +19,11 @@ public class Response {
     @Column(columnDefinition = "TEXT")
     private String text;
 
-    public Response() {
+    public APIResponse() {
 
     }
 
-    public Response(JSONObject data) {
+    public APIResponse(JSONObject data) {
         Long requestId = data.getLong("request_id");
         this.text = data.getString("text");
         this.request = RequestManager.findRequest(requestId);

@@ -115,7 +115,7 @@ public class RequestManager {
         try {
             tx = session.beginTransaction();
             Query<Request> query = session.createQuery("FROM Request WHERE id = :id", Request.class);
-            query.setParameter(0, id);
+            query.setParameter("id", id);
             request = query.uniqueResult();
 
         } catch (HibernateException e) {

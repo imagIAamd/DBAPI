@@ -22,12 +22,12 @@
         <property name="hibernate.show_sql">true</property>
 
         <!-- Drop and re-create the database schema on startup -->
-        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
 
         <!-- Specify the mapping resources -->
         <mapping class="cat.amd.dbapi.persistence.db.entities.User"/>
         <mapping class="cat.amd.dbapi.persistence.db.entities.Model"/>
         <mapping class="cat.amd.dbapi.persistence.db.entities.Request"/>
-        <mapping class="cat.amd.dbapi.persistence.db.entities.Response"/>
+        <mapping class="cat.amd.dbapi.persistence.db.entities.APIResponse"/>
     </session-factory>
 </hibernate-configuration>

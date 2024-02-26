@@ -1,7 +1,6 @@
 package cat.amd.dbapi.persistence.db.managers;
 
-import cat.amd.dbapi.persistence.db.entities.Response;
-import cat.amd.dbapi.persistence.db.entities.User;
+import cat.amd.dbapi.persistence.db.entities.APIResponse;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -21,32 +20,33 @@ public class ResponseManager {
      * Tries to find an existing response.
      * If not found creates it.
      *
-     * @param response received response
+     * @param apiResponse received response
      * @return found or created response
      */
-    public static Response findResponse(Response response) {
+    public static APIResponse findResponse(APIResponse apiResponse) {
         Session session = SessionFactoryManager.getSessionFactory().openSession();
         Transaction tx = null;
-        Response foundResponse = null;
+        APIResponse foundAPIResponse = null;
 
         try {
             tx = session.beginTransaction();
-            Query<Response> query = session.createQuery("FROM User WHERE request = :request", Response.class);
-            query.setParameter("request", response.getRequest().getId());
-            foundResponse = query.uniqueResult();
+            Query<APIResponse> query = session.createQuery("FROM APIResponse WHERE request = :request", APIResponse.class);
+            query.setParameter("request", apiResponse.getRequest());
+            foundAPIResponse = query.uniqueResult();
 
-            if (foundResponse == null) {
-                session.merge(response);
+            if (foundAPIResponse == null) {
+                session.merge(apiResponse);
+                foundAPIResponse = apiResponse;
                 tx.commit();
             }
 
         } catch (HibernateException e) {
             if (tx != null) tx.rollback();
-            LOGGER.error("Error trying to response with request_id '{}'", response.getRequest().getId(), e);
+            LOGGER.error("Error trying to response with request_id '{}'", apiResponse.getRequest().getId(), e);
         } finally {
             session.close();
         }
 
-        return foundResponse;
+        return foundAPIResponse;
     }
 }

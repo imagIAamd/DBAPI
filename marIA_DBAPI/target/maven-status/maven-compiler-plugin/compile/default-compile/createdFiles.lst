@@ -2,14 +2,16 @@ cat/amd/dbapi/persistence/db/entities/Administrator.class
 cat/amd/dbapi/persistence/reference/ConfigurationDAO.class
 cat/amd/dbapi/Constants.class
 cat/amd/dbapi/persistence/db/entities/Model.class
-cat/amd/dbapi/persistence/db/entities/Response.class
 cat/amd/dbapi/persistence/db/managers/UserManager.class
 cat/amd/dbapi/DBapi.class
 cat/amd/dbapi/endpoints/UserController.class
+cat/amd/dbapi/persistence/db/managers/ResponseManager.class
 cat/amd/dbapi/persistence/reference/Configuration.class
 cat/amd/dbapi/persistence/reference/Property.class
 cat/amd/dbapi/endpoints/RequestController.class
 cat/amd/dbapi/persistence/db/managers/SessionFactoryManager.class
+cat/amd/dbapi/endpoints/ResponseController.class
+cat/amd/dbapi/persistence/db/entities/APIResponse.class
 cat/amd/dbapi/persistence/db/entities/User.class
 cat/amd/dbapi/AppMain.class
 cat/amd/dbapi/persistence/db/managers/CommonManager.class
