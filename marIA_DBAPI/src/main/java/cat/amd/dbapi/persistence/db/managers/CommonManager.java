@@ -15,6 +15,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.UUID;
 
+import static cat.amd.dbapi.Constants.SECRET_KEY;
+
 public class CommonManager {
 
     private CommonManager() {
@@ -34,9 +36,10 @@ public class CommonManager {
         Date currentDate = new Date();
         Date expirationDate = calendar.getTime();
 
-        Algorithm algorithm = Algorithm.HMAC256(user.getTelephone());
+        Algorithm algorithm = Algorithm.HMAC256(SECRET_KEY);
 
         return JWT.create()
+                .withClaim("userId", user.getId())
                 .withIssuedAt(currentDate)
                 .withExpiresAt(expirationDate)
                 .sign(algorithm);
@@ -49,12 +52,12 @@ public class CommonManager {
      * @return decoded key
      * @throws JWTVerificationException if not valid throws exception
      */
-    public static DecodedJWT verifyAccessKey(User user) throws JWTVerificationException {
-        Algorithm algorithm = Algorithm.HMAC256(user.getTelephone());
+    public static DecodedJWT verifyAccessKey(String accessKey) throws JWTVerificationException {
+        Algorithm algorithm = Algorithm.HMAC256(SECRET_KEY);
         JWTVerifier verifier = JWT.require(algorithm)
                 .build();
 
-        return verifier.verify(user.getAccessKey());
+        return verifier.verify(accessKey);
     }
 
     /**

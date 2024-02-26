@@ -3,6 +3,8 @@ package cat.amd.dbapi.endpoints;
 import cat.amd.dbapi.persistence.db.entities.User;
 import cat.amd.dbapi.persistence.db.managers.CommonManager;
 import cat.amd.dbapi.persistence.db.managers.UserManager;
+import com.auth0.jwt.exceptions.JWTVerificationException;
+import com.auth0.jwt.interfaces.DecodedJWT;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
@@ -10,16 +12,15 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Objects;
+
+import static cat.amd.dbapi.Constants.*;
+
 
 @Path("/user")
 public class UserController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
-    private static final String ACCESS_KEY = "access_key";
-    private static final String NICKNAME = "nickname";
-    private static final String PHONE_NUMBER = "phone_number";
-    private static final String EMAIL = "email";
-
     /**
      * Endpoint for user registration
      *
@@ -101,5 +102,66 @@ public class UserController {
                 Response.Status.OK,
                 responseData,
                 "User successfully validated");
+    }
+
+    /**
+     * Returns the sender info
+     *
+     * @param authorization access_token with user data
+     * @return status code
+     */
+    @GET
+    @Path("/info")
+    public Response getUserInfo(@HeaderParam(value = "Authorization") String authorization) {
+        String[] splitAuthorization = authorization.split(" ");
+        JSONObject responseData = new JSONObject();
+
+        if (splitAuthorization.length <= 1) {
+            return CommonManager.buildResponse(
+                    Response.Status.BAD_REQUEST,
+                    responseData,
+                    "bad request");
+        }
+
+        if (!Objects.equals(splitAuthorization[0], "Bearer")) {
+            return CommonManager.buildResponse(
+                    Response.Status.BAD_REQUEST,
+                    responseData,
+                    "bad request");
+        }
+
+        DecodedJWT decodedKey;
+        try {
+            decodedKey = CommonManager.verifyAccessKey(splitAuthorization[1]);
+
+        } catch (JWTVerificationException e) {
+            LOGGER.error("ERROR trying to verify received access_key");
+            return CommonManager.buildResponse(
+                    Response.Status.UNAUTHORIZED,
+                    responseData,
+                    "unauthorized");
+        }
+
+        Long userId = decodedKey.getClaim("userId").asLong();
+        User user = UserManager.findUser(userId);
+
+        if (user != null) {
+            boolean validated = user.getAccessKey() != null;
+            responseData.put("nickname", user.getNickname())
+                    .put("email", user.getEmail())
+                    .put("phone_number", user.getTelephone())
+                    .put("validated", validated)
+                    .put("tos", "WIP")
+                    .put("plan", "WIP");
+            return CommonManager.buildResponse(
+                    Response.Status.OK,
+                    responseData,
+                    "User information successfully retrieved");
+        }
+
+        return CommonManager.buildResponse(
+                Response.Status.BAD_REQUEST,
+                responseData,
+                "bad request");
     }
 }

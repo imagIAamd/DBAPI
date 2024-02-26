@@ -51,6 +51,33 @@ public class  UserManager {
     }
 
     /**
+     * Tries to find an existing user with 'id' Long parameter.
+     *
+     * @param id user id
+     * @return User if found, null if else
+     */
+    public static User findUser(Long id) {
+        Session session = SessionFactoryManager.getSessionFactory().openSession();
+        Transaction tx = null;
+        User user = null;
+
+        try {
+            tx = session.beginTransaction();
+            Query<User> query = session.createQuery("FROM User WHERE id = :id", User.class);
+            query.setParameter("id", id);
+            user = query.uniqueResult();
+
+        } catch (HibernateException e) {
+            if (tx != null) tx.rollback();;
+            LOGGER.error("Error trying to find user with id '{}'", id, e);
+        } finally {
+            session.close();
+        }
+
+        return user;
+    }
+
+    /**
      * Tries to find an existing user.
      * If not found creates it.
      *
