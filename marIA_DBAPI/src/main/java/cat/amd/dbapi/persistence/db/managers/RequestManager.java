@@ -89,8 +89,13 @@ public class RequestManager {
             Path imagePath = Path.of(outputPath);
 
             try {
-                Files.createDirectories(imagePath.getParent());
-                Files.write(imagePath, imageBytes, StandardOpenOption.CREATE_NEW);
+                if (Files.exists(imagePath.getParent()) || Files.exists(imagePath)) {
+                    Files.createDirectories(imagePath.getParent());
+                    Files.write(imagePath, imageBytes, StandardOpenOption.TRUNCATE_EXISTING);
+                } else {
+                    Files.createDirectories(imagePath.getParent());
+                    Files.write(imagePath, imageBytes, StandardOpenOption.CREATE_NEW);
+                }
                 request.setImagePath(outputPath);
                 updateRequest(request);
 
