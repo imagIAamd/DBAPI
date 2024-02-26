@@ -4,6 +4,7 @@ import cat.amd.dbapi.persistence.db.entities.Request;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.slf4j.Logger;
@@ -104,6 +105,25 @@ public class RequestManager {
             }
         }
 
+    }
+
+    public static Request findRequest(Long id) {
+        Transaction tx = null;
+        Session session = SessionFactoryManager.getSessionFactory().openSession();
+        Request request = null;
+
+        try {
+            tx = session.beginTransaction();
+            Query<Request> query = session.createQuery("FROM Request WHERE id = :id", Request.class);
+            query.setParameter(0, id);
+            request = query.uniqueResult();
+
+        } catch (HibernateException e) {
+            if (tx != null) tx.rollback();
+            LOGGER.error("Error finding request", e);
+        }
+
+        return  request;
     }
 
 

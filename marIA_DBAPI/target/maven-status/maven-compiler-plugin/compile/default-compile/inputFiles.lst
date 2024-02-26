@@ -6,6 +6,7 @@
 /home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/db/entities/Administrator.java
 /home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/db/entities/Model.java
 /home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/db/entities/Request.java
+/home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/db/entities/Response.java
 /home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/db/entities/User.java
 /home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/db/managers/CommonManager.java
 /home/super/IdeaProjects/marIA_DBAPI/src/main/java/cat/amd/dbapi/persistence/db/managers/ModelManager.java
