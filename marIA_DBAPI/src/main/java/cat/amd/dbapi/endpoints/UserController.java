@@ -12,8 +12,6 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Objects;
-
 import static cat.amd.dbapi.Constants.*;
 
 
@@ -116,7 +114,7 @@ public class UserController {
         JSONObject responseData = new JSONObject();
         String[] splitAuthorization = authorization.split(" ");
 
-        if (!CommonManager.isAuthorizationValid(authorization)) {
+        if (CommonManager.isValidAuthorization(authorization)) {
             return CommonManager.buildResponse(
                     Response.Status.BAD_REQUEST,
                     responseData,

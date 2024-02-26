@@ -91,14 +91,18 @@ public class CommonManager {
         return responseJSON;
     }
 
-    public static boolean isAuthorizationValid(String authorization) {
+    public static boolean isValidAuthorization(String authorization) {
+        if (authorization == null) {
+            return true;
+        }
+
         String[] splitAuthorization = authorization.split(" ");
 
         if (splitAuthorization.length <= 1) {
-            return false;
+            return true;
         }
 
-        return Objects.equals(splitAuthorization[0], "Bearer");
+        return !Objects.equals(splitAuthorization[0], "Bearer");
     }
 
 

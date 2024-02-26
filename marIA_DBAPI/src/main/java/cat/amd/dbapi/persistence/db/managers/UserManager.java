@@ -172,7 +172,7 @@ public class  UserManager {
         try  {
             tx = session.beginTransaction();
             session.merge(user);
-
+            tx.commit();
 
         } catch (HibernateException e) {
             if (tx != null) tx.rollback();
