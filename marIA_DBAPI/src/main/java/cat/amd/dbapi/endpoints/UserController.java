@@ -113,17 +113,10 @@ public class UserController {
     @GET
     @Path("/info")
     public Response getUserInfo(@HeaderParam(value = "Authorization") String authorization) {
-        String[] splitAuthorization = authorization.split(" ");
         JSONObject responseData = new JSONObject();
+        String[] splitAuthorization = authorization.split(" ");
 
-        if (splitAuthorization.length <= 1) {
-            return CommonManager.buildResponse(
-                    Response.Status.BAD_REQUEST,
-                    responseData,
-                    "bad request");
-        }
-
-        if (!Objects.equals(splitAuthorization[0], "Bearer")) {
+        if (!CommonManager.isAuthorizationValid(authorization)) {
             return CommonManager.buildResponse(
                     Response.Status.BAD_REQUEST,
                     responseData,

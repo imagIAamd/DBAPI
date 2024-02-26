@@ -10,10 +10,7 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import org.json.JSONObject;
 
-import java.util.Base64;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.UUID;
+import java.util.*;
 
 import static cat.amd.dbapi.Constants.SECRET_KEY;
 
@@ -48,7 +45,7 @@ public class CommonManager {
     /**
      * Verifies the received access key
      *
-     * @param user user that sent the key
+     * @param accessKey received access_key
      * @return decoded key
      * @throws JWTVerificationException if not valid throws exception
      */
@@ -92,6 +89,16 @@ public class CommonManager {
                 .put("MESSAGE", message);
 
         return responseJSON;
+    }
+
+    public static boolean isAuthorizationValid(String authorization) {
+        String[] splitAuthorization = authorization.split(" ");
+
+        if (splitAuthorization.length <= 1) {
+            return false;
+        }
+
+        return Objects.equals(splitAuthorization[0], "Bearer");
     }
 
 

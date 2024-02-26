@@ -2,10 +2,7 @@ package cat.amd.dbapi.endpoints;
 
 import cat.amd.dbapi.persistence.db.entities.Request;
 import cat.amd.dbapi.persistence.db.managers.RequestManager;
-import jakarta.ws.rs.Consumes;
-import jakarta.ws.rs.POST;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import org.json.JSONObject;
@@ -19,7 +16,7 @@ public class RequestController {
     @Path("/insert")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response insertRequest(String data) {
+    public Response insertRequest(@HeaderParam(value = "Authorization")String authorization, String data) {
 
         boolean inserted;
         Request request;
