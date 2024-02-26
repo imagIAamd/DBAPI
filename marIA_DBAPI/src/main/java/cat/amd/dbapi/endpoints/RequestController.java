@@ -63,7 +63,11 @@ public class RequestController {
         }
 
         RequestManager.storeRequestImages(requestJson.getJSONArray("images"), request);
-
-        return Response.accepted().build();
+        LOGGER.info("request successfully inserted");
+        responseData.put("id", request.getId());
+        return CommonManager.buildResponse(
+                Response.Status.OK,
+                responseData,
+                "OK");
     }
 }

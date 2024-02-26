@@ -28,6 +28,7 @@ public class ResponseController {
         LOGGER.info("Received insert response request");
 
         if (CommonManager.isValidAuthorization(authorization)) {
+            LOGGER.info("Invalid access_key");
             return CommonManager.buildResponse(
                     Response.Status.BAD_REQUEST,
                     responseData,
@@ -36,7 +37,7 @@ public class ResponseController {
 
         String[] splitAuthorization = authorization.split(" ");
         try {
-            DecodedJWT decodedKey = CommonManager.verifyAccessKey(splitAuthorization[1]);
+            CommonManager.verifyAccessKey(splitAuthorization[1]);
 
         } catch (JWTVerificationException e) {
             LOGGER.error("ERROR trying to verify received access_key");
@@ -59,6 +60,7 @@ public class ResponseController {
                     "ERROR");
         }
 
+        LOGGER.info("request successfully inserted");
         responseData.put("id", response.getId())
                 .put("request_id", response.getRequest().getId());
         return CommonManager.buildResponse(
