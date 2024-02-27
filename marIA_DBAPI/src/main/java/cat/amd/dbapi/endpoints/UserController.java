@@ -86,6 +86,13 @@ public class UserController {
                     "the phone number is not registered");
         }
 
+        if (user.getValidationCode() != requestJson.getInt("validation_code")) {
+            return CommonManager.buildResponse(
+                    Response.Status.BAD_REQUEST,
+                    responseData,
+                    "the validation code is not correct");
+        }
+
         LOGGER.info("User validated");
         String accessKey = CommonManager.generateAccessKey(user);
         UserManager.updateUser(user);
