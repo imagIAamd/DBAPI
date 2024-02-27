@@ -87,11 +87,11 @@ public class UserController {
         }
 
         LOGGER.info("User validated");
-        user.setAccessKey(CommonManager.generateAccessKey(user));
+        String accessKey = CommonManager.generateAccessKey(user);
         UserManager.updateUser(user);
 
 
-        responseData.put(ACCESS_KEY, user.getAccessKey())
+        responseData.put(ACCESS_KEY, accessKey)
                 .put(NICKNAME, user.getNickname())
                 .put(PHONE_NUMBER, user.getTelephone())
                 .put(EMAIL, user.getEmail());
@@ -137,7 +137,7 @@ public class UserController {
         User user = UserManager.findUser(userId);
 
         if (user != null) {
-            boolean validated = user.getAccessKey() != null;
+            boolean validated = user.getValidationCode() != null;
             responseData.put("nickname", user.getNickname())
                     .put("email", user.getEmail())
                     .put("phone_number", user.getTelephone())

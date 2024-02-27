@@ -21,8 +21,8 @@ public class User {
     @Column(nullable = false)
     private String email;
 
-    @Column(name = "access_key")
-    private String accessKey;
+    @Column(name = "validation_code")
+    private Integer validationCode;
 
     /**
      * Empty constructor
@@ -63,6 +63,7 @@ public class User {
         this.nickname = data.getString("nickname");
         this.telephone = data.getString("phone_number");
         this.email = data.getString("email");
+        this.validationCode = data.getInt("validation_code");
     }
 
     public Long getId() {
@@ -97,12 +98,12 @@ public class User {
         this.email = email;
     }
 
-    public String getAccessKey() {
-        return accessKey;
+    public Integer getValidationCode() {
+        return validationCode;
     }
 
-    public void setAccessKey(String accessKey) {
-        this.accessKey = accessKey;
+    public void setValidationCode(Integer accessKey) {
+        this.validationCode = accessKey;
     }
 
     @Override
@@ -112,7 +113,7 @@ public class User {
                 ", nickname='" + nickname + '\'' +
                 ", telephone='" + telephone + '\'' +
                 ", email='" + email + '\'' +
-                ", accessKey=" + accessKey +
+                ", validationCode=" + validationCode +
                 '}';
     }
 }
