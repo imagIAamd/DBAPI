@@ -85,11 +85,12 @@ public class  UserManager {
      * @return user found
      */
     public static User findUser(User user) {
+        Session session = SessionFactoryManager.getSessionFactory().openSession();
         final String telephone = user.getTelephone();
         Transaction tx = null;
+        User foundUser;
 
-        try (Session session = SessionFactoryManager.getSessionFactory().openSession()) {
-            User foundUser;
+        try  {
             tx = session.beginTransaction();
             Query<User> query = session.createQuery("FROM User WHERE telephone = :telephone", User.class);
             query.setParameter("telephone", telephone);
@@ -108,6 +109,8 @@ public class  UserManager {
             if (tx != null) tx.rollback();
             LOGGER.error("Error finding user", e);
 
+        } finally {
+            session.close();
         }
 
         return user;
