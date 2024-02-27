@@ -60,7 +60,6 @@ public class User {
      * @param data JSON
      */
     public User(JSONObject data) {
-        data = data.getJSONObject("data");
         this.nickname = data.getString("nickname");
         this.telephone = data.getString("phone_number");
         this.email = data.getString("email");
