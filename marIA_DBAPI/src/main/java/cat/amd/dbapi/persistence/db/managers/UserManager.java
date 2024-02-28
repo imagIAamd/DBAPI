@@ -1,5 +1,6 @@
 package cat.amd.dbapi.persistence.db.managers;
 
+import cat.amd.dbapi.persistence.db.entities.Administrator;
 import cat.amd.dbapi.persistence.db.entities.User;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -185,6 +186,36 @@ public class  UserManager {
         finally {
             session.close();
         }
+    }
+
+    public static Administrator findAdministrator(Administrator administrator) {
+        Transaction tx = null;
+        Session session = SessionFactoryManager.getSessionFactory().openSession();
+
+        try {
+            Administrator foundAdmin;
+            tx = session.beginTransaction();
+            Query<Administrator> query = session.createQuery("FROM Administrator " +
+                    "WHERE email = :email AND password := password", Administrator.class);
+            query.setParameter("email", administrator.getEmail());
+            query.setParameter("password", administrator.getPassword());
+            foundAdmin = query.uniqueResult();
+
+            if (foundAdmin == null) {
+                return null;
+            }
+
+            administrator = foundAdmin;
+
+        } catch (HibernateException e) {
+            if (tx != null) tx.rollback();
+            LOGGER.error("Error updating user", e);
+
+        } finally {
+            session.close();
+        }
+
+        return administrator;
     }
 
 

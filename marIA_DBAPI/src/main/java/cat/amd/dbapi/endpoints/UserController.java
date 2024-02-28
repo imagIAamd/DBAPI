@@ -1,5 +1,6 @@
 package cat.amd.dbapi.endpoints;
 
+import cat.amd.dbapi.persistence.db.entities.Administrator;
 import cat.amd.dbapi.persistence.db.entities.User;
 import cat.amd.dbapi.persistence.db.managers.CommonManager;
 import cat.amd.dbapi.persistence.db.managers.UserManager;
@@ -161,5 +162,29 @@ public class UserController {
                 Response.Status.BAD_REQUEST,
                 responseData,
                 "bad request");
+    }
+
+    @POST
+    @Path("/login")
+    public Response userLogin(String data) {
+        JSONObject requestJson = new JSONObject(data);
+        JSONObject responseData = new JSONObject();
+        Administrator administrator = new Administrator(requestJson);
+
+        if (UserManager.findAdministrator(administrator) == null) {
+            return CommonManager.buildResponse(
+                    Response.Status.UNAUTHORIZED,
+                    responseData,
+                    "bad credentials"
+            );
+        }
+
+        String accessKey = "WIP";
+        responseData.put("access_key", accessKey);
+        return CommonManager.buildResponse(
+                Response.Status.OK,
+                responseData,
+                "congratulations!"
+        );
     }
 }

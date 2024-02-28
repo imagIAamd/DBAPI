@@ -1,6 +1,7 @@
 package cat.amd.dbapi.persistence.db.entities;
 
 import jakarta.persistence.*;
+import org.json.JSONObject;
 
 @Entity
 public class Administrator {
@@ -16,12 +17,16 @@ public class Administrator {
     @Column(name = "password", nullable = false)
     private String password;
 
+    @Column(name = "email", nullable = false)
+    private String email;
+
     public Administrator() {
 
     }
 
-    public Administrator(User user) {
-
+    public Administrator(JSONObject data) {
+        this.email = data.getString("email");
+        this.password = data.getString("password");
     }
 
     public long getId() {
@@ -46,6 +51,14 @@ public class Administrator {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override
