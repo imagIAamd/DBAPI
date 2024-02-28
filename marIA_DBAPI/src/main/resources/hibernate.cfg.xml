@@ -29,5 +29,6 @@
         <mapping class="cat.amd.dbapi.persistence.db.entities.Model"/>
         <mapping class="cat.amd.dbapi.persistence.db.entities.Request"/>
         <mapping class="cat.amd.dbapi.persistence.db.entities.APIResponse"/>
+        <mapping class="cat.amd.dbapi.persistence.db.entities.Administrator"/>
     </session-factory>
 </hibernate-configuration>

@@ -2,10 +2,6 @@ package cat.amd.dbapi.persistence.db.entities;
 
 import jakarta.persistence.*;
 
-/*
-    TODO create role tables and permission tables and relation tables between them
- */
-
 @Entity
 public class Administrator {
 
@@ -16,6 +12,9 @@ public class Administrator {
     @OneToOne
     @JoinColumn(name = "user_id")
     private User user;
+
+    @Column(name = "password", nullable = false)
+    private String password;
 
     public Administrator() {
 
@@ -39,6 +38,14 @@ public class Administrator {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override

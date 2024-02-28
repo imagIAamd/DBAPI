@@ -1,6 +1,5 @@
 package cat.amd.dbapi;
 
-import cat.amd.dbapi.persistence.db.entities.Model;
 import cat.amd.dbapi.persistence.db.entities.User;
 import cat.amd.dbapi.persistence.db.managers.ModelManager;
 import cat.amd.dbapi.persistence.db.managers.SessionFactoryManager;
