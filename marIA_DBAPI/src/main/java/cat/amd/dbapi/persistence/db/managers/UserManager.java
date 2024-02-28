@@ -196,7 +196,7 @@ public class  UserManager {
             Administrator foundAdmin;
             tx = session.beginTransaction();
             Query<Administrator> query = session.createQuery("FROM Administrator " +
-                    "WHERE email = :email AND password := password", Administrator.class);
+                    "WHERE email = :email AND password = :password", Administrator.class);
             query.setParameter("email", administrator.getEmail());
             query.setParameter("password", administrator.getPassword());
             foundAdmin = query.uniqueResult();
