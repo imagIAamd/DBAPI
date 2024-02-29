@@ -9,12 +9,16 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.*;
 
 import static cat.amd.dbapi.Constants.SECRET_KEY;
 
 public class CommonManager {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(CommonManager.class);
 
     private CommonManager() {
 
@@ -68,6 +72,8 @@ public class CommonManager {
     public static Response buildResponse(Response.Status status, JSONObject data, String message) {
         JSONObject responseBody = buildDefaultResponseBody(status.toString(), message);
         responseBody.put("data", data);
+
+        LOGGER.info("Returning the following response: {}", responseBody);
 
         return Response.status(status)
                 .entity(responseBody.toString())

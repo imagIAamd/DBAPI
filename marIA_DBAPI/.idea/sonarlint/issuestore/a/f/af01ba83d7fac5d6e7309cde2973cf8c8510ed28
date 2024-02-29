@@ -1,0 +1,7 @@
+
+R
+java:S2629"7Use the built-in formatting to construct this argument.(Ç»›¯ùÿÿÿÿ
+\
+java:S3457"AFormat specifiers should be used instead of string concatenation.(Ç»›¯ùÿÿÿÿ
+V
+java:S1128"@Remove this unused import 'com.auth0.jwt.interfaces.DecodedJWT'.(éÀ¼”
