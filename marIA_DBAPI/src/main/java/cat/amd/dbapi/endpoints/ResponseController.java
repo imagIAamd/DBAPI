@@ -25,9 +25,9 @@ public class ResponseController {
         APIResponse response;
         JSONObject responseData = new JSONObject();
 
-        LOGGER.info("Received insert response request");
+        LOGGER.info("Received insert response request with authorization : " + authorization);
 
-        if (!CommonManager.isValidAuthorization(authorization)) {
+        if (CommonManager.isValidAuthorization(authorization)) {
             LOGGER.info("Invalid access_key");
             return CommonManager.buildResponse(
                     Response.Status.BAD_REQUEST,
