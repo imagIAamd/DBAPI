@@ -27,7 +27,7 @@ public class ResponseController {
 
         LOGGER.info("Received insert response request");
 
-        if (CommonManager.isValidAuthorization(authorization)) {
+        if (!CommonManager.isValidAuthorization(authorization)) {
             LOGGER.info("Invalid access_key");
             return CommonManager.buildResponse(
                     Response.Status.BAD_REQUEST,
