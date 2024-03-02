@@ -14,60 +14,55 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static cat.amd.dbapi.Constants.*;
+
 @Path("/request")
 public class RequestController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestController.class);
+    private static final String[] REQUEST_INSERT__REQUEST_TEMPLATE = new String[]{
+            PROMPT,
+            MODEL,
+            IMAGES
+    };
 
     @POST
     @Path("/insert")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response insertRequest(@HeaderParam(value = "Authorization")String authorization, String data) {
-        Request request;
+    public Response insertRequest(@HeaderParam(value = "Authorization") String authorization, String data) {
         JSONObject responseData = new JSONObject();
+        JSONObject requestJson = new JSONObject(data);
 
         LOGGER.info("Received insert image request");
 
-        if (CommonManager.isValidAuthorization(authorization)) {
-            return CommonManager.buildResponse(
-                    Response.Status.BAD_REQUEST,
-                    responseData,
-                    "bad request");
+        if (!CommonManager.isValidAuthorization(authorization)) {
+            return CommonManager.buildBadRequestResponse();
+        }
+
+        if (!CommonManager.isValidAuthorization(authorization)) {
+            return CommonManager.buildBadRequestResponse();
+        }
+
+        if (!CommonManager.isValidRequest(requestJson, REQUEST_INSERT__REQUEST_TEMPLATE)) {
+            return CommonManager.buildBadRequestResponse();
         }
 
         String[] splitAuthorization = authorization.split(" ");
-        DecodedJWT decodedKey;
-        try {
-            decodedKey = CommonManager.verifyAccessKey(splitAuthorization[1]);
+        DecodedJWT decodedJWT = CommonManager.verifyAccessKey(splitAuthorization[1]);
+        User user = UserManager.findUser(decodedJWT.getClaim("userId").asLong());
 
-        } catch (JWTVerificationException e) {
-            LOGGER.error("ERROR trying to verify received access_key");
-            return CommonManager.buildResponse(
-                    Response.Status.UNAUTHORIZED,
-                    responseData,
-                    "unauthorized");
-        }
-
-        Long userId = decodedKey.getClaim("userId").asLong();
-        User user = UserManager.findUser(userId);
-        JSONObject requestJson = new JSONObject(data);
-
-        request = new Request(requestJson);
+        Request request = new Request(requestJson);
         request.setUser(user);
         request = RequestManager.insertRequest(request);
         boolean inserted = request != null;
 
         if (!inserted) {
-            return Response.serverError().build();
+            return CommonManager.buildBadRequestResponse();
         }
-
         RequestManager.storeRequestImages(requestJson.getJSONArray("images"), request);
         LOGGER.info("request successfully inserted");
         responseData.put("id", request.getId());
-        return CommonManager.buildResponse(
-                Response.Status.OK,
-                responseData,
-                "OK");
+        return CommonManager.buildOkResponse(responseData, REQUEST_INSERT_OK);
     }
 }

@@ -77,8 +77,11 @@ public class AppMain {
             logger.info("Running server...");
             final HttpServer server = runServer(host, port);
 
-            logger.info(String.format("App started with WADL available at " +
-                    "%sapplication.wadl\nPress \"Enter\" to stop it...", baseURI));
+            String startInfo = (String.format("App started with WADL available at " +
+                    "%sapplication.wadl%nPress \"Enter\" to stop it...", baseURI));
+            logger.info(startInfo);
+
+            // TODO maybe something can be done with this
             System.in.read();
 
             SessionFactoryManager.close();

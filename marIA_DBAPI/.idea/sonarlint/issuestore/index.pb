@@ -25,3 +25,12 @@ X
 (src/main/java/cat/amd/dbapi/AppMain.java,b\7\b770f1f5036522a24d59b59f0be5634041688d37
 m
 =src/main/java/cat/amd/dbapi/endpoints/ResponseController.java,a\f\af01ba83d7fac5d6e7309cde2973cf8c8510ed28
+t
+Dsrc/main/java/cat/amd/dbapi/persistence/db/entities/APIResponse.java,2\5\2534599ea9c0eeab435e3461a46bbddb94f8eca3
+V
+&src/main/java/cat/amd/dbapi/DBapi.java,9\4\94975356197aca49d77c53c375fd945b5727ed8c
+Z
+*src/main/java/cat/amd/dbapi/Constants.java,5\f\5f0c2832ced1c85571fd4d381cbc11b819ab6802
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302

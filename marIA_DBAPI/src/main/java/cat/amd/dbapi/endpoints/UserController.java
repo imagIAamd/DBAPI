@@ -20,6 +20,17 @@ import static cat.amd.dbapi.Constants.*;
 public class UserController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
+    private static final String[] USER_REGISTER_REQUEST_TEMPLATE = new String[]{
+            PHONE_NUMBER,
+            NICKNAME,
+            EMAIL,
+            VALIDATION_CODE
+    };
+    private static final String[] USER_VALIDATE_REQUEST_TEMPLATE = new String[]{
+            PHONE_NUMBER,
+            VALIDATION_CODE
+    };
+
     /**
      * Endpoint for user registration
      *
@@ -36,31 +47,22 @@ public class UserController {
         User user;
         JSONObject responseData = new JSONObject();
         JSONObject requestJson = new JSONObject(data);
-        user = new User(requestJson);
 
-        if (UserManager.findUser(user) == null) {
-            LOGGER.info("User already exists");
-
-            responseData.put(NICKNAME, user.getNickname())
-                    .put(PHONE_NUMBER, user.getTelephone())
-                    .put(EMAIL, user.getEmail());
-
-            return CommonManager.buildResponse(
-                    Response.Status.CONFLICT,
-                    responseData,
-                    "User already exists");
+        if (!CommonManager.isValidRequest(requestJson, USER_REGISTER_REQUEST_TEMPLATE)) {
+            return CommonManager.buildBadRequestResponse();
         }
 
-        LOGGER.info("User successfully registered");
+        user = new User(requestJson);
+        if (UserManager.findUser(user) == null) {
+            return CommonManager.buildBadRequestResponse();
+        }
 
         responseData.put(NICKNAME, user.getNickname())
                 .put(PHONE_NUMBER, user.getTelephone())
                 .put(EMAIL, user.getEmail());
 
-        return CommonManager.buildResponse(
-                Response.Status.OK,
-                responseData,
-                "User successfully registered");
+        LOGGER.info("User successfully registered");
+        return CommonManager.buildOkResponse(responseData, USER_REGISTER_OK);
     }
 
     /**
@@ -78,36 +80,27 @@ public class UserController {
 
         JSONObject responseData = new JSONObject();
         JSONObject requestJson = new JSONObject(data);
+
+        if (!CommonManager.isValidRequest(requestJson, USER_VALIDATE_REQUEST_TEMPLATE)) {
+            return  CommonManager.buildBadRequestResponse();
+        }
         User user = UserManager.findUserByTelephone(requestJson.getString(PHONE_NUMBER));
-
         if (user == null) {
-            return CommonManager.buildResponse(
-                    Response.Status.BAD_REQUEST,
-                    responseData,
-                    "the phone number is not registered");
+            return CommonManager.buildBadRequestResponse();
+        }
+        if (user.getValidationCode() != requestJson.getInt(VALIDATION_CODE)) {
+            return CommonManager.buildBadRequestResponse();
         }
 
-        if (user.getValidationCode() != requestJson.getInt("validation_code")) {
-            return CommonManager.buildResponse(
-                    Response.Status.BAD_REQUEST,
-                    responseData,
-                    "the validation code is not correct");
-        }
-
-        LOGGER.info("User validated");
         String accessKey = CommonManager.generateAccessKey(user);
         UserManager.updateUser(user);
-
-
         responseData.put(ACCESS_KEY, accessKey)
                 .put(NICKNAME, user.getNickname())
                 .put(PHONE_NUMBER, user.getTelephone())
                 .put(EMAIL, user.getEmail());
 
-        return CommonManager.buildResponse(
-                Response.Status.OK,
-                responseData,
-                "User successfully validated");
+        LOGGER.info("User validated");
+        return CommonManager.buildOkResponse(responseData, USER_VALIDATION_OK);
     }
 
     /**

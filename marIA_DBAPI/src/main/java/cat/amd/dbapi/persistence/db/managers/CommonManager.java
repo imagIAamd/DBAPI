@@ -14,6 +14,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.*;
 
+import static cat.amd.dbapi.Constants.BAD_REQUEST;
 import static cat.amd.dbapi.Constants.SECRET_KEY;
 
 public class CommonManager {
@@ -92,23 +93,54 @@ public class CommonManager {
     private static JSONObject buildDefaultResponseBody(String status, String message) {
         JSONObject responseJSON = new JSONObject();
         responseJSON.put("status", status)
-                .put("MESSAGE", message);
+                .put("message", message);
 
         return responseJSON;
     }
 
+    public static Response buildBadRequestResponse() {
+        JSONObject data = new JSONObject();
+        return buildResponse(
+                Response.Status.BAD_REQUEST,
+                data,
+                BAD_REQUEST
+        );
+    }
+
+    public static Response buildOkResponse(JSONObject data, String message) {
+        return buildResponse(
+                Response.Status.OK,
+                data,
+                message
+        );
+    }
+
     public static boolean isValidAuthorization(String authorization) {
-        if (authorization == null) {
-            return true;
+        if (authorization == null || authorization.trim().isEmpty()) {
+            return false;
         }
 
         String[] splitAuthorization = authorization.split(" ");
+        int splitLength = splitAuthorization.length;
 
-        if (splitAuthorization.length <= 1) {
-            return true;
+        if (splitLength != 2 || Objects.equals(splitAuthorization[0], "Bearer")) {
+            return false;
         }
 
-        return !Objects.equals(splitAuthorization[0], "Bearer");
+        try {
+            CommonManager.verifyAccessKey(splitAuthorization[1]);
+        } catch (JWTVerificationException e) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public static boolean isValidRequest(JSONObject request, String[] template) {
+        for (String key : template) {
+            if (!request.has(key)) return false;
+        }
+        return true;
     }
 
 

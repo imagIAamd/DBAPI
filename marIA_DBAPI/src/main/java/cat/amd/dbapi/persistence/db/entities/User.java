@@ -26,7 +26,6 @@ public class User {
 
     /**
      * Empty constructor
-     *
      */
     public User() {
 
@@ -44,9 +43,9 @@ public class User {
     /**
      * Default constructor
      *
-     * @param nickname nickname
+     * @param nickname  nickname
      * @param telephone telephone
-     * @param email email
+     * @param email     email
      */
     public User(String nickname, String telephone, String email) {
         this.nickname = nickname;
@@ -60,10 +59,18 @@ public class User {
      * @param data JSON
      */
     public User(JSONObject data) {
-        this.nickname = data.getString("nickname");
-        this.telephone = data.getString("phone_number");
-        this.email = data.getString("email");
-        this.validationCode = data.getInt("validation_code");
+        if (data.has("nickname")) {
+            this.nickname = data.getString("nickname");
+        }
+        if (data.has("phone_number")) {
+            this.telephone = data.getString("phone_number");
+        }
+        if (data.has("email")) {
+            this.email = data.getString("email");
+        }
+        if (data.has("validation_code")) {
+            this.validationCode = data.getInt("validation_code");
+        }
     }
 
     public Long getId() {
@@ -104,6 +111,10 @@ public class User {
 
     public void setValidationCode(Integer accessKey) {
         this.validationCode = accessKey;
+    }
+
+    public static boolean isValid(User user) {
+        return user.nickname != null && user.validationCode != null && user.telephone != null && user.email != null;
     }
 
     @Override

@@ -9,7 +9,7 @@ import org.hibernate.query.Query;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class  UserManager {
+public class UserManager {
 
     private UserManager() {
 
@@ -42,7 +42,8 @@ public class  UserManager {
             }
 
         } catch (HibernateException e) {
-            if (tx != null) tx.rollback();;
+            if (tx != null) tx.rollback();
+            ;
             LOGGER.error("Error trying to find user with nickname '{}'", nickname, e);
         } finally {
             session.close();
@@ -69,7 +70,8 @@ public class  UserManager {
             user = query.uniqueResult();
 
         } catch (HibernateException e) {
-            if (tx != null) tx.rollback();;
+            if (tx != null) tx.rollback();
+            ;
             LOGGER.error("Error trying to find user with id '{}'", id, e);
         } finally {
             session.close();
@@ -91,7 +93,7 @@ public class  UserManager {
         Transaction tx = null;
         User foundUser;
 
-        try  {
+        try {
             tx = session.beginTransaction();
             Query<User> query = session.createQuery("FROM User WHERE telephone = :telephone", User.class);
             query.setParameter("telephone", telephone);
@@ -100,15 +102,12 @@ public class  UserManager {
             if (foundUser == null) {
                 session.merge(user);
                 tx.commit();
-
-            } else {
-                return null;
-
             }
 
         } catch (HibernateException e) {
             if (tx != null) tx.rollback();
             LOGGER.error("Error finding user", e);
+            return null;
 
         } finally {
             session.close();
@@ -170,10 +169,15 @@ public class  UserManager {
         return exists;
     }
 
+    /**
+     * Updates an existing user
+     *
+     * @param user user to update
+     */
     public static void updateUser(User user) {
         Transaction tx = null;
         Session session = SessionFactoryManager.getSessionFactory().openSession();
-        try  {
+        try {
             tx = session.beginTransaction();
             session.merge(user);
             tx.commit();
@@ -181,13 +185,17 @@ public class  UserManager {
         } catch (HibernateException e) {
             if (tx != null) tx.rollback();
             LOGGER.error("Error updating user", e);
-        }
-
-        finally {
+        } finally {
             session.close();
         }
     }
 
+    /**
+     * Returns an existing administrator user
+     *
+     * @param administrator entity to look for
+     * @return found entity
+     */
     public static Administrator findAdministrator(Administrator administrator) {
         Transaction tx = null;
         Session session = SessionFactoryManager.getSessionFactory().openSession();
