@@ -37,10 +37,6 @@ public class RequestController {
         LOGGER.info("Received insert image request");
 
         if (!CommonManager.isValidAuthorization(authorization)) {
-            return CommonManager.buildBadRequestResponse();
-        }
-
-        if (!CommonManager.isValidAuthorization(authorization)) {
             return CommonManager.buildUnauthorizedResponse();
         }
 

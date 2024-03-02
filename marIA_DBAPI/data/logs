@@ -394,3 +394,208 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'dbapi.response' doesn't exis
 10:52:22.791 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
 Press "Enter" to stop it...
 17:39:12.164 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+18:26:55.591 [main] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 777 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\777\key.sek
+18:28:41.253 [main] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 777 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\777\key.sek
+18:28:45.209 [main] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 777 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\777\key.sek
+18:28:47.319 [main] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 777 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\777\key.sek
+18:28:50.114 [main] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 777 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\777\key.sek
+18:30:30.981 [main] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 777 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\777\key.sek
+18:30:31.134 [main] ERROR c.a.d.p.db.managers.CommonManager - Error decoding base64 string: Input byte array has incorrect ending byte at 52
+18:30:41.024 [main] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 777 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\777\key.sek
+18:30:43.851 [main] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 777 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\777\key.sek
+18:30:46.002 [main] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 777 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\777\key.sek
+18:30:46.155 [main] ERROR c.a.d.p.db.managers.CommonManager - Error decoding base64 string: Input byte array has incorrect ending byte at 52
+18:31:32.600 [main] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 777 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\777\key.sek
+18:31:35.632 [main] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 777 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\777\key.sek
+18:31:38.495 [main] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 777 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\777\key.sek
+18:31:42.190 [main] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 777 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\777\key.sek
+18:31:42.339 [main] ERROR c.a.d.p.db.managers.CommonManager - Error decoding base64 string: Input byte array has incorrect ending byte at 52
+18:38:36.987 [main] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 777 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\777\key.sek
+18:38:37.179 [main] ERROR c.a.d.p.db.managers.CommonManager - Error decoding base64 string: Input byte array has incorrect ending byte at 44
+18:38:41.120 [main] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 777 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\777\key.sek
+18:38:41.292 [main] ERROR c.a.d.p.db.managers.CommonManager - Error decoding base64 string: Input byte array has incorrect ending byte at 44
+18:38:46.290 [main] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 777 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\777\key.sek
+18:38:46.473 [main] ERROR c.a.d.p.db.managers.CommonManager - Error decoding base64 string: Input byte array has incorrect ending byte at 44
+18:38:53.098 [main] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 777 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\777\key.sek
+18:38:53.270 [main] ERROR c.a.d.p.db.managers.CommonManager - Error decoding base64 string: Input byte array has incorrect ending byte at 44
+18:38:57.586 [main] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 777 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\777\key.sek
+18:38:57.766 [main] ERROR c.a.d.p.db.managers.CommonManager - Error decoding base64 string: Input byte array has incorrect ending byte at 44
+18:41:33.367 [main] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 777 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\777\key.sek
+18:41:36.941 [main] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 777 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\777\key.sek
+18:41:42.206 [main] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 777 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\777\key.sek
+18:41:52.524 [main] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 678 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\678\key.sek
+21:35:18.771 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+21:35:18.893 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+21:35:19.298 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+21:35:19.446 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+21:35:19.465 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+21:35:19.466 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+21:35:19.467 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+21:35:19.469 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+21:35:19.473 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+21:35:21.702 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@ad0cdb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+21:35:21.875 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@271140ba] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+21:35:22.738 [cat.amd.dbapi.AppMain.main()] INFO  c.a.d.p.db.managers.ModelManager - New Model created with the name 'llava'
+21:35:22.766 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+21:35:23.339 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+21:35:40.142 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+21:40:48.951 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+21:40:49.009 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+21:40:49.261 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+21:40:49.459 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+21:40:49.470 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+21:40:49.472 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+21:40:49.473 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+21:40:49.481 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+21:40:49.487 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+21:40:50.992 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@453f59a5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+21:40:51.131 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6f07850c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+21:40:51.876 [cat.amd.dbapi.AppMain.main()] INFO  c.a.d.p.db.managers.ModelManager - New Model created with the name 'llava'
+21:40:51.904 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+21:40:52.449 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+21:41:32.559 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+21:41:32.571 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+21:41:32.572 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"jags","phone_number":"688916185","email":"juan@juan"},"message":"User successfully registered","status":"OK"}
+21:41:51.402 [grizzly-http-server-3] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+21:41:51.410 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 2 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\2\key.sek
+21:41:51.438 [grizzly-http-server-3] INFO  c.amd.dbapi.endpoints.UserController - User validated
+21:41:51.438 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk0NTUzMTEsInVzZXJJZCI6MiwiaWF0IjoxNzA5NDEyMTExfQ.csKXaE4Wtp6JsBBKV9_HngBZFYb9Tj99xwPtVWRu92s","nickname":"jags","phone_number":"688916185","email":"juan@juan"},"message":"User successfully validated","status":"OK"}
+21:42:43.574 [grizzly-http-server-2] INFO  c.a.d.endpoints.RequestController - Received insert image request
+21:42:43.574 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Bad Request"}
+21:44:50.207 [grizzly-http-server-1] INFO  c.a.d.endpoints.RequestController - Received insert image request
+21:44:50.208 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Bad Request"}
+21:45:07.523 [grizzly-http-server-5] INFO  c.a.d.endpoints.RequestController - Received insert image request
+21:45:07.524 [grizzly-http-server-5] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Bad Request"}
+21:45:26.120 [grizzly-http-server-4] INFO  c.a.d.endpoints.RequestController - Received insert image request
+21:45:26.121 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Bad Request"}
+21:45:52.409 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+21:46:12.617 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+21:46:12.669 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+21:46:12.900 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+21:46:13.015 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+21:46:13.021 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+21:46:13.021 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+21:46:13.022 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+21:46:13.022 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+21:46:13.024 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+21:46:14.498 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4ca15aa4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+21:46:14.673 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@77c03b4f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+21:46:15.405 [cat.amd.dbapi.AppMain.main()] INFO  c.a.d.p.db.managers.ModelManager - New Model created with the name 'llava'
+21:46:15.428 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+21:46:15.955 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+21:46:20.465 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+21:46:20.477 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+21:46:20.478 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"jags","phone_number":"688916185","email":"juan@juan"},"message":"User successfully registered","status":"OK"}
+21:46:24.915 [grizzly-http-server-1] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+21:46:24.923 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 2 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\2\key.sek
+21:46:24.957 [grizzly-http-server-1] INFO  c.amd.dbapi.endpoints.UserController - User validated
+21:46:24.957 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk0NTU1ODQsInVzZXJJZCI6MiwiaWF0IjoxNzA5NDEyMzg0fQ.gj1_aEGcdeMM7F9E78vxoEVjec4FkydsZleglAlfcHY","nickname":"jags","phone_number":"688916185","email":"juan@juan"},"message":"User successfully validated","status":"OK"}
+21:46:51.141 [grizzly-http-server-2] INFO  c.a.d.endpoints.RequestController - Received insert image request
+21:46:51.141 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Unauthorized"}
+21:47:06.566 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+21:47:57.179 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+21:47:57.233 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+21:47:57.510 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+21:47:57.631 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+21:47:57.636 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+21:47:57.637 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+21:47:57.637 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+21:47:57.637 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+21:47:57.639 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+21:47:59.658 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@453f59a5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+21:47:59.816 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6f07850c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+21:48:00.641 [cat.amd.dbapi.AppMain.main()] INFO  c.a.d.p.db.managers.ModelManager - New Model created with the name 'llava'
+21:48:00.668 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+21:48:01.216 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+21:48:11.256 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+21:48:11.268 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+21:48:11.269 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"jags","phone_number":"688916185","email":"juan@juan"},"message":"User successfully registered","status":"OK"}
+21:48:13.925 [grizzly-http-server-1] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+21:48:13.931 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 2 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\2\key.sek
+21:48:13.958 [grizzly-http-server-1] INFO  c.amd.dbapi.endpoints.UserController - User validated
+21:48:13.958 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk0NTU2OTMsInVzZXJJZCI6MiwiaWF0IjoxNzA5NDEyNDkzfQ.CnnA5mL-qOsK8mr7fFtJUjgI-4V17HXm19W-hx8kqH8","nickname":"jags","phone_number":"688916185","email":"juan@juan"},"message":"User successfully validated","status":"OK"}
+21:48:28.494 [grizzly-http-server-2] INFO  c.a.d.endpoints.RequestController - Received insert image request
+21:48:28.494 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Unauthorized"}
+21:48:55.684 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+21:49:16.187 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+21:49:16.238 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+21:49:16.470 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+21:49:16.583 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+21:49:16.588 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+21:49:16.588 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+21:49:16.589 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+21:49:16.589 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+21:49:16.591 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+21:49:18.067 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@777ef6f8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+21:49:18.206 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@33c87c1c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+21:49:18.957 [cat.amd.dbapi.AppMain.main()] INFO  c.a.d.p.db.managers.ModelManager - New Model created with the name 'llava'
+21:49:18.981 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+21:49:19.471 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+21:49:26.593 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+21:49:26.604 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+21:49:26.606 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"jags","phone_number":"688916185","email":"juan@juan"},"message":"User successfully registered","status":"OK"}
+21:49:28.659 [grizzly-http-server-1] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+21:49:28.667 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 2 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\2\key.sek
+21:49:28.695 [grizzly-http-server-1] INFO  c.amd.dbapi.endpoints.UserController - User validated
+21:49:28.695 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk0NTU3NjgsInVzZXJJZCI6MiwiaWF0IjoxNzA5NDEyNTY4fQ.RVi5VJhXHk1bF1fDBDdbeVxdYumMPtIHHm-z9imVDk8","nickname":"jags","phone_number":"688916185","email":"juan@juan"},"message":"User successfully validated","status":"OK"}
+21:49:30.796 [grizzly-http-server-3] INFO  c.a.d.endpoints.RequestController - Received insert image request
+21:49:30.836 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.CommonManager - Couldn't verify access key
+21:49:30.836 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Unauthorized"}
+21:50:31.578 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+21:50:52.977 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+21:50:53.039 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+21:50:53.310 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+21:50:53.543 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+21:50:53.560 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+21:50:53.560 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+21:50:53.561 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+21:50:53.562 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+21:50:53.566 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+21:50:55.094 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@777ef6f8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+21:50:55.239 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@33c87c1c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+21:50:56.047 [cat.amd.dbapi.AppMain.main()] INFO  c.a.d.p.db.managers.ModelManager - New Model created with the name 'llava'
+21:50:56.072 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+21:50:56.565 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+21:50:57.808 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+21:50:57.818 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+21:50:57.820 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"jags","phone_number":"688916185","email":"juan@juan"},"message":"User successfully registered","status":"OK"}
+21:51:00.284 [grizzly-http-server-2] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+21:51:00.293 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 2 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\2\key.sek
+21:51:00.321 [grizzly-http-server-2] INFO  c.amd.dbapi.endpoints.UserController - User validated
+21:51:00.322 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk0NTU4NjAsInVzZXJJZCI6MiwiaWF0IjoxNzA5NDEyNjYwfQ.JpORiDw6IpUOrxXq2QuLqSYu7xdUuV2u92zHXfSSOzk","nickname":"jags","phone_number":"688916185","email":"juan@juan"},"message":"User successfully validated","status":"OK"}
+21:51:01.990 [grizzly-http-server-1] INFO  c.a.d.endpoints.RequestController - Received insert image request
+21:51:02.024 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Unauthorized"}
+21:51:05.502 [grizzly-http-server-3] INFO  c.a.d.endpoints.RequestController - Received insert image request
+21:51:05.508 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Unauthorized"}
+21:51:51.836 [grizzly-http-server-4] INFO  c.a.d.endpoints.RequestController - Received insert image request
+21:51:51.852 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+21:51:51.888 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'jags'
+21:52:44.088 [grizzly-http-server-5] INFO  c.a.d.endpoints.RequestController - Received insert image request
+21:52:44.103 [grizzly-http-server-5] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+21:52:44.118 [grizzly-http-server-5] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'jags'
+21:53:27.780 [grizzly-http-server-6] INFO  c.a.d.endpoints.RequestController - Received insert image request
+21:53:27.796 [grizzly-http-server-6] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+21:53:27.802 [grizzly-http-server-6] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'jags'
+21:53:42.005 [grizzly-http-server-11] INFO  c.a.d.endpoints.RequestController - Received insert image request
+21:53:42.031 [grizzly-http-server-11] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+21:53:42.039 [grizzly-http-server-11] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'jags'
+21:54:10.238 [grizzly-http-server-9] INFO  c.a.d.endpoints.RequestController - Received insert image request
+21:54:10.255 [grizzly-http-server-9] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+21:54:10.262 [grizzly-http-server-9] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'jags'
+21:54:10.279 [grizzly-http-server-9] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '5'
+21:54:10.279 [grizzly-http-server-9] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+21:54:10.279 [grizzly-http-server-9] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":5},"message":"Request successfully inserted","status":"OK"}
+21:54:36.348 [grizzly-http-server-10] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+21:54:36.355 [grizzly-http-server-10] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+21:54:36.355 [grizzly-http-server-10] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"kilpepo","phone_number":"688916195","email":"juan@juan"},"message":"User successfully registered","status":"OK"}
+21:54:43.084 [grizzly-http-server-8] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+21:54:43.089 [grizzly-http-server-8] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 3 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\3\key.sek
+21:54:43.097 [grizzly-http-server-8] INFO  c.amd.dbapi.endpoints.UserController - User validated
+21:54:43.097 [grizzly-http-server-8] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk0NTYwODMsInVzZXJJZCI6MywiaWF0IjoxNzA5NDEyODgzfQ.G9GFfDxcqpGFMH6tKKiYMO9eAi9VEarguM2In22M8VI","nickname":"kilpepo","phone_number":"688916195","email":"juan@juan"},"message":"User successfully validated","status":"OK"}
+21:55:19.863 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]

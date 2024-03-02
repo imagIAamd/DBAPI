@@ -12,10 +12,15 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
+import java.security.SecureRandom;
 import java.util.*;
 
-import static cat.amd.dbapi.Constants.BAD_REQUEST;
-import static cat.amd.dbapi.Constants.SECRET_KEY;
+import static cat.amd.dbapi.Constants.*;
 
 public class CommonManager {
 
@@ -32,19 +37,117 @@ public class CommonManager {
      * @return access key
      */
     public static String generateAccessKey(User user) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.HOUR, 12);
-
         Date currentDate = new Date();
-        Date expirationDate = calendar.getTime();
+        Date expirationDate = calculateExpirationDate();
+        String secretKey = generateSecretKey();
 
-        Algorithm algorithm = Algorithm.HMAC256(SECRET_KEY);
+        storeSecretKey(user, secretKey);
+        System.out.println(secretKey.toString());
+        Algorithm algorithm = Algorithm.HMAC256(secretKey);
 
         return JWT.create()
                 .withClaim("userId", user.getId())
                 .withIssuedAt(currentDate)
                 .withExpiresAt(expirationDate)
                 .sign(algorithm);
+    }
+
+    /**
+     * Generates a secret key
+     *
+     * @return generated secret key
+     */
+    private static String generateSecretKey() {
+        SecureRandom secureRandom = new SecureRandom();
+        byte[] secretBytes = new byte[SECRET_KEY_LENGTH];
+        secureRandom.nextBytes(secretBytes);
+
+        return Base64.getUrlEncoder().withoutPadding().encodeToString(secretBytes);
+    }
+
+    /**
+     * Encode the given data to Base64
+     *
+     * @param data data to encode
+     * @return encoded data
+     */
+    private static String encodeToBase64(String data) {
+        try {
+            byte[] bytes = data.getBytes(StandardCharsets.UTF_8);
+            return Base64.getEncoder().encodeToString(bytes);
+        } catch (Exception e) {
+            LOGGER.error("Error encoding to base64: {}", e.getMessage());
+            return null;
+        }
+    }
+
+    /**
+     * Decodes the given data from Base64
+     *
+     * @param input data to decode
+     * @return decoded data
+     */
+    private static String decodeFromBase64(String input) {
+        try {
+            StringBuilder trimmedInput = new StringBuilder(input.trim());
+
+            while (trimmedInput.length() % 4 != 0) {
+                trimmedInput.append("=");
+            }
+
+            byte[] decodedBytes = Base64.getDecoder().decode(trimmedInput.toString());
+            return new String(decodedBytes);
+
+        } catch (IllegalArgumentException e) {
+            LOGGER.error("Error decoding base64 string: {}", e.getMessage());
+            return null;
+        }
+    }
+
+    private static String decodeFromBase64URL(String input) {
+        return new String(Base64.getUrlDecoder().decode(input));
+    }
+
+    /**
+     * Stores the user related secret key into a file
+     *
+     * @param user user related to the key
+     * @param key key to store
+     */
+    private static void storeSecretKey(User user, String key) {
+        String outputFilePath = SECRET_OUTPUT_PATH.replace("USER", user.getId().toString());
+        String encodedKey = encodeToBase64(key);
+
+        Path keyPath = Path.of(outputFilePath);
+
+        try {
+            Files.createDirectories(keyPath.getParent());
+            Files.write(keyPath, encodedKey.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.WRITE);
+            LOGGER.info("Secret key for user {} stored at: {}", user.getId(), keyPath.toAbsolutePath());
+        } catch (IOException e) {
+            LOGGER.error("Error storing secret key for user " + user.getId(), e);
+        }
+    }
+
+    /**
+     * Retrieves the given user secret key from a file
+     *
+     * @param user user to get the key of
+     * @return retrieved key
+     */
+    public static String retrieveSecretKey(User user) {
+        String inputFilePath = SECRET_OUTPUT_PATH.replace("USER", user.getId().toString());
+        Path keyPath = Path.of(inputFilePath);
+
+        try {
+            byte[] encodedKeyBytes = Files.readAllBytes(keyPath);
+            String encodedKey = new String(encodedKeyBytes);
+
+            return decodeFromBase64URL(encodedKey);
+        } catch (IOException e) {
+            LOGGER.error("Error retrieving secret key for user " + user.getId(), e);
+            return null;
+        }
     }
 
     /**
@@ -55,7 +158,16 @@ public class CommonManager {
      * @throws JWTVerificationException if not valid throws exception
      */
     public static DecodedJWT verifyAccessKey(String accessKey) throws JWTVerificationException {
-        Algorithm algorithm = Algorithm.HMAC256(SECRET_KEY);
+        DecodedJWT decodedJWT = JWT.decode(accessKey);
+        User user = UserManager.findUser(decodedJWT.getClaim("userId").asLong());
+        String secretKey = retrieveSecretKey(user);
+
+        if (secretKey == null) {
+            LOGGER.info("No secret key for user with id {}", user.getId());
+            throw new JWTVerificationException("");
+        }
+
+        Algorithm algorithm = Algorithm.HMAC256(secretKey);
         JWTVerifier verifier = JWT.require(algorithm)
                 .build();
 
@@ -153,7 +265,7 @@ public class CommonManager {
         String[] splitAuthorization = authorization.split(" ");
         int splitLength = splitAuthorization.length;
 
-        if (splitLength != 2 || Objects.equals(splitAuthorization[0], "Bearer")) {
+        if (splitLength != 2 || !Objects.equals(splitAuthorization[0], "Bearer")) {
             return false;
         }
 
@@ -180,5 +292,15 @@ public class CommonManager {
         return true;
     }
 
+    /**
+     * Returns the calculated expiration date
+     *
+     * @return expiration date
+     */
+    private static Date calculateExpirationDate() {
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.HOUR, 12);
+        return calendar.getTime();
+    }
 
 }

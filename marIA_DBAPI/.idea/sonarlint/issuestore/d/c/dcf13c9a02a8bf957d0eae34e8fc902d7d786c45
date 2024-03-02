@@ -1,5 +1,8 @@
 
-X
-java:S6437)"6Revoke and change this password, as it is compromised.( ‹˜øÿÿÿÿ8¸úøóß1
-X
-java:S6437:"6Revoke and change this password, as it is compromised.( ‹˜øÿÿÿÿ8ºúøóß1
+d
+java:S2259}"HA "NullPointerException" could be thrown; "encodedKey" is nullable here.(ŒÏ¦[8­Š»‡à1
+G	java:S106-"+Replace this use of System.out by a logger.(š†Í©8²Š»‡à1
+i
+java:S1858-"L"secretKey" is already a string, there's no need to call "toString()" on it.(š†Í©8²Š»‡à1
+R
+java:S1144Z"5Remove this unused private "decodeFromBase64" method.(¹”¨”8ÅŠ»‡à1

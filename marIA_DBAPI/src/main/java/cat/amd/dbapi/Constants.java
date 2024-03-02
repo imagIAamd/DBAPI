@@ -25,4 +25,8 @@ public class Constants {
     public static final String REQUEST_INSERT_OK = "Request successfully inserted";
     public static final String RESPONSE_INSERT_OK = "Request successfully inserted";
 
+    public static final String SECRET_OUTPUT_PATH = "~/secret/USER/key.sek";
+
+    public static final int SECRET_KEY_LENGTH = 64;
+
 }
