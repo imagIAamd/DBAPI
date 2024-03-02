@@ -41,7 +41,7 @@ public class RequestController {
         }
 
         if (!CommonManager.isValidAuthorization(authorization)) {
-            return CommonManager.buildBadRequestResponse();
+            return CommonManager.buildUnauthorizedResponse();
         }
 
         if (!CommonManager.isValidRequest(requestJson, REQUEST_INSERT__REQUEST_TEMPLATE)) {

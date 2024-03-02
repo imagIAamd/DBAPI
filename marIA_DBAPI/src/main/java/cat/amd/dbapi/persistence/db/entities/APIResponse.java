@@ -4,7 +4,7 @@ import cat.amd.dbapi.persistence.db.managers.RequestManager;
 import jakarta.persistence.*;
 import org.json.JSONObject;
 
-@Entity
+@Entity(name = "Response")
 public class APIResponse {
 
     @Id

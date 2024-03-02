@@ -12,10 +12,16 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static cat.amd.dbapi.Constants.*;
+
 @Path("/response")
 public class ResponseController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ResponseController.class);
+    private static final String[] RESPONSE_INSERT_REQUEST_TEMPLATE = new String[] {
+            REQUEST_ID,
+            TEXT
+    };
 
     @POST
     @Path("/insert")
@@ -25,48 +31,23 @@ public class ResponseController {
         APIResponse response;
         JSONObject responseData = new JSONObject();
 
-        LOGGER.info("Received insert response request with authorization : " + authorization);
+        LOGGER.info("Received insert response request with authorization : {}", authorization);
 
-        if (CommonManager.isValidAuthorization(authorization)) {
-            LOGGER.info("Invalid access_key");
-            return CommonManager.buildResponse(
-                    Response.Status.BAD_REQUEST,
-                    responseData,
-                    "bad request");
-        }
-
-        String[] splitAuthorization = authorization.split(" ");
-        try {
-            CommonManager.verifyAccessKey(splitAuthorization[1]);
-
-        } catch (JWTVerificationException e) {
-            LOGGER.error("ERROR trying to verify received access_key");
-            return CommonManager.buildResponse(
-                    Response.Status.UNAUTHORIZED,
-                    responseData,
-                    "unauthorized");
+        if (!CommonManager.isValidAuthorization(authorization)) {
+            return CommonManager.buildUnauthorizedResponse();
         }
 
         JSONObject requestJson = new JSONObject(data);
         response = new APIResponse(requestJson);
 
-        try {
-            response = ResponseManager.findResponse(response);
-        } catch (Exception e) {
-            LOGGER.error("An error happened while processing request", e);
-            return CommonManager.buildResponse(
-                    Response.Status.BAD_REQUEST,
-                    responseData,
-                    "ERROR");
+        if (!CommonManager.isValidRequest(requestJson, RESPONSE_INSERT_REQUEST_TEMPLATE)) {
+            return CommonManager.buildBadRequestResponse();
         }
 
-        LOGGER.info("request successfully inserted");
+        response = ResponseManager.findResponse(response);
+        LOGGER.info(RESPONSE_INSERT_OK);
         responseData.put("id", response.getId())
                 .put("request_id", response.getRequest().getId());
-        return CommonManager.buildResponse(
-                Response.Status.OK,
-                responseData,
-                "response successfully registered"
-        );
+        return CommonManager.buildOkResponse(responseData, RESPONSE_INSERT_OK);
     }
 }

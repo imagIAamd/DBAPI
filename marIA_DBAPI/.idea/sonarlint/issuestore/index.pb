@@ -34,3 +34,7 @@ Z
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+9
+	data/logs,9\0\900dc74957aab3278d9aeff6f62c60dae7726c1a
+x
+Hsrc/main/java/cat/amd/dbapi/persistence/db/managers/ResponseManager.java,2\7\277029aec9657cb9cb3406b340714b2c347152f4

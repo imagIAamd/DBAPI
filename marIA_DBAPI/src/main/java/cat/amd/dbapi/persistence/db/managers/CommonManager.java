@@ -98,6 +98,11 @@ public class CommonManager {
         return responseJSON;
     }
 
+    /**
+     * Returns a bad request response
+     *
+     * @return response
+     */
     public static Response buildBadRequestResponse() {
         JSONObject data = new JSONObject();
         return buildResponse(
@@ -107,6 +112,25 @@ public class CommonManager {
         );
     }
 
+    /**
+     * Returns an unauthorized response
+     *
+     * @return response
+     */
+    public static Response buildUnauthorizedResponse() {
+        JSONObject data = new JSONObject();
+        return buildResponse(
+                Response.Status.UNAUTHORIZED,
+                data,
+                BAD_REQUEST
+        );
+    }
+
+    /**
+     * Returns an OK response with custom data and message
+     *
+     * @return response
+     */
     public static Response buildOkResponse(JSONObject data, String message) {
         return buildResponse(
                 Response.Status.OK,
@@ -115,6 +139,12 @@ public class CommonManager {
         );
     }
 
+    /**
+     * Returns true if the given authorization string is valid
+     *
+     * @param authorization authorization string
+     * @return true if valid
+     */
     public static boolean isValidAuthorization(String authorization) {
         if (authorization == null || authorization.trim().isEmpty()) {
             return false;
@@ -136,6 +166,13 @@ public class CommonManager {
         return true;
     }
 
+    /**
+     * Returns true if the given JSONObject request contains the given template parameters
+     *
+     * @param request request to validate
+     * @param template template to validate from
+     * @return true if valid
+     */
     public static boolean isValidRequest(JSONObject request, String[] template) {
         for (String key : template) {
             if (!request.has(key)) return false;
