@@ -37,10 +37,12 @@ public class RequestController {
         LOGGER.info("Received insert image request");
 
         if (!CommonManager.isValidAuthorization(authorization)) {
+            LOGGER.warn("Unable to verify received authorization");
             return CommonManager.buildUnauthorizedResponse();
         }
 
         if (!CommonManager.isValidRequest(requestJson, REQUEST_INSERT__REQUEST_TEMPLATE)) {
+            LOGGER.warn("Unable to validate received request");
             return CommonManager.buildBadRequestResponse();
         }
 
@@ -54,6 +56,7 @@ public class RequestController {
         boolean inserted = request != null;
 
         if (!inserted) {
+            LOGGER.warn("Unable to insert received request");
             return CommonManager.buildBadRequestResponse();
         }
         RequestManager.storeRequestImages(requestJson.getJSONArray("images"), request);
