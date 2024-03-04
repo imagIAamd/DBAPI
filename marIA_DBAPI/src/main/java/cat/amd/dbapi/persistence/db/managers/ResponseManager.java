@@ -30,7 +30,7 @@ public class ResponseManager {
 
         try {
             tx = session.beginTransaction();
-            Query<APIResponse> query = session.createQuery("FROM APIResponse WHERE request = :request", APIResponse.class);
+            Query<APIResponse> query = session.createQuery("FROM Response WHERE request = :request", APIResponse.class);
             query.setParameter("request", apiResponse.getRequest());
             foundAPIResponse = query.uniqueResult();
 
