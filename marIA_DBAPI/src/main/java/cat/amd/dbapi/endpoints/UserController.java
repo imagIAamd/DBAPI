@@ -57,6 +57,7 @@ public class UserController {
         if (UserManager.findUser(user) == null) {
             return CommonManager.buildBadRequestResponse();
         }
+        UserManager.updateUser(user);
 
         responseData.put(NICKNAME, user.getNickname())
                 .put(PHONE_NUMBER, user.getTelephone())
