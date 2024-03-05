@@ -9,6 +9,9 @@ import org.hibernate.query.Query;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static cat.amd.dbapi.Constants.EMAIL;
+import static cat.amd.dbapi.Constants.PASSWORD;
+
 public class UserManager {
 
     private UserManager() {
@@ -223,6 +226,29 @@ public class UserManager {
         }
 
         return administrator;
+    }
+
+    public static User findUser(String email, String password) {
+        Session session = SessionFactoryManager.getSessionFactory().openSession();
+        Transaction tx = null;
+        User user = null;
+
+        try {
+            tx = session.beginTransaction();
+            Query<User> query = session.createQuery("FROM User " +
+                    "WHERE email = :email AND password = :password", User.class);
+            query.setParameter(EMAIL, email);
+            query.setParameter(PASSWORD, password);
+            user = query.uniqueResult();
+
+        } catch (HibernateException e) {
+            if (tx != null) tx.rollback();
+            LOGGER.error("Error trying to find user with email '{}'", email);
+        } finally {
+            session.close();
+        }
+
+        return user;
     }
 
 

@@ -6,6 +6,8 @@ import org.json.JSONObject;
 
 import java.util.Set;
 
+import static cat.amd.dbapi.Constants.*;
+
 @Entity
 public class User {
 
@@ -32,6 +34,9 @@ public class User {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
+
+    @Column(name = "password")
+    private String password;
 
     /**
      * Empty constructor
@@ -62,23 +67,33 @@ public class User {
         this.email = email;
     }
 
+    public User(String nickname, String telephone, String email, String password) {
+        this.nickname = nickname;
+        this.telephone = telephone;
+        this.email = email;
+        this.password = password;
+    }
+
     /**
      * Constructor from JSON
      *
      * @param data JSON
      */
     public User(JSONObject data) {
-        if (data.has("nickname")) {
-            this.nickname = data.getString("nickname");
+        if (data.has(NICKNAME)) {
+            this.nickname = data.getString(NICKNAME);
         }
-        if (data.has("phone_number")) {
-            this.telephone = data.getString("phone_number");
+        if (data.has(PHONE_NUMBER)) {
+            this.telephone = data.getString(PHONE_NUMBER);
         }
-        if (data.has("email")) {
-            this.email = data.getString("email");
+        if (data.has(EMAIL)) {
+            this.email = data.getString(EMAIL);
         }
-        if (data.has("validation_code")) {
-            this.validationCode = data.getInt("validation_code");
+        if (data.has(VALIDATION_CODE)) {
+            this.validationCode = data.getInt(VALIDATION_CODE);
+        }
+        if (data.has(PASSWORD)) {
+            this.password = data.getString(PASSWORD);
         }
     }
 
@@ -132,6 +147,14 @@ public class User {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override

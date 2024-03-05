@@ -30,6 +30,10 @@ public class UserController {
             PHONE_NUMBER,
             VALIDATION_CODE
     };
+    private static final String[] USER_LOGIN_TEMPLATE = new String[]{
+            EMAIL,
+            PASSWORD
+    };
 
     /**
      * Endpoint for user registration
@@ -163,22 +167,19 @@ public class UserController {
     public Response userLogin(String data) {
         JSONObject requestJson = new JSONObject(data);
         JSONObject responseData = new JSONObject();
-        Administrator administrator = new Administrator(requestJson);
 
-        if (UserManager.findAdministrator(administrator) == null) {
-            return CommonManager.buildResponse(
-                    Response.Status.UNAUTHORIZED,
-                    responseData,
-                    "bad credentials"
-            );
+        if (!CommonManager.isValidRequest(requestJson, USER_LOGIN_TEMPLATE)) {
+            return CommonManager.buildBadRequestResponse();
+        }
+        String email = requestJson.getString(EMAIL);
+        String password = requestJson.getString(PASSWORD);
+        User user = UserManager.findUser(email, password);
+        if (user == null) {
+            return CommonManager.buildUnauthorizedResponse();
         }
 
-        String accessKey = "WIP";
+        String accessKey = CommonManager.generateAccessKey(user);
         responseData.put("access_key", accessKey);
-        return CommonManager.buildResponse(
-                Response.Status.OK,
-                responseData,
-                "congratulations!"
-        );
+        return CommonManager.buildOkResponse(responseData, "Congratulations!");
     }
 }

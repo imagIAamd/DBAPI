@@ -31,6 +31,9 @@ public class AppMain {
         RoleManager.findRole(administrator);
         RoleManager.findRole(premium);
         RoleManager.findRole(free);
+
+        User admin = new User("admin", "-0", "admin@admin", "56Ur,)23Avc.");
+        UserManager.findUser(admin);
     }
 
     /**
