@@ -53,6 +53,7 @@ public class UserController {
         }
 
         user = new User(requestJson);
+        LOGGER.info("Received SMS code: {}", requestJson.get(VALIDATION_CODE));
         if (UserManager.findUser(user) == null) {
             return CommonManager.buildBadRequestResponse();
         }

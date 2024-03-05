@@ -16,17 +16,15 @@ public class Constants {
     public static final String REQUEST_ID = "request_id";
     public static final String TEXT = "text";
 
-    public static final String SECRET_KEY = "VOmT7CXcHNb6vM7wwMJwwQ==";
-
     public static final String BAD_REQUEST = "Bad request";
-
     public static final String USER_REGISTER_OK = "User successfully registered";
     public static final String USER_VALIDATION_OK = "User successfully validated";
     public static final String REQUEST_INSERT_OK = "Request successfully inserted";
     public static final String RESPONSE_INSERT_OK = "Request successfully inserted";
 
     public static final String SECRET_OUTPUT_PATH = "~/secret/USER/key.sek";
+    public static final int SECRET_KEY_LENGTH = 256;
 
-    public static final int SECRET_KEY_LENGTH = 64;
+    public static final String ROLE_ADMINISTRATOR_NAME = "Administrator";
 
 }

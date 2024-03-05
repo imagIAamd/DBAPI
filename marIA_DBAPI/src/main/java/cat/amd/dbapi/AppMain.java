@@ -1,7 +1,9 @@
 package cat.amd.dbapi;
 
+import cat.amd.dbapi.persistence.db.entities.Role;
 import cat.amd.dbapi.persistence.db.entities.User;
 import cat.amd.dbapi.persistence.db.managers.ModelManager;
+import cat.amd.dbapi.persistence.db.managers.RoleManager;
 import cat.amd.dbapi.persistence.db.managers.SessionFactoryManager;
 import cat.amd.dbapi.persistence.db.managers.UserManager;
 import org.apache.commons.cli.*;
@@ -22,13 +24,13 @@ public class AppMain {
      * Sets up and runs hibernate
      */
     public static void runHibernate() {
-        User defaultUser = new User();
-        defaultUser.setNickname("admin");
-        defaultUser.setTelephone("000000001");
-        defaultUser.setEmail("admin@localhost.net");
-        
-        ModelManager.findModelByName("llava");
-        UserManager.findUser(defaultUser);
+        Role administrator = new Role("Administrator", "For administrators");
+        Role premium = new Role("Premium user", "For paid users");
+        Role free = new Role("Free user", "For free users");
+
+        RoleManager.findRole(administrator);
+        RoleManager.findRole(premium);
+        RoleManager.findRole(free);
     }
 
     /**

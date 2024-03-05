@@ -4,6 +4,8 @@ package cat.amd.dbapi.persistence.db.entities;
 import jakarta.persistence.*;
 import org.json.JSONObject;
 
+import java.util.Set;
+
 @Entity
 public class User {
 
@@ -23,6 +25,13 @@ public class User {
 
     @Column(name = "validation_code")
     private Integer validationCode;
+
+    @ManyToMany
+    @JoinTable(
+            name = "User_Role",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles;
 
     /**
      * Empty constructor
@@ -115,6 +124,14 @@ public class User {
 
     public static boolean isValid(User user) {
         return user.nickname != null && user.validationCode != null && user.telephone != null && user.email != null;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 
     @Override

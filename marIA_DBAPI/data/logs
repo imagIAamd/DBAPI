@@ -599,3 +599,418 @@ Press "Enter" to stop it...
 21:54:43.097 [grizzly-http-server-8] INFO  c.amd.dbapi.endpoints.UserController - User validated
 21:54:43.097 [grizzly-http-server-8] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk0NTYwODMsInVzZXJJZCI6MywiaWF0IjoxNzA5NDEyODgzfQ.G9GFfDxcqpGFMH6tKKiYMO9eAi9VEarguM2In22M8VI","nickname":"kilpepo","phone_number":"688916195","email":"juan@juan"},"message":"User successfully validated","status":"OK"}
 21:55:19.863 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+15:30:39.498 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+15:30:39.560 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+15:30:39.812 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+15:30:39.919 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+15:30:39.927 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+15:30:39.927 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+15:30:39.927 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+15:30:39.928 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+15:30:39.930 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+15:30:41.355 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@55f2f72f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+15:30:41.372 [cat.amd.dbapi.AppMain.main()] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "alter table Administrator drop foreign key FK8hau117bg0amv9oi6hfvauptc" via JDBC [Table 'dbapi.Administrator' doesn't exist]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table Administrator drop foreign key FK8hau117bg0amv9oi6hfvauptc" via JDBC [Table 'dbapi.Administrator' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:470)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:244)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at cat.amd.dbapi.persistence.db.managers.SessionFactoryManager.<clinit>(SessionFactoryManager.java:26)
+	at cat.amd.dbapi.persistence.db.managers.ModelManager.findModelByName(ModelManager.java:26)
+	at cat.amd.dbapi.AppMain.runHibernate(AppMain.java:30)
+	at cat.amd.dbapi.AppMain.main(AppMain.java:75)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'dbapi.Administrator' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 24 common frames omitted
+15:30:41.413 [cat.amd.dbapi.AppMain.main()] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "alter table Response drop foreign key FKeph3hdgtvn37dync7y7r5qc1a" via JDBC [Table 'dbapi.Response' doesn't exist]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table Response drop foreign key FKeph3hdgtvn37dync7y7r5qc1a" via JDBC [Table 'dbapi.Response' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:470)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:244)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at cat.amd.dbapi.persistence.db.managers.SessionFactoryManager.<clinit>(SessionFactoryManager.java:26)
+	at cat.amd.dbapi.persistence.db.managers.ModelManager.findModelByName(ModelManager.java:26)
+	at cat.amd.dbapi.AppMain.runHibernate(AppMain.java:30)
+	at cat.amd.dbapi.AppMain.main(AppMain.java:75)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'dbapi.Response' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 24 common frames omitted
+15:30:41.416 [cat.amd.dbapi.AppMain.main()] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "alter table user_role drop foreign key FK7ir6hi5jr98lclgjgbyxafneu" via JDBC [Table 'dbapi.user_role' doesn't exist]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table user_role drop foreign key FK7ir6hi5jr98lclgjgbyxafneu" via JDBC [Table 'dbapi.user_role' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:470)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:244)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at cat.amd.dbapi.persistence.db.managers.SessionFactoryManager.<clinit>(SessionFactoryManager.java:26)
+	at cat.amd.dbapi.persistence.db.managers.ModelManager.findModelByName(ModelManager.java:26)
+	at cat.amd.dbapi.AppMain.runHibernate(AppMain.java:30)
+	at cat.amd.dbapi.AppMain.main(AppMain.java:75)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'dbapi.user_role' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 24 common frames omitted
+15:30:41.420 [cat.amd.dbapi.AppMain.main()] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "alter table user_role drop foreign key FKcnrjdc801vcdj8n017nlriv61" via JDBC [Table 'dbapi.user_role' doesn't exist]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table user_role drop foreign key FKcnrjdc801vcdj8n017nlriv61" via JDBC [Table 'dbapi.user_role' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:470)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:244)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at cat.amd.dbapi.persistence.db.managers.SessionFactoryManager.<clinit>(SessionFactoryManager.java:26)
+	at cat.amd.dbapi.persistence.db.managers.ModelManager.findModelByName(ModelManager.java:26)
+	at cat.amd.dbapi.AppMain.runHibernate(AppMain.java:30)
+	at cat.amd.dbapi.AppMain.main(AppMain.java:75)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'dbapi.user_role' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 24 common frames omitted
+15:30:41.469 [cat.amd.dbapi.AppMain.main()] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "drop table if exists Request" via JDBC [Cannot drop table 'Request' referenced by a foreign key constraint 'FKr3aals17fdiwlnqvco9ggi14b' on table 'APIResponse'.]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "drop table if exists Request" via JDBC [Cannot drop table 'Request' referenced by a foreign key constraint 'FKr3aals17fdiwlnqvco9ggi14b' on table 'APIResponse'.]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropTables(SchemaDropperImpl.java:377)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:253)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:244)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at cat.amd.dbapi.persistence.db.managers.SessionFactoryManager.<clinit>(SessionFactoryManager.java:26)
+	at cat.amd.dbapi.persistence.db.managers.ModelManager.findModelByName(ModelManager.java:26)
+	at cat.amd.dbapi.AppMain.runHibernate(AppMain.java:30)
+	at cat.amd.dbapi.AppMain.main(AppMain.java:75)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLException: Cannot drop table 'Request' referenced by a foreign key constraint 'FKr3aals17fdiwlnqvco9ggi14b' on table 'APIResponse'.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 24 common frames omitted
+15:30:41.524 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@60cbf3a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+15:30:41.567 [cat.amd.dbapi.AppMain.main()] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "create table Request (model_id bigint, request_id bigint not null, user_id bigint, image varchar(2083), prompt varchar(255) not null, request_date varchar(255), primary key (request_id)) engine=InnoDB" via JDBC [Table 'Request' already exists]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table Request (model_id bigint, request_id bigint not null, user_id bigint, image varchar(2083), prompt varchar(255) not null, request_date varchar(255), primary key (request_id)) engine=InnoDB" via JDBC [Table 'Request' already exists]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createTables(SchemaCreatorImpl.java:420)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createSequencesTablesConstraints(SchemaCreatorImpl.java:340)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:239)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:172)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:142)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:118)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:256)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at cat.amd.dbapi.persistence.db.managers.SessionFactoryManager.<clinit>(SessionFactoryManager.java:26)
+	at cat.amd.dbapi.persistence.db.managers.ModelManager.findModelByName(ModelManager.java:26)
+	at cat.amd.dbapi.AppMain.runHibernate(AppMain.java:30)
+	at cat.amd.dbapi.AppMain.main(AppMain.java:75)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'Request' already exists
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 24 common frames omitted
+15:30:41.848 [cat.amd.dbapi.AppMain.main()] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "alter table Request add constraint FKkqkuycu6nqxtf9newuf2bhe6a foreign key (model_id) references Model (model_id)" via JDBC [Cannot add or update a child row: a foreign key constraint fails (`dbapi`.`#sql-3c6_a`, CONSTRAINT `FKkqkuycu6nqxtf9newuf2bhe6a` FOREIGN KEY (`model_id`) REFERENCES `Model` (`model_id`))]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table Request add constraint FKkqkuycu6nqxtf9newuf2bhe6a foreign key (model_id) references Model (model_id)" via JDBC [Cannot add or update a child row: a foreign key constraint fails (`dbapi`.`#sql-3c6_a`, CONSTRAINT `FKkqkuycu6nqxtf9newuf2bhe6a` FOREIGN KEY (`model_id`) REFERENCES `Model` (`model_id`))]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createForeignKeys(SchemaCreatorImpl.java:303)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:250)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:172)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:142)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:118)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:256)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at cat.amd.dbapi.persistence.db.managers.SessionFactoryManager.<clinit>(SessionFactoryManager.java:26)
+	at cat.amd.dbapi.persistence.db.managers.ModelManager.findModelByName(ModelManager.java:26)
+	at cat.amd.dbapi.AppMain.runHibernate(AppMain.java:30)
+	at cat.amd.dbapi.AppMain.main(AppMain.java:75)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`dbapi`.`#sql-3c6_a`, CONSTRAINT `FKkqkuycu6nqxtf9newuf2bhe6a` FOREIGN KEY (`model_id`) REFERENCES `Model` (`model_id`))
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 23 common frames omitted
+15:30:41.880 [cat.amd.dbapi.AppMain.main()] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "alter table Request add constraint FKgl490g7646oyowsncniikpbmf foreign key (user_id) references User (user_id)" via JDBC [Cannot add or update a child row: a foreign key constraint fails (`dbapi`.`#sql-3c6_a`, CONSTRAINT `FKgl490g7646oyowsncniikpbmf` FOREIGN KEY (`user_id`) REFERENCES `User` (`user_id`))]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table Request add constraint FKgl490g7646oyowsncniikpbmf foreign key (user_id) references User (user_id)" via JDBC [Cannot add or update a child row: a foreign key constraint fails (`dbapi`.`#sql-3c6_a`, CONSTRAINT `FKgl490g7646oyowsncniikpbmf` FOREIGN KEY (`user_id`) REFERENCES `User` (`user_id`))]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createForeignKeys(SchemaCreatorImpl.java:303)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:250)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:172)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:142)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:118)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:256)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at cat.amd.dbapi.persistence.db.managers.SessionFactoryManager.<clinit>(SessionFactoryManager.java:26)
+	at cat.amd.dbapi.persistence.db.managers.ModelManager.findModelByName(ModelManager.java:26)
+	at cat.amd.dbapi.AppMain.runHibernate(AppMain.java:30)
+	at cat.amd.dbapi.AppMain.main(AppMain.java:75)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`dbapi`.`#sql-3c6_a`, CONSTRAINT `FKgl490g7646oyowsncniikpbmf` FOREIGN KEY (`user_id`) REFERENCES `User` (`user_id`))
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 23 common frames omitted
+15:30:42.272 [cat.amd.dbapi.AppMain.main()] INFO  c.a.d.p.db.managers.ModelManager - New Model created with the name 'llava'
+15:30:42.291 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+15:30:42.765 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+15:31:19.617 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+15:31:39.355 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+15:31:39.392 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+15:31:39.601 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+15:31:39.679 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+15:31:39.684 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+15:31:39.684 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+15:31:39.685 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+15:31:39.685 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+15:31:39.687 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+15:31:41.023 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1a081e2a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+15:31:41.176 [cat.amd.dbapi.AppMain.main()] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "alter table Request add constraint FKgl490g7646oyowsncniikpbmf foreign key (user_id) references User (user_id)" via JDBC [Cannot add or update a child row: a foreign key constraint fails (`dbapi`.`#sql-3c6_b`, CONSTRAINT `FKgl490g7646oyowsncniikpbmf` FOREIGN KEY (`user_id`) REFERENCES `User` (`user_id`))]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table Request add constraint FKgl490g7646oyowsncniikpbmf foreign key (user_id) references User (user_id)" via JDBC [Cannot add or update a child row: a foreign key constraint fails (`dbapi`.`#sql-3c6_b`, CONSTRAINT `FKgl490g7646oyowsncniikpbmf` FOREIGN KEY (`user_id`) REFERENCES `User` (`user_id`))]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:574)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:514)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applyForeignKeys(AbstractSchemaMigrator.java:446)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:268)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at cat.amd.dbapi.persistence.db.managers.SessionFactoryManager.<clinit>(SessionFactoryManager.java:26)
+	at cat.amd.dbapi.persistence.db.managers.ModelManager.findModelByName(ModelManager.java:26)
+	at cat.amd.dbapi.AppMain.runHibernate(AppMain.java:30)
+	at cat.amd.dbapi.AppMain.main(AppMain.java:75)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`dbapi`.`#sql-3c6_b`, CONSTRAINT `FKgl490g7646oyowsncniikpbmf` FOREIGN KEY (`user_id`) REFERENCES `User` (`user_id`))
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 21 common frames omitted
+15:31:41.440 [cat.amd.dbapi.AppMain.main()] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+15:31:41.455 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+15:31:41.895 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+15:32:37.264 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+15:32:37.305 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+15:32:37.516 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+15:32:37.610 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+15:32:37.615 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+15:32:37.615 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+15:32:37.616 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+15:32:37.616 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+15:32:37.618 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+15:32:39.005 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1a081e2a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+15:32:39.893 [cat.amd.dbapi.AppMain.main()] INFO  c.a.d.p.db.managers.ModelManager - New Model created with the name 'llava'
+15:32:39.914 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+15:32:40.345 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+15:33:49.625 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+15:33:49.663 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+15:33:49.866 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+15:33:49.944 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+15:33:49.949 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+15:33:49.949 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+15:33:49.950 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+15:33:49.950 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+15:33:49.952 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+15:33:51.284 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@25e942d0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+15:33:52.137 [cat.amd.dbapi.AppMain.main()] INFO  c.a.d.p.db.managers.ModelManager - New Model created with the name 'llava'
+15:33:52.158 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+15:33:52.602 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+15:56:18.176 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+15:56:18.215 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+15:56:18.427 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+15:56:18.515 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+15:56:18.520 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+15:56:18.521 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+15:56:18.521 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+15:56:18.521 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+15:56:18.523 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+15:56:19.856 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@297806aa] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+15:56:20.813 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+15:56:21.255 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+15:58:02.377 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+15:58:31.762 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+15:58:31.799 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+15:58:32.004 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+15:58:32.085 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+15:58:32.090 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+15:58:32.090 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+15:58:32.090 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+15:58:32.090 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+15:58:32.092 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+15:58:33.391 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@738c24e0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+15:58:33.768 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+15:58:34.190 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+16:00:05.696 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+16:00:19.627 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+16:00:19.668 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+16:00:19.890 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+16:00:19.974 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:00:19.979 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+16:00:19.979 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+16:00:19.979 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+16:00:19.979 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:00:19.981 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+16:00:21.318 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@738c24e0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+16:00:22.239 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+16:00:22.702 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+16:01:09.949 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+16:07:52.754 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+16:07:52.791 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+16:07:52.998 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+16:07:53.080 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:07:53.085 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+16:07:53.085 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+16:07:53.085 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+16:07:53.085 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:07:53.087 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+16:07:54.414 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@738c24e0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+16:07:54.792 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+16:07:55.227 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+16:17:31.423 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
