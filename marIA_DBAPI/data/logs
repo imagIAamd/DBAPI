@@ -1033,3 +1033,91 @@ Press "Enter" to stop it...
 17:42:32.245 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 1 stored at: /home/super/IdeaProjects/marIA_DBAPI/~/secret/1/key.sek
 17:42:32.247 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk3MDAxNTIsInVzZXJJZCI6MSwiaWF0IjoxNzA5NjU2OTUyfQ.7dq_cPCWpeIGHFy0STpynKv-Su0cy_s__VM1LXgBSJ4"},"message":"Congratulations!","status":"OK"}
 17:45:30.747 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+18:17:49.756 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+18:17:49.793 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+18:17:50.012 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+18:17:50.092 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+18:17:50.097 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+18:17:50.097 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+18:17:50.097 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+18:17:50.097 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+18:17:50.099 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+18:17:51.402 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1e34ee4f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+18:17:52.218 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+18:17:52.646 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+18:19:23.275 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+18:19:23.278 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 3223
+18:19:23.302 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+18:19:23.304 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"test","phone_number":"777888999","email":"admin@admin"},"message":"User successfully registered","status":"OK"}
+18:24:53.343 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+18:25:56.992 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+18:25:57.036 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+18:25:57.242 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+18:25:57.324 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+18:25:57.329 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+18:25:57.329 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+18:25:57.329 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+18:25:57.329 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+18:25:57.331 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+18:25:58.689 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4a9a5c45] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+18:25:59.533 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+18:25:59.984 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+18:26:18.090 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+18:26:18.092 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 3223
+18:27:08.215 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+18:27:08.254 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+18:27:08.478 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+18:27:08.568 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+18:27:08.573 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+18:27:08.573 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+18:27:08.573 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+18:27:08.573 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+18:27:08.575 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+18:27:09.959 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4fe98a07] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+18:27:10.286 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+18:27:10.719 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+18:27:12.702 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+18:27:12.705 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 3223
+18:27:12.766 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+18:27:12.767 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"test","phone_number":"777888999","email":"admin@admin"},"message":"User successfully registered","status":"OK"}
+19:08:09.333 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+19:08:45.280 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+19:08:45.318 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+19:08:45.527 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+19:08:45.612 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+19:08:45.617 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+19:08:45.617 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+19:08:45.617 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+19:08:45.618 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+19:08:45.619 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+19:08:46.986 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1b4126b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+19:08:47.324 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+19:08:47.764 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+19:09:29.789 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Unauthorized"}
+19:09:48.421 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Unauthorized"}
+19:10:22.316 [grizzly-http-server-2] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+19:10:22.317 [grizzly-http-server-2] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 3223
+19:10:22.320 [grizzly-http-server-2] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+19:10:22.321 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"test","phone_number":"777888999","email":"admin@admin"},"message":"User successfully registered","status":"OK"}
+19:11:59.072 [grizzly-http-server-3] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+19:11:59.078 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 2 stored at: /home/super/IdeaProjects/marIA_DBAPI/~/secret/2/key.sek
+19:11:59.106 [grizzly-http-server-3] INFO  c.amd.dbapi.endpoints.UserController - User validated
+19:11:59.106 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk3MDU1MTksInVzZXJJZCI6MiwiaWF0IjoxNzA5NjYyMzE5fQ.vlWn9vxjvDO2lQtDKi7TPrKLCkF6Kzn-y8XOUu2ba4M","nickname":"test","phone_number":"777888999","email":"admin@admin"},"message":"User successfully validated","status":"OK"}
+19:12:09.149 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":[{"roles":[],"nickname":"admin","phone_number":"-0","email":"admin@admin"},{"roles":[],"nickname":"test","phone_number":"777888999","email":"admin@admin"}],"message":"OK","status":"OK"}
+19:14:27.687 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+19:14:27.726 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+19:14:27.932 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+19:14:28.025 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+19:14:28.030 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+19:14:28.030 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+19:14:28.030 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+19:14:28.030 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+19:14:28.032 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+19:14:29.633 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2239d237] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+19:14:29.963 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+19:14:30.397 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...

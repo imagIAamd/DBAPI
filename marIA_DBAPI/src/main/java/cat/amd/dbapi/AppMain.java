@@ -15,6 +15,10 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.net.URI;
+import java.util.HashSet;
+import java.util.Set;
+
+import static cat.amd.dbapi.Constants.*;
 
 public class AppMain {
     private static final Logger logger = LoggerFactory.getLogger(AppMain.class);
@@ -24,15 +28,18 @@ public class AppMain {
      * Sets up and runs hibernate
      */
     public static void runHibernate() {
-        Role administrator = new Role("Administrator", "For administrators");
-        Role premium = new Role("Premium user", "For paid users");
-        Role free = new Role("Free user", "For free users");
+        Role administrator = new Role(ROLE_ADMINISTRATOR_NAME, "For administrators");
+        Role premium = new Role(ROLE_PREMIUM_NAME, "For paid users");
+        Role free = new Role(ROLE_FREE_NAME, "For free users");
 
         RoleManager.findRole(administrator);
         RoleManager.findRole(premium);
         RoleManager.findRole(free);
 
         User admin = new User("admin", "-0", "admin@admin", "56Ur,)23Avc.");
+        Set<Role> roles = new HashSet<>();
+        roles.add(RoleManager.findRole(ROLE_ADMINISTRATOR_NAME));
+        admin.setRoles(roles);
         UserManager.findUser(admin);
     }
 

@@ -27,5 +27,7 @@ public class Constants {
     public static final int SECRET_KEY_LENGTH = 256;
 
     public static final String ROLE_ADMINISTRATOR_NAME = "Administrator";
+    public static final String ROLE_FREE_NAME = "Free user";
+    public static final String ROLE_PREMIUM_NAME = "Premium user";
 
 }

@@ -3,11 +3,12 @@ package cat.amd.dbapi.persistence.db.managers;
 import cat.amd.dbapi.persistence.db.entities.Role;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Set;
 
 public class RoleManager {
 
@@ -79,5 +80,49 @@ public class RoleManager {
 
         return role;
     }
+
+    public static Role findRole(String name) {
+        Session session = SessionFactoryManager.getSessionFactory().openSession();
+        Transaction tx = null;
+        Role role = null;
+
+        try {
+            tx = session.beginTransaction();
+            Query<Role> query = session.createQuery("FROM Role WHERE name = :name", Role.class);
+            query.setParameter("name", name);
+            role = query.uniqueResult();
+
+        } catch (HibernateException e) {
+            if (tx != null) tx.rollback();
+            LOGGER.error("HibernateException trying to find role {}", name);
+        } finally {
+            session.close();
+        }
+
+        return role;
+    }
+
+    /*
+    public Set<Role> getUserRoles(Long userId) {
+        Session session = SessionFactoryManager.getSessionFactory().openSession();
+        Transaction tx = null;
+        Role role = null;
+        try () {
+            Transaction transaction = session.beginTransaction();
+
+            User user = session.get(User.class, userId);
+            Set<Role> roles = user.getRoles(); // Access within the active session
+
+            transaction.commit();
+            return roles;
+        } catch (Exception e) {
+            // Handle exceptions
+            e.printStackTrace();
+            return Collections.emptySet();
+        }
+    }
+
+    */
+
 
 }

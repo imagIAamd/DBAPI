@@ -6,12 +6,18 @@ import cat.amd.dbapi.persistence.db.managers.CommonManager;
 import cat.amd.dbapi.persistence.db.managers.UserManager;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.interfaces.DecodedJWT;
+import com.mysql.cj.util.StringUtils;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+import org.hibernate.annotations.Parameter;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static cat.amd.dbapi.Constants.*;
 
@@ -181,5 +187,37 @@ public class UserController {
         String accessKey = CommonManager.generateAccessKey(user);
         responseData.put("access_key", accessKey);
         return CommonManager.buildOkResponse(responseData, "Congratulations!");
+    }
+
+    @GET
+    @Path("/admin_get_list")
+    public Response getList(@HeaderParam(value = "Authorization") String authorization,
+                            @QueryParam("nickname") String nickname, @QueryParam("limit") String limit) {
+
+        if (!CommonManager.isValidAuthorization(authorization)) {
+            return CommonManager.buildUnauthorizedResponse();
+
+        }
+
+        List<User> users = new ArrayList<>();
+        if (nickname == null && limit == null) {
+            users = UserManager.findUsers();
+        } else if (limit == null) {
+            users = UserManager.findUsers(nickname);
+        } else {
+            if (StringUtils.isStrictlyNumeric(limit)) {
+                UserManager.findUsers(Integer.parseInt(limit));
+            } else {
+                users = UserManager.findUsers();
+            }
+        }
+
+        JSONArray usersData = new JSONArray();
+        for (User user : users) {
+            System.out.println(user.getRoles());
+            usersData.put(user.toJSON());
+        }
+
+        return CommonManager.buildOkResponse(usersData, "OK");
     }
 }

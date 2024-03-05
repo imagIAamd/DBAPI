@@ -8,6 +8,7 @@ import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -196,6 +197,26 @@ public class CommonManager {
     }
 
     /**
+     *
+     * @param status
+     * @param data
+     * @param message
+     * @return
+     */
+    public static Response buildResponse(Response.Status status, JSONArray data, String message) {
+        JSONObject responseBody = buildDefaultResponseBody(status.toString(), message);
+        responseBody.put("data", data);
+
+        LOGGER.info("Returning the following response: {}", responseBody);
+
+        return Response.status(status)
+                .entity(responseBody.toString())
+                .type(MediaType.APPLICATION_JSON_TYPE)
+                .build();
+
+    }
+
+    /**
      * Returns the default response body
      *
      * @param status response status
@@ -244,6 +265,19 @@ public class CommonManager {
      * @return response
      */
     public static Response buildOkResponse(JSONObject data, String message) {
+        return buildResponse(
+                Response.Status.OK,
+                data,
+                message
+        );
+    }
+
+    /**
+     * Returns an OK response with custom data and message
+     *
+     * @return response
+     */
+    public static Response buildOkResponse(JSONArray data, String message) {
         return buildResponse(
                 Response.Status.OK,
                 data,

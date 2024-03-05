@@ -1,6 +1,7 @@
 package cat.amd.dbapi.persistence.db.managers;
 
 import cat.amd.dbapi.persistence.db.entities.Administrator;
+import cat.amd.dbapi.persistence.db.entities.Role;
 import cat.amd.dbapi.persistence.db.entities.User;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -9,8 +10,12 @@ import org.hibernate.query.Query;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static cat.amd.dbapi.Constants.EMAIL;
-import static cat.amd.dbapi.Constants.PASSWORD;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import static cat.amd.dbapi.Constants.*;
 
 public class UserManager {
 
@@ -94,6 +99,13 @@ public class UserManager {
         final String telephone = user.getTelephone();
         Transaction tx = null;
         User foundUser;
+
+        if (user.getRoles() == null) {
+            Set<Role> roles = new HashSet<>();
+            Role free = RoleManager.findRole(ROLE_FREE_NAME);
+            roles.add(free);
+            user.setRoles(roles);
+        }
 
         try {
             tx = session.beginTransaction();
@@ -251,6 +263,89 @@ public class UserManager {
         return user;
     }
 
+    public static List<User> findUsers() {
+        Session session = SessionFactoryManager.getSessionFactory().openSession();
+        Transaction tx = null;
+        List<User> users = new ArrayList<>();
 
+        try {
+            tx = session.beginTransaction();
+            Query<User> query = session.createQuery("FROM User", User.class);
+            users = query.list();
+
+        } catch (HibernateException e) {
+            if (tx != null) tx.rollback();
+            LOGGER.error("Error trying to find all users");
+        } finally {
+            session.close();
+        }
+
+        return users;
+    }
+
+    public static List<User> findUsers(String nickname) {
+        Session session = SessionFactoryManager.getSessionFactory().openSession();
+        Transaction tx = null;
+        List<User> users = new ArrayList<>();
+
+        try {
+            tx = session.beginTransaction();
+            Query<User> query = session.createQuery("FROM User WHERE nickname := nickname", User.class);
+            query.setParameter("nickname", nickname);
+            users = query.list();
+
+        } catch (HibernateException e) {
+            if (tx != null) tx.rollback();
+            LOGGER.error("Error trying to find all users");
+        } finally {
+            session.close();
+        }
+
+        return users;
+    }
+
+    public static List<User> findUsers(int limit) {
+        Session session = SessionFactoryManager.getSessionFactory().openSession();
+        Transaction tx = null;
+        List<User> users = new ArrayList<>();
+
+        try {
+            tx = session.beginTransaction();
+            Query<User> query = session.createQuery("FROM User LIMIT :limit", User.class);
+            query.setParameter("limit", limit);
+            users = query.list();
+
+        } catch (HibernateException e) {
+            if (tx != null) tx.rollback();
+            LOGGER.error("Error trying to find all users");
+        } finally {
+            session.close();
+        }
+
+        return users;
+    }
+
+    public static List<User> findUsers(String nickname, int limit) {
+        Session session = SessionFactoryManager.getSessionFactory().openSession();
+        Transaction tx = null;
+        List<User> users = new ArrayList<>();
+
+        try {
+            tx = session.beginTransaction();
+            Query<User> query = session
+                    .createQuery("FROM User WHERE nickname = :nickname LIMIT :limit", User.class);
+            query.setParameter("nickname", nickname);
+            query.setParameter("limit", limit);
+            users = query.list();
+
+        } catch (HibernateException e) {
+            if (tx != null) tx.rollback();
+            LOGGER.error("Error trying to find all users");
+        } finally {
+            session.close();
+        }
+
+        return users;
+    }
 
 }

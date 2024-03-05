@@ -2,8 +2,11 @@ package cat.amd.dbapi.persistence.db.entities;
 
 
 import jakarta.persistence.*;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 import static cat.amd.dbapi.Constants.*;
@@ -33,7 +36,7 @@ public class User {
             name = "User_Role",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
-    private Set<Role> roles;
+    private Set<Role> roles = new HashSet<>();
 
     @Column(name = "password")
     private String password;
@@ -166,5 +169,21 @@ public class User {
                 ", email='" + email + '\'' +
                 ", validationCode=" + validationCode +
                 '}';
+    }
+
+    public JSONObject toJSON() {
+        JSONObject json = new JSONObject();
+        JSONArray roles = new JSONArray();
+
+        json.put("nickname", Objects.requireNonNullElse(nickname, "null"));
+        json.put("phone_number", Objects.requireNonNullElse(telephone, "null"));
+        json.put("email", Objects.requireNonNullElse(email, "null"));
+
+        for (Object role : roles) {
+            roles.put(Objects.requireNonNullElse(((Role) role).getName(), "null"));
+        }
+        json.put("roles", roles);
+
+        return json;
     }
 }
