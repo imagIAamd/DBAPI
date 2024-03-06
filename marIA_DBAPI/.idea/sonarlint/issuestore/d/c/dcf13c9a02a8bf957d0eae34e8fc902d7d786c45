@@ -1,8 +1,10 @@
 
-d
-java:S2259~"HA "NullPointerException" could be thrown; "encodedKey" is nullable here.(åœ¶[8ìπé£·1
-G	java:S106."+Replace this use of System.out by a logger.(öÜÕ©8ùπé£·1
+e
+java:S2259Å"HA "NullPointerException" could be thrown; "encodedKey" is nullable here.(åœ¶[8≠„ ≠·1
+G	java:S1061"+Replace this use of System.out by a logger.(öÜÕ©8≤„ ≠·1
 i
-java:S1858."L"secretKey" is already a string, there's no need to call "toString()" on it.(öÜÕ©8ûπé£·1
+java:S18581"L"secretKey" is already a string, there's no need to call "toString()" on it.(öÜÕ©8≤„ ≠·1
+F
+java:S1128")Remove this unused import 'java.io.File'.(Ü–•≈8≈„ ≠·1
 R
-java:S1144["5Remove this unused private "decodeFromBase64" method.(πî®î8“πé£·1
+java:S1144^"5Remove this unused private "decodeFromBase64" method.(πî®î8∆„ ≠·1

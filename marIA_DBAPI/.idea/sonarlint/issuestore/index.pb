@@ -46,3 +46,5 @@ t
 Dsrc/main/java/cat/amd/dbapi/persistence/db/managers/RoleManager.java,3\b\3be54d4b3cb003d4288fd2cb042fa9b2c862b8e1
 u
 Esrc/main/java/cat/amd/dbapi/persistence/db/managers/GroupManager.java,4\d\4db6e8e35c46b70cbbb860e52418bd9302f76a92
+H
+data/quotes/quote_2.json,f\5\f5320ed47fae4d6b56505cd1386175728affee8f

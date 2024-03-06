@@ -13,12 +13,15 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 import java.security.SecureRandom;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 import static cat.amd.dbapi.Constants.*;
@@ -336,6 +339,59 @@ public class CommonManager {
         Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.HOUR, 12);
         return calendar.getTime();
+    }
+
+    public static JSONObject updateUserQuote(User user) {
+        JSONObject quote = new JSONObject();
+        String quoteFilePath = "data/quotes/quote_ID.json";
+        String quoteFile = quoteFilePath.replace("ID", user.getId().toString());
+        Path filePath = Path.of(quoteFile);
+
+        String plan = FREE;
+
+        if (GroupManager.isPremium(user)) {
+            plan = PREMIUM;
+        }
+
+        try {
+            Files.createDirectories(filePath.getParent());
+            if (!Files.exists(filePath)) {
+                quote.put("plan", plan);
+                if (plan.equals(PREMIUM)) {
+                    quote.put("quote", PREMIUM_QUOTE);
+                } else {
+                    quote.put("quote", FREE_QUOTE);
+                }
+                quote.put("last_reset", LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME));
+                Files.writeString(filePath, quote.toString(), StandardOpenOption.CREATE, StandardOpenOption.WRITE);
+                return quote;
+            }
+
+            String retrievedQuote = Files.readString(filePath);
+            quote = new JSONObject(retrievedQuote);
+            LocalDateTime lastReset = LocalDateTime.parse((String) quote.get("last_reset"));
+            LocalDateTime nextReset = lastReset.plusHours(RESET_TIMER);
+
+            if (nextReset.isBefore(LocalDateTime.now())) {
+                if (quote.getString("plan").equals(PREMIUM)) {
+                    quote.put("quote", PREMIUM_QUOTE);
+                } else {
+                    quote.put("quote", FREE_QUOTE);
+                }
+                quote.put("last_reset", LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME));
+                return quote;
+            }
+
+            quote.put("quote", quote.getInt("quote") - 1);
+            Files.writeString(filePath, quote.toString(), StandardOpenOption.CREATE, StandardOpenOption.WRITE);
+
+        } catch (IOException e) {
+            LOGGER.error("ERROR white updating user quote");
+        }
+
+
+
+        return quote;
     }
 
 }

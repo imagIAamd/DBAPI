@@ -50,6 +50,20 @@ public class RequestController {
         DecodedJWT decodedJWT = CommonManager.verifyAccessKey(splitAuthorization[1]);
         User user = UserManager.findUser(decodedJWT.getClaim("userId").asLong());
 
+        JSONObject quote = CommonManager.updateUserQuote(user);
+        if (!quote.has("quote")) {
+            return CommonManager.buildBadRequestResponse();
+        }
+
+        if (quote.getInt("quote") <= 0) {
+            LOGGER.warn("user quote is at 0");
+            return CommonManager.buildResponse(
+                    Response.Status.TOO_MANY_REQUESTS,
+                    responseData,
+                    "Quote is at 0"
+            );
+        }
+
         Request request = new Request(requestJson);
         request.setUser(user);
         request = RequestManager.insertRequest(request);

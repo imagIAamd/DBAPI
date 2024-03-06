@@ -2553,3 +2553,411 @@ Press "Enter" to stop it...
 20:52:52.776 [grizzly-http-server-7] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
 20:52:52.792 [grizzly-http-server-7] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"free"},"message":"Congratulations!","status":"OK"}
 20:53:00.155 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+22:23:10.594 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+22:23:10.711 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+22:23:11.075 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22:23:11.187 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+22:23:11.193 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+22:23:11.193 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+22:23:11.193 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+22:23:11.194 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+22:23:11.196 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+22:23:12.776 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@24de0c0a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+22:23:13.185 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+22:23:13.698 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+22:23:33.019 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+22:23:33.035 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 2 stored at: C:\Users\alexc\OneDrive\IdeaProjects\marIA_DBAPI\~\secret\2\key.sek
+22:23:33.075 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - User validated
+22:23:33.076 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4MDM0MTMsInVzZXJJZCI6MiwiaWF0IjoxNzA5NzYwMjEzfQ.ESBw-PIvdGE1rhyHlGZKxgX_KlUxFSnspwRFXY9pcag","nickname":"kilpepo","phone_number":"688916185","email":"juan@juan"},"message":"User successfully validated","status":"OK"}
+22:23:53.150 [grizzly-http-server-1] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:23:53.230 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.ModelManager - New Model created with the name 'llava'
+22:23:53.275 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:23:53.294 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '1'
+22:23:53.294 [grizzly-http-server-1] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:23:53.295 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":1},"message":"Request successfully inserted","status":"OK"}
+22:24:31.927 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+22:24:39.698 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+22:24:39.765 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+22:24:40.113 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22:24:40.335 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+22:24:40.340 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+22:24:40.341 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+22:24:40.341 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+22:24:40.341 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+22:24:40.345 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+22:24:41.978 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@491ae92c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+22:24:42.380 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+22:24:42.865 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+22:24:46.457 [grizzly-http-server-0] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:26:12.836 [grizzly-http-server-2] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:26:12.853 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:26:19.564 [grizzly-http-server-1] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:28:59.329 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+22:29:07.371 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+22:29:07.429 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+22:29:07.714 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22:29:07.886 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+22:29:07.893 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+22:29:07.893 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+22:29:07.893 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+22:29:07.893 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+22:29:07.896 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+22:29:09.391 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5be3f62c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+22:29:09.780 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+22:29:10.270 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+22:29:11.887 [grizzly-http-server-0] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:32:58.792 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+22:33:04.264 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+22:33:04.321 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+22:33:04.551 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22:33:04.666 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+22:33:04.671 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+22:33:04.671 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+22:33:04.671 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+22:33:04.671 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+22:33:04.674 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+22:33:06.399 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@393ee913] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+22:33:06.795 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+22:33:07.277 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+22:33:08.551 [grizzly-http-server-0] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:33:08.623 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:33:09.719 [grizzly-http-server-1] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:37:29.128 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+22:37:34.743 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+22:37:34.798 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+22:37:35.064 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22:37:35.186 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+22:37:35.191 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+22:37:35.191 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+22:37:35.191 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+22:37:35.191 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+22:37:35.194 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+22:37:36.774 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@681620e0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+22:37:37.207 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+22:37:37.733 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+22:37:39.096 [grizzly-http-server-0] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:37:39.154 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:37:41.121 [grizzly-http-server-1] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:37:41.148 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:37:41.213 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:37:41.241 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '2'
+22:37:41.241 [grizzly-http-server-1] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:37:41.241 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":2},"message":"Request successfully inserted","status":"OK"}
+22:37:46.910 [grizzly-http-server-2] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:37:46.938 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:37:46.949 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:37:46.962 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '3'
+22:37:46.962 [grizzly-http-server-2] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:37:46.962 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":3},"message":"Request successfully inserted","status":"OK"}
+22:37:49.325 [grizzly-http-server-3] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:37:49.347 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:37:49.358 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:37:49.371 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '4'
+22:37:49.371 [grizzly-http-server-3] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:37:49.371 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":4},"message":"Request successfully inserted","status":"OK"}
+22:38:55.096 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+22:39:00.533 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+22:39:00.595 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+22:39:00.873 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22:39:00.998 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+22:39:01.003 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+22:39:01.003 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+22:39:01.003 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+22:39:01.003 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+22:39:01.007 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+22:39:02.590 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@29628dd4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+22:39:02.971 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+22:39:03.457 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+22:39:04.734 [grizzly-http-server-0] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:39:04.796 [grizzly-http-server-0] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:39:04.798 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:39:08.017 [grizzly-http-server-1] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:39:08.032 [grizzly-http-server-1] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:39:08.032 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:39:09.214 [grizzly-http-server-2] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:39:09.229 [grizzly-http-server-2] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:39:09.229 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:39:10.781 [grizzly-http-server-3] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:39:10.797 [grizzly-http-server-3] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:39:10.798 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:39:11.671 [grizzly-http-server-4] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:39:11.692 [grizzly-http-server-4] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:39:11.693 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:39:12.740 [grizzly-http-server-5] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:39:12.762 [grizzly-http-server-5] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:39:12.762 [grizzly-http-server-5] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:39:13.549 [grizzly-http-server-6] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:39:13.565 [grizzly-http-server-6] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:39:13.565 [grizzly-http-server-6] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:39:15.043 [grizzly-http-server-7] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:39:15.059 [grizzly-http-server-7] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:39:15.059 [grizzly-http-server-7] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:39:15.771 [grizzly-http-server-8] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:39:15.796 [grizzly-http-server-8] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:39:15.796 [grizzly-http-server-8] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:39:16.565 [grizzly-http-server-9] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:39:16.580 [grizzly-http-server-9] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:39:16.581 [grizzly-http-server-9] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:39:17.282 [grizzly-http-server-10] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:39:17.296 [grizzly-http-server-10] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:39:17.296 [grizzly-http-server-10] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:39:18.013 [grizzly-http-server-11] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:39:18.028 [grizzly-http-server-11] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:39:18.029 [grizzly-http-server-11] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:39:18.750 [grizzly-http-server-0] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:39:18.764 [grizzly-http-server-0] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:39:18.764 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:40:42.436 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+22:40:48.345 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+22:40:48.404 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+22:40:48.639 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22:40:48.751 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+22:40:48.757 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+22:40:48.758 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+22:40:48.758 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+22:40:48.758 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+22:40:48.761 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+22:40:50.463 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@393ee913] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+22:40:50.847 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+22:40:51.340 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+22:40:52.490 [grizzly-http-server-0] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:40:52.553 [grizzly-http-server-0] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:40:52.554 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:40:53.777 [grizzly-http-server-1] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:40:53.795 [grizzly-http-server-1] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:40:53.795 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:40:54.691 [grizzly-http-server-2] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:40:54.707 [grizzly-http-server-2] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:40:54.707 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:40:55.395 [grizzly-http-server-3] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:40:55.410 [grizzly-http-server-3] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:40:55.411 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:40:56.037 [grizzly-http-server-4] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:40:56.058 [grizzly-http-server-4] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:40:56.059 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:40:56.685 [grizzly-http-server-5] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:40:56.700 [grizzly-http-server-5] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:40:56.700 [grizzly-http-server-5] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:40:57.188 [grizzly-http-server-6] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:40:57.203 [grizzly-http-server-6] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:40:57.204 [grizzly-http-server-6] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:41:05.269 [grizzly-http-server-7] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:41:05.294 [grizzly-http-server-7] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:41:05.356 [grizzly-http-server-7] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:41:05.383 [grizzly-http-server-7] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '52'
+22:41:05.383 [grizzly-http-server-7] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:41:05.383 [grizzly-http-server-7] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":52},"message":"Request successfully inserted","status":"OK"}
+22:41:07.500 [grizzly-http-server-8] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:41:07.521 [grizzly-http-server-8] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:41:07.531 [grizzly-http-server-8] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:41:07.543 [grizzly-http-server-8] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '53'
+22:41:07.544 [grizzly-http-server-8] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:41:07.544 [grizzly-http-server-8] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":53},"message":"Request successfully inserted","status":"OK"}
+22:41:08.165 [grizzly-http-server-11] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:41:08.197 [grizzly-http-server-11] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:41:08.209 [grizzly-http-server-11] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:41:08.224 [grizzly-http-server-11] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '54'
+22:41:08.224 [grizzly-http-server-11] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:41:08.224 [grizzly-http-server-11] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":54},"message":"Request successfully inserted","status":"OK"}
+22:41:08.755 [grizzly-http-server-10] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:41:08.777 [grizzly-http-server-10] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:41:08.787 [grizzly-http-server-10] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:41:08.799 [grizzly-http-server-10] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '55'
+22:41:08.799 [grizzly-http-server-10] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:41:08.799 [grizzly-http-server-10] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":55},"message":"Request successfully inserted","status":"OK"}
+22:41:09.348 [grizzly-http-server-9] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:41:09.376 [grizzly-http-server-9] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:41:09.388 [grizzly-http-server-9] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:41:09.401 [grizzly-http-server-9] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '56'
+22:41:09.401 [grizzly-http-server-9] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:41:09.401 [grizzly-http-server-9] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":56},"message":"Request successfully inserted","status":"OK"}
+22:41:09.937 [grizzly-http-server-0] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:41:09.956 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:41:09.966 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:41:09.977 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '57'
+22:41:09.979 [grizzly-http-server-0] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:41:09.979 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":57},"message":"Request successfully inserted","status":"OK"}
+22:41:10.418 [grizzly-http-server-1] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:41:10.452 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:41:10.463 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:41:10.474 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '58'
+22:41:10.475 [grizzly-http-server-1] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:41:10.475 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":58},"message":"Request successfully inserted","status":"OK"}
+22:41:10.993 [grizzly-http-server-2] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:41:11.011 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:41:11.022 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:41:11.034 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '59'
+22:41:11.034 [grizzly-http-server-2] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:41:11.034 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":59},"message":"Request successfully inserted","status":"OK"}
+22:41:11.460 [grizzly-http-server-3] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:41:11.478 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:41:11.488 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:41:11.500 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '60'
+22:41:11.501 [grizzly-http-server-3] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:41:11.501 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":60},"message":"Request successfully inserted","status":"OK"}
+22:41:11.986 [grizzly-http-server-4] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:41:12.005 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:41:12.014 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:41:12.026 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '61'
+22:41:12.027 [grizzly-http-server-4] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:41:12.027 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":61},"message":"Request successfully inserted","status":"OK"}
+22:41:12.530 [grizzly-http-server-5] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:41:12.550 [grizzly-http-server-5] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:41:12.561 [grizzly-http-server-5] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:41:12.573 [grizzly-http-server-5] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '62'
+22:41:12.573 [grizzly-http-server-5] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:41:12.573 [grizzly-http-server-5] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":62},"message":"Request successfully inserted","status":"OK"}
+22:41:13.013 [grizzly-http-server-6] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:41:13.031 [grizzly-http-server-6] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:41:13.041 [grizzly-http-server-6] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:41:13.057 [grizzly-http-server-6] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '63'
+22:41:13.058 [grizzly-http-server-6] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:41:13.058 [grizzly-http-server-6] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":63},"message":"Request successfully inserted","status":"OK"}
+22:41:13.510 [grizzly-http-server-7] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:41:13.529 [grizzly-http-server-7] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:41:13.538 [grizzly-http-server-7] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:41:13.549 [grizzly-http-server-7] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '64'
+22:41:13.550 [grizzly-http-server-7] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:41:13.550 [grizzly-http-server-7] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":64},"message":"Request successfully inserted","status":"OK"}
+22:41:13.948 [grizzly-http-server-8] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:41:13.969 [grizzly-http-server-8] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:41:13.976 [grizzly-http-server-8] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:41:13.988 [grizzly-http-server-8] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '65'
+22:41:13.988 [grizzly-http-server-8] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:41:13.989 [grizzly-http-server-8] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":65},"message":"Request successfully inserted","status":"OK"}
+22:41:14.402 [grizzly-http-server-11] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:41:14.421 [grizzly-http-server-11] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:41:14.430 [grizzly-http-server-11] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:41:14.441 [grizzly-http-server-11] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '66'
+22:41:14.443 [grizzly-http-server-11] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:41:14.443 [grizzly-http-server-11] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":66},"message":"Request successfully inserted","status":"OK"}
+22:41:14.884 [grizzly-http-server-10] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:41:14.902 [grizzly-http-server-10] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:41:14.912 [grizzly-http-server-10] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:41:14.922 [grizzly-http-server-10] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '67'
+22:41:14.922 [grizzly-http-server-10] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:41:14.922 [grizzly-http-server-10] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":67},"message":"Request successfully inserted","status":"OK"}
+22:41:15.384 [grizzly-http-server-9] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:41:15.401 [grizzly-http-server-9] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:41:15.406 [grizzly-http-server-9] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:41:15.412 [grizzly-http-server-9] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '68'
+22:41:15.412 [grizzly-http-server-9] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:41:15.412 [grizzly-http-server-9] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":68},"message":"Request successfully inserted","status":"OK"}
+22:41:15.821 [grizzly-http-server-0] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:41:15.845 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:41:15.856 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:41:15.866 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '69'
+22:41:15.866 [grizzly-http-server-0] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:41:15.867 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":69},"message":"Request successfully inserted","status":"OK"}
+22:41:16.350 [grizzly-http-server-1] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:41:16.367 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:41:16.378 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:41:16.390 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '70'
+22:41:16.390 [grizzly-http-server-1] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:41:16.390 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":70},"message":"Request successfully inserted","status":"OK"}
+22:41:28.177 [grizzly-http-server-2] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:41:28.193 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:41:28.202 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:41:28.213 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '71'
+22:41:28.213 [grizzly-http-server-2] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:41:28.213 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":71},"message":"Request successfully inserted","status":"OK"}
+22:41:28.759 [grizzly-http-server-3] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:41:28.782 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:41:28.792 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:41:28.804 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '72'
+22:41:28.804 [grizzly-http-server-3] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:41:28.804 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":72},"message":"Request successfully inserted","status":"OK"}
+22:41:29.218 [grizzly-http-server-4] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:41:29.293 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:41:29.304 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:41:29.328 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '73'
+22:41:29.329 [grizzly-http-server-4] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:41:29.329 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":73},"message":"Request successfully inserted","status":"OK"}
+22:42:10.814 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+22:42:16.272 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+22:42:16.337 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+22:42:16.573 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22:42:16.692 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+22:42:16.697 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+22:42:16.698 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+22:42:16.698 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+22:42:16.698 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+22:42:16.701 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+22:42:18.431 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@393ee913] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+22:42:18.827 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+22:42:19.379 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+22:42:21.541 [grizzly-http-server-0] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:42:21.616 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:42:21.682 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:42:21.712 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '102'
+22:42:21.713 [grizzly-http-server-0] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:42:21.714 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":102},"message":"Request successfully inserted","status":"OK"}
+22:42:23.276 [grizzly-http-server-1] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:42:23.298 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:42:23.309 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:42:23.320 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '103'
+22:42:23.320 [grizzly-http-server-1] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:42:23.320 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":103},"message":"Request successfully inserted","status":"OK"}
+22:42:28.124 [grizzly-http-server-2] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:42:28.146 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:42:28.157 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:42:28.179 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '104'
+22:42:28.179 [grizzly-http-server-2] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:42:28.179 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":104},"message":"Request successfully inserted","status":"OK"}
+22:42:29.455 [grizzly-http-server-3] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:42:29.498 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:42:29.507 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:42:29.518 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '105'
+22:42:29.518 [grizzly-http-server-3] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:42:29.518 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":105},"message":"Request successfully inserted","status":"OK"}
+22:42:34.874 [grizzly-http-server-5] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:42:34.896 [grizzly-http-server-5] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:42:34.906 [grizzly-http-server-5] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:42:34.920 [grizzly-http-server-5] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '106'
+22:42:34.920 [grizzly-http-server-5] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:42:34.920 [grizzly-http-server-5] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":106},"message":"Request successfully inserted","status":"OK"}
+22:42:35.581 [grizzly-http-server-4] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:42:35.619 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:42:35.636 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:42:35.648 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '107'
+22:42:35.648 [grizzly-http-server-4] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:42:35.648 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":107},"message":"Request successfully inserted","status":"OK"}
+22:42:39.332 [grizzly-http-server-6] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:42:39.352 [grizzly-http-server-6] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:42:39.362 [grizzly-http-server-6] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:42:39.374 [grizzly-http-server-6] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '108'
+22:42:39.374 [grizzly-http-server-6] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:42:39.375 [grizzly-http-server-6] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":108},"message":"Request successfully inserted","status":"OK"}
+22:42:39.933 [grizzly-http-server-7] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:42:39.964 [grizzly-http-server-7] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:42:39.978 [grizzly-http-server-7] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:42:39.990 [grizzly-http-server-7] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '109'
+22:42:39.990 [grizzly-http-server-7] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:42:39.990 [grizzly-http-server-7] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":109},"message":"Request successfully inserted","status":"OK"}
+22:42:43.391 [grizzly-http-server-8] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:42:43.412 [grizzly-http-server-8] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+22:42:43.423 [grizzly-http-server-8] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+22:42:43.435 [grizzly-http-server-8] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '110'
+22:42:43.435 [grizzly-http-server-8] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+22:42:43.435 [grizzly-http-server-8] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":110},"message":"Request successfully inserted","status":"OK"}
+22:42:44.582 [grizzly-http-server-9] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:42:44.595 [grizzly-http-server-9] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:42:44.596 [grizzly-http-server-9] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:42:45.950 [grizzly-http-server-10] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:42:45.964 [grizzly-http-server-10] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:42:45.964 [grizzly-http-server-10] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:42:46.590 [grizzly-http-server-11] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:42:46.609 [grizzly-http-server-11] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:42:46.609 [grizzly-http-server-11] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:42:47.242 [grizzly-http-server-0] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:42:47.271 [grizzly-http-server-0] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+22:42:47.272 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:43:03.363 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]

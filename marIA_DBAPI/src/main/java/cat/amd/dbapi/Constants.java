@@ -33,4 +33,8 @@ public class Constants {
     public static final String ROLE_FREE_NAME = "Free user";
     public static final String ROLE_PREMIUM_NAME = "Premium user";
 
+    public static final int PREMIUM_QUOTE = 50;
+    public static final int FREE_QUOTE = 10;
+    public static final int RESET_TIMER = 24;
+
 }

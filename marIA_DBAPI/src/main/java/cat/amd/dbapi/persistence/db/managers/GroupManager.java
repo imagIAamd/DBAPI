@@ -1,5 +1,6 @@
 package cat.amd.dbapi.persistence.db.managers;
 
+import cat.amd.dbapi.Constants;
 import cat.amd.dbapi.persistence.db.entities.Group;
 import cat.amd.dbapi.persistence.db.entities.User;
 import org.hibernate.HibernateException;
@@ -195,6 +196,32 @@ public class GroupManager {
         }
 
         return true;
+    }
+
+    public static boolean isPremium(User user) {
+        Session session = SessionFactoryManager.getSessionFactory().openSession();
+        Transaction tx = null;
+        try  {
+            tx = session.beginTransaction();
+
+            Set<Group> tmpGroups = user.getRoles();
+            user.setRoles(new HashSet<>());
+            for (Group dummyGroup : tmpGroups) {
+                if (Objects.equals(Constants.ROLE_PREMIUM_NAME, dummyGroup.getName())) {
+                    return true;
+                }
+            }
+
+        } catch (HibernateException e) {
+            if (tx != null) tx.rollback();
+            LOGGER.error("HibernateException trying to find retrieve user groups", e);
+            return false;
+
+        } finally {
+            session.close();
+        }
+
+        return false;
     }
 
 
