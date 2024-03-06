@@ -17,6 +17,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import static cat.amd.dbapi.Constants.*;
 
@@ -38,6 +39,10 @@ public class UserController {
     private static final String[] USER_LOGIN_TEMPLATE = new String[]{
             EMAIL,
             PASSWORD
+    };
+    private static final String[] ADMIN_CHANGE_PLAN_TEMPLATE = new String[]{
+            PHONE_NUMBER,
+            PLAN
     };
 
     /**
@@ -219,14 +224,42 @@ public class UserController {
         return CommonManager.buildOkResponse(usersData, "OK");
     }
 
-    /*
     @POST
     @Path("admin_change_plan")
-    public Response changePlan(@HeaderParam(value = "Authorization") String authorization) {
+    public Response changePlan(@HeaderParam(value = "Authorization") String authorization, String data) {
 
         LOGGER.info("Received new request in /admin_change_plan");
+        JSONObject requestJson = new JSONObject(data);
 
+        if (!CommonManager.isValidRequest(requestJson, ADMIN_CHANGE_PLAN_TEMPLATE)) {
+            return CommonManager.buildBadRequestResponse();
+        }
+
+        if (!CommonManager.isValidAuthorization(authorization)) {
+            return CommonManager.buildUnauthorizedResponse();
+        }
+
+        User user = UserManager.findUserByTelephone(requestJson.getString(PHONE_NUMBER));
+        if (user == null) {
+            return CommonManager.buildBadRequestResponse();
+        }
+
+        String plan = requestJson.getString("plan");
+        boolean updated = false;
+        if (Objects.equals(plan, PREMIUM)) {
+            updated = GroupManager.addUserGroup(user, ROLE_PREMIUM_NAME);
+        } else if (Objects.equals(plan, FREE)) {
+            updated = GroupManager.removeUserGroup(user, ROLE_PREMIUM_NAME);
+        }
+
+        if (!updated) {
+            LOGGER.warn("Unable to update the requested user groups");
+            return CommonManager.buildBadRequestResponse();
+        }
+
+        JSONObject responseData = new JSONObject();
+        responseData.put("plan", plan);
+        return CommonManager.buildOkResponse(responseData, "Congratulations!");
 
     }
-    */
 }

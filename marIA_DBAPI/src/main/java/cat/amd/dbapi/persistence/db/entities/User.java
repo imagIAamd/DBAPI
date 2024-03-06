@@ -32,7 +32,7 @@ public class User {
     @Column(name = "validation_code")
     private Integer validationCode;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "User_x_Group",
             joinColumns = @JoinColumn(name = "user_id"),
@@ -76,6 +76,15 @@ public class User {
         this.telephone = telephone;
         this.email = email;
         this.password = password;
+    }
+
+    public User(Long id, String nickname, String telephone, String email, String password, Set<Group> groups) {
+        this.id = id;
+        this.nickname = nickname;
+        this.telephone = telephone;
+        this.email = email;
+        this.password = password;
+        this.groups = groups;
     }
 
     /**

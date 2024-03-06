@@ -16,6 +16,9 @@ public class Constants {
     public static final String REQUEST_ID = "request_id";
     public static final String TEXT = "text";
     public static final String PASSWORD = "password";
+    public static final String PLAN = "plan";
+    public static final String PREMIUM = "premium";
+    public static final String FREE = "free";
 
     public static final String BAD_REQUEST = "Bad request";
     public static final String USER_REGISTER_OK = "User successfully registered";

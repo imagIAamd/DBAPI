@@ -9,10 +9,7 @@ import org.hibernate.query.Query;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class GroupManager {
 
@@ -131,6 +128,73 @@ public class GroupManager {
         }
 
         return groups;
+    }
+
+    public static boolean addUserGroup(User user, String groupName) {
+        Session session = SessionFactoryManager.getSessionFactory().openSession();
+        Transaction tx = null;
+        List<Group> groups = new ArrayList<>();
+        try  {
+            tx = session.beginTransaction();
+
+            Group group = findGroup(groupName);
+            if (group == null) {
+                return false;
+            }
+
+            if (!getUserRoles(user.getId()).contains(group)) {
+                user.getRoles().add(group);
+            }
+
+            user.getRoles().add(group);
+            session.merge(user);
+            tx.commit();
+
+        } catch (HibernateException e) {
+            if (tx != null) tx.rollback();
+            LOGGER.error("HibernateException trying to find retrieve user groups", e);
+            return false;
+
+        } finally {
+            session.close();
+        }
+
+        return true;
+    }
+
+    public static boolean removeUserGroup(User user, String groupName) {
+        Session session = SessionFactoryManager.getSessionFactory().openSession();
+        Transaction tx = null;
+        List<Group> groups = new ArrayList<>();
+        try  {
+            tx = session.beginTransaction();
+
+            Group group = findGroup(groupName);
+            if (group == null) {
+                return false;
+            }
+
+            Set<Group> tmpGroups = user.getRoles();
+            user.setRoles(new HashSet<>());
+            for (Group dummyGroup : tmpGroups) {
+                if (!Objects.equals(group.getName(), dummyGroup.getName())) {
+                    user.getRoles().add(dummyGroup);
+                }
+            }
+
+            session.merge(user);
+            tx.commit();
+
+        } catch (HibernateException e) {
+            if (tx != null) tx.rollback();
+            LOGGER.error("HibernateException trying to find retrieve user groups", e);
+            return false;
+
+        } finally {
+            session.close();
+        }
+
+        return true;
     }
 
 

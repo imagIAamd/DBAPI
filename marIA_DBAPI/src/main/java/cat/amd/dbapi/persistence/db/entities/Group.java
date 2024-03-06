@@ -18,7 +18,7 @@ public class Group {
     @Column(name = "description")
     private String description;
 
-    @ManyToMany(mappedBy = "groups")
+    @ManyToMany(mappedBy = "groups", fetch = FetchType.EAGER)
     private Set<User> users;
 
     public Group() {
@@ -70,9 +70,11 @@ public class Group {
 
     @Override
     public String toString() {
-        return "Role{" +
+        return "Group{" +
                 "id=" + id +
+                ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
+                ", users=" + users +
                 '}';
     }
 }
