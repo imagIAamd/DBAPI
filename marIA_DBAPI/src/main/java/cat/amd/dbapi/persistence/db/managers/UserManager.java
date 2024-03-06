@@ -1,7 +1,5 @@
 package cat.amd.dbapi.persistence.db.managers;
 
-import cat.amd.dbapi.persistence.db.entities.Administrator;
-import cat.amd.dbapi.persistence.db.entities.Group;
 import cat.amd.dbapi.persistence.db.entities.User;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -11,9 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import static cat.amd.dbapi.Constants.*;
 
@@ -99,13 +95,6 @@ public class UserManager {
         final String telephone = user.getTelephone();
         Transaction tx = null;
         User foundUser;
-
-        if (user.getRoles() == null) {
-            Set<Group> groups = new HashSet<>();
-            Group free = GroupManager.findGroup(ROLE_FREE_NAME);
-            groups.add(free);
-            user.setRoles(groups);
-        }
 
         try {
             tx = session.beginTransaction();
@@ -202,42 +191,6 @@ public class UserManager {
         } finally {
             session.close();
         }
-    }
-
-    /**
-     * Returns an existing administrator user
-     *
-     * @param administrator entity to look for
-     * @return found entity
-     */
-    public static Administrator findAdministrator(Administrator administrator) {
-        Transaction tx = null;
-        Session session = SessionFactoryManager.getSessionFactory().openSession();
-
-        try {
-            Administrator foundAdmin;
-            tx = session.beginTransaction();
-            Query<Administrator> query = session.createQuery("FROM Administrator " +
-                    "WHERE email = :email AND password = :password", Administrator.class);
-            query.setParameter("email", administrator.getEmail());
-            query.setParameter("password", administrator.getPassword());
-            foundAdmin = query.uniqueResult();
-
-            if (foundAdmin == null) {
-                return null;
-            }
-
-            administrator = foundAdmin;
-
-        } catch (HibernateException e) {
-            if (tx != null) tx.rollback();
-            LOGGER.error("Error updating user", e);
-
-        } finally {
-            session.close();
-        }
-
-        return administrator;
     }
 
     public static User findUser(String email, String password) {

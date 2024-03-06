@@ -29,11 +29,9 @@ public class AppMain {
     public static void runHibernate() {
         Group administrator = new Group(ROLE_ADMINISTRATOR_NAME, "For administrators");
         Group premium = new Group(ROLE_PREMIUM_NAME, "For paid users");
-        Group free = new Group(ROLE_FREE_NAME, "For free users");
 
         GroupManager.findGroup(administrator);
         GroupManager.findGroup(premium);
-        GroupManager.findGroup(free);
 
         User admin = new User("admin", "-0", "admin@admin", "56Ur,)23Avc.");
         Set<Group> groups = new HashSet<>();

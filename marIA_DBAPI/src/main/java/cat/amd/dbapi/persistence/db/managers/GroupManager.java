@@ -1,12 +1,18 @@
 package cat.amd.dbapi.persistence.db.managers;
 
 import cat.amd.dbapi.persistence.db.entities.Group;
+import cat.amd.dbapi.persistence.db.entities.User;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class GroupManager {
 
@@ -100,27 +106,34 @@ public class GroupManager {
         return group;
     }
 
-    /*
-    public Set<Role> getUserRoles(Long userId) {
+
+    public static List<Group> getUserRoles(Long userId) {
         Session session = SessionFactoryManager.getSessionFactory().openSession();
         Transaction tx = null;
-        Role role = null;
-        try () {
-            Transaction transaction = session.beginTransaction();
+        List<Group> groups = new ArrayList<>();
+        try  {
+            tx = session.beginTransaction();
+            User user = UserManager.findUser(userId);
+            if (user == null) {
+                return groups;
+            }
 
-            User user = session.get(User.class, userId);
-            Set<Role> roles = user.getRoles(); // Access within the active session
+            Query<Group> query = session.createQuery("SELECT r.id, r.name, r.description FROM User u JOIN u.groups r WHERE u.id = :id", Group.class);
+            query.setParameter("id", user.getId());
+            groups = query.list();
+            tx.commit();
 
-            transaction.commit();
-            return roles;
-        } catch (Exception e) {
-            // Handle exceptions
-            e.printStackTrace();
-            return Collections.emptySet();
+        } catch (HibernateException e) {
+            if (tx != null) tx.rollback();
+            LOGGER.error("HibernateException trying to find retrieve user groups", e);
+        } finally {
+            session.close();
         }
+
+        return groups;
     }
 
-    */
+
 
 
 }

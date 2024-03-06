@@ -1,8 +1,8 @@
 package cat.amd.dbapi.endpoints;
 
-import cat.amd.dbapi.persistence.db.entities.Administrator;
 import cat.amd.dbapi.persistence.db.entities.User;
 import cat.amd.dbapi.persistence.db.managers.CommonManager;
+import cat.amd.dbapi.persistence.db.managers.GroupManager;
 import cat.amd.dbapi.persistence.db.managers.UserManager;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.interfaces.DecodedJWT;
@@ -10,7 +10,6 @@ import com.mysql.cj.util.StringUtils;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
-import org.hibernate.annotations.Parameter;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.slf4j.Logger;
@@ -194,9 +193,9 @@ public class UserController {
     public Response getList(@HeaderParam(value = "Authorization") String authorization,
                             @QueryParam("nickname") String nickname, @QueryParam("limit") String limit) {
 
+        LOGGER.info("Received new request in /admin_get_list");
         if (!CommonManager.isValidAuthorization(authorization)) {
             return CommonManager.buildUnauthorizedResponse();
-
         }
 
         List<User> users = new ArrayList<>();
@@ -214,8 +213,7 @@ public class UserController {
 
         JSONArray usersData = new JSONArray();
         for (User user : users) {
-            System.out.println(user.getRoles());
-            usersData.put(user.toJSON());
+            usersData.put(user.toJSON(GroupManager.getUserRoles(user.getId())));
         }
 
         return CommonManager.buildOkResponse(usersData, "OK");

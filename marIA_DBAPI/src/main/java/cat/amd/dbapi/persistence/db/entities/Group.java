@@ -30,6 +30,12 @@ public class Group {
         this.description = description;
     }
 
+    public Group(Long id, String name, String description) {
+        this.name = name;
+        this.description = description;
+        this.id = id;
+    }
+
     public Long getId() {
         return id;
     }

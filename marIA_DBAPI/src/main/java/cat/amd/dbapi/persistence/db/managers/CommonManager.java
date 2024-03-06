@@ -252,6 +252,7 @@ public class CommonManager {
      */
     public static Response buildUnauthorizedResponse() {
         JSONObject data = new JSONObject();
+        LOGGER.warn("The request is unauthorized");
         return buildResponse(
                 Response.Status.UNAUTHORIZED,
                 data,

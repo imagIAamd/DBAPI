@@ -6,6 +6,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
@@ -171,18 +172,30 @@ public class User {
                 '}';
     }
 
-    public JSONObject toJSON() {
+    public JSONObject toJSON(List<Group> groups) {
         JSONObject json = new JSONObject();
-        JSONArray roles = new JSONArray();
+        JSONArray groupArray = new JSONArray();
 
         json.put("nickname", Objects.requireNonNullElse(nickname, "null"));
         json.put("phone_number", Objects.requireNonNullElse(telephone, "null"));
         json.put("email", Objects.requireNonNullElse(email, "null"));
 
-        for (Object role : roles) {
-            roles.put(Objects.requireNonNullElse(((Group) role).getName(), "null"));
+        if (groups == null || groups.isEmpty()) {
+            return json;
         }
-        json.put("roles", roles);
+
+        for (Group group : groups) {
+            if (Objects.equals(group.getName(), ROLE_PREMIUM_NAME) || Objects.equals(group.getName(), ROLE_ADMINISTRATOR_NAME)) {
+                json.put("plan", "premium");
+            }
+            groupArray.put(group.getName());
+        }
+
+        if (!json.has("plan")) {
+            json.put("plan", "free");
+        }
+
+        json.put("groups", groupArray);
 
         return json;
     }
