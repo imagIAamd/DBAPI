@@ -218,4 +218,15 @@ public class UserController {
 
         return CommonManager.buildOkResponse(usersData, "OK");
     }
+
+    /*
+    @POST
+    @Path("admin_change_plan")
+    public Response changePlan(@HeaderParam(value = "Authorization") String authorization) {
+
+        LOGGER.info("Received new request in /admin_change_plan");
+
+
+    }
+    */
 }

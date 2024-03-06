@@ -181,6 +181,8 @@ public class User {
         json.put("email", Objects.requireNonNullElse(email, "null"));
 
         if (groups == null || groups.isEmpty()) {
+            json.put("groups", groupArray);
+            json.put("plan", "free");
             return json;
         }
 
