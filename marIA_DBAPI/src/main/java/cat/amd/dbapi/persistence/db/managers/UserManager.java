@@ -1,7 +1,7 @@
 package cat.amd.dbapi.persistence.db.managers;
 
 import cat.amd.dbapi.persistence.db.entities.Administrator;
-import cat.amd.dbapi.persistence.db.entities.Role;
+import cat.amd.dbapi.persistence.db.entities.Group;
 import cat.amd.dbapi.persistence.db.entities.User;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -101,10 +101,10 @@ public class UserManager {
         User foundUser;
 
         if (user.getRoles() == null) {
-            Set<Role> roles = new HashSet<>();
-            Role free = RoleManager.findRole(ROLE_FREE_NAME);
-            roles.add(free);
-            user.setRoles(roles);
+            Set<Group> groups = new HashSet<>();
+            Group free = GroupManager.findGroup(ROLE_FREE_NAME);
+            groups.add(free);
+            user.setRoles(groups);
         }
 
         try {

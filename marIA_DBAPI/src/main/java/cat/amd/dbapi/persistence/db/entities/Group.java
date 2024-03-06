@@ -4,12 +4,12 @@ import jakarta.persistence.*;
 
 import java.util.Set;
 
-@Entity
-public class Role {
+@Entity(name = "User_group")
+public class Group {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "role_id")
+    @Column(name = "group_id")
     private Long id;
 
     @Column(name = "name")
@@ -18,14 +18,14 @@ public class Role {
     @Column(name = "description")
     private String description;
 
-    @ManyToMany(mappedBy = "roles")
+    @ManyToMany(mappedBy = "groups")
     private Set<User> users;
 
-    public Role() {
+    public Group() {
         super();
     }
 
-    public Role(String name, String description) {
+    public Group(String name, String description) {
         this.name = name;
         this.description = description;
     }

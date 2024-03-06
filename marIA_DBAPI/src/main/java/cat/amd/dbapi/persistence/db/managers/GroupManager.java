@@ -1,6 +1,6 @@
 package cat.amd.dbapi.persistence.db.managers;
 
-import cat.amd.dbapi.persistence.db.entities.Role;
+import cat.amd.dbapi.persistence.db.entities.Group;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -8,15 +8,13 @@ import org.hibernate.query.Query;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Set;
+public class GroupManager {
 
-public class RoleManager {
-
-    private RoleManager() {
+    private GroupManager() {
 
     }
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(RoleManager.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(GroupManager.class);
 
     /**
      * Sends a query to retrieve Role entity with given id.
@@ -24,82 +22,82 @@ public class RoleManager {
      * @param id role id
      * @return Role if found, null if it doesn't exist
      */
-    public static Role findRole(Long id) {
+    public static Group findGroup(Long id) {
         Session session = SessionFactoryManager.getSessionFactory().openSession();
         Transaction tx = null;
-        Role role = null;
+        Group group = null;
 
         try {
             tx = session.beginTransaction();
-            Query<Role> query = session.createQuery("FROM Role WHERE id = :id", Role.class);
+            Query<Group> query = session.createQuery("FROM User_group WHERE id = :id", Group.class);
             query.setParameter("id", id);
-            role = query.uniqueResult();
+            group = query.uniqueResult();
 
         } catch (HibernateException e) {
             if (tx != null) tx.rollback();
-            LOGGER.error("HibernateException trying to find role with Id {}", id);
+            LOGGER.error("HibernateException trying to find Group with Id {}", id);
         } finally {
             session.close();
         }
 
-        return role;
+        return group;
     }
 
     /**
      * Sends a query to retrieve Role entity with given Role entity.
      *
-     * @param role role
+     * @param group role
      * @return Role if found, creates it if not found
      */
-    public static Role findRole(Role role) {
+    public static Group findGroup(Group group) {
         Session session = SessionFactoryManager.getSessionFactory().openSession();
-        String name = role.getName();
-        String description = role.getDescription();
+        String name = group.getName();
+        String description = group.getDescription();
         Transaction tx = null;
 
         try {
             tx = session.beginTransaction();
-            Query<Role> query = session.createQuery("FROM Role WHERE name = :name", Role.class);
-            query.setParameter("name", role.getName());
-            role = query.uniqueResult();
+            Query<Group> query = session.createQuery("FROM User_group WHERE name = :name", Group.class);
+            query.setParameter("name", group.getName());
+            group = query.uniqueResult();
 
-            if (role == null) {
-                role = new Role();
-                role.setName(name);
-                role.setDescription(description);
-                session.merge(role);
+            if (group == null) {
+                group = new Group();
+                group.setName(name);
+                group.setDescription(description);
+                session.merge(group);
                 tx.commit();
             }
 
         } catch (HibernateException e) {
             if (tx != null) tx.rollback();
-            LOGGER.error("HibernateException trying to find role {}", role);
+            LOGGER.error("HibernateException trying to find Group {}", group);
         } finally {
             session.close();
         }
 
-        return role;
+        return group;
     }
 
-    public static Role findRole(String name) {
+    public static Group findGroup(String name) {
         Session session = SessionFactoryManager.getSessionFactory().openSession();
         Transaction tx = null;
-        Role role = null;
+        Group group = null;
 
         try {
             tx = session.beginTransaction();
-            Query<Role> query = session.createQuery("FROM Role WHERE name = :name", Role.class);
+            Query<Group> query = session.createQuery("FROM User_group WHERE name = :name", Group.class);
             query.setParameter("name", name);
-            role = query.uniqueResult();
+            group = query.uniqueResult();
 
         } catch (HibernateException e) {
             if (tx != null) tx.rollback();
-            LOGGER.error("HibernateException trying to find role {}", name);
+            LOGGER.error("HibernateException trying to find Group {}", name);
         } finally {
             session.close();
         }
 
-        return role;
+        return group;
     }
 
     /*

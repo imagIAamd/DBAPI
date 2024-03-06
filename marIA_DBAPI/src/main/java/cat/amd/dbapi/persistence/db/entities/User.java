@@ -33,10 +33,10 @@ public class User {
 
     @ManyToMany
     @JoinTable(
-            name = "User_Role",
+            name = "User_x_Group",
             joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id"))
-    private Set<Role> roles = new HashSet<>();
+            inverseJoinColumns = @JoinColumn(name = "group_id"))
+    private Set<Group> groups = new HashSet<>();
 
     @Column(name = "password")
     private String password;
@@ -144,12 +144,12 @@ public class User {
         return user.nickname != null && user.validationCode != null && user.telephone != null && user.email != null;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
+    public Set<Group> getRoles() {
+        return groups;
     }
 
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
+    public void setRoles(Set<Group> groups) {
+        this.groups = groups;
     }
 
     public String getPassword() {
@@ -180,7 +180,7 @@ public class User {
         json.put("email", Objects.requireNonNullElse(email, "null"));
 
         for (Object role : roles) {
-            roles.put(Objects.requireNonNullElse(((Role) role).getName(), "null"));
+            roles.put(Objects.requireNonNullElse(((Group) role).getName(), "null"));
         }
         json.put("roles", roles);
 

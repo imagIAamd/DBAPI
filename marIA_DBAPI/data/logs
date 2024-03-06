@@ -1107,7 +1107,7 @@ Press "Enter" to stop it...
 19:11:59.078 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 2 stored at: /home/super/IdeaProjects/marIA_DBAPI/~/secret/2/key.sek
 19:11:59.106 [grizzly-http-server-3] INFO  c.amd.dbapi.endpoints.UserController - User validated
 19:11:59.106 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk3MDU1MTksInVzZXJJZCI6MiwiaWF0IjoxNzA5NjYyMzE5fQ.vlWn9vxjvDO2lQtDKi7TPrKLCkF6Kzn-y8XOUu2ba4M","nickname":"test","phone_number":"777888999","email":"admin@admin"},"message":"User successfully validated","status":"OK"}
-19:12:09.149 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":[{"roles":[],"nickname":"admin","phone_number":"-0","email":"admin@admin"},{"roles":[],"nickname":"test","phone_number":"777888999","email":"admin@admin"}],"message":"OK","status":"OK"}
+19:12:09.149 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":[{"groups":[],"nickname":"admin","phone_number":"-0","email":"admin@admin"},{"groups":[],"nickname":"test","phone_number":"777888999","email":"admin@admin"}],"message":"OK","status":"OK"}
 19:14:27.687 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
 19:14:27.726 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
 19:14:27.932 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
@@ -1121,3 +1121,391 @@ Press "Enter" to stop it...
 19:14:29.963 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
 19:14:30.397 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
 Press "Enter" to stop it...
+16:54:19.157 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+16:54:19.222 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+16:54:19.510 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+16:54:19.650 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+16:54:19.657 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+16:54:19.657 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+16:54:19.657 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+16:54:19.657 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:54:19.660 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+16:54:21.429 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6e166bd0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+16:54:22.542 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+16:54:23.074 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+17:30:21.472 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+17:31:59.551 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+17:31:59.605 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+17:31:59.850 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+17:31:59.966 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+17:31:59.971 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+17:31:59.972 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+17:31:59.973 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+17:31:59.973 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+17:31:59.976 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+17:32:01.578 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2164e932] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+17:32:01.629 [cat.amd.dbapi.AppMain.main()] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "create table Group (group_id bigint not null, description varchar(255), name varchar(255), primary key (group_id)) engine=InnoDB" via JDBC [You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id bigint not null, description varchar(255), name varchar(255), pr' at line 1]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table Group (group_id bigint not null, description varchar(255), name varchar(255), primary key (group_id)) engine=InnoDB" via JDBC [You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id bigint not null, description varchar(255), name varchar(255), pr' at line 1]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:574)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:514)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.createTable(AbstractSchemaMigrator.java:315)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:80)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:232)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at cat.amd.dbapi.persistence.db.managers.SessionFactoryManager.<clinit>(SessionFactoryManager.java:26)
+	at cat.amd.dbapi.persistence.db.managers.GroupManager.findRole(RoleManager.java:53)
+	at cat.amd.dbapi.AppMain.runHibernate(AppMain.java:34)
+	at cat.amd.dbapi.AppMain.main(AppMain.java:86)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id bigint not null, description varchar(255), name varchar(255), pr' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 22 common frames omitted
+17:32:01.777 [cat.amd.dbapi.AppMain.main()] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "alter table User_Group add constraint FKu7t43i9usdwsfphdc73gcixx foreign key (group_id) references Group (group_id)" via JDBC [You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id)' at line 1]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table User_Group add constraint FKu7t43i9usdwsfphdc73gcixx foreign key (group_id) references Group (group_id)" via JDBC [You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id)' at line 1]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:574)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:514)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applyForeignKeys(AbstractSchemaMigrator.java:446)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:268)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at cat.amd.dbapi.persistence.db.managers.SessionFactoryManager.<clinit>(SessionFactoryManager.java:26)
+	at cat.amd.dbapi.persistence.db.managers.GroupManager.findRole(RoleManager.java:53)
+	at cat.amd.dbapi.AppMain.runHibernate(AppMain.java:34)
+	at cat.amd.dbapi.AppMain.main(AppMain.java:86)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id)' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 21 common frames omitted
+17:33:43.279 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+17:33:43.336 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+17:33:43.574 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+17:33:43.691 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+17:33:43.696 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+17:33:43.697 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+17:33:43.697 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+17:33:43.697 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+17:33:43.700 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+17:33:45.182 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5dc98c1b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+17:33:45.232 [cat.amd.dbapi.AppMain.main()] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "create table Group (group_id bigint not null, description varchar(255), name varchar(255), primary key (group_id)) engine=InnoDB" via JDBC [You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id bigint not null, description varchar(255), name varchar(255), pr' at line 1]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table Group (group_id bigint not null, description varchar(255), name varchar(255), primary key (group_id)) engine=InnoDB" via JDBC [You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id bigint not null, description varchar(255), name varchar(255), pr' at line 1]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:574)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:514)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.createTable(AbstractSchemaMigrator.java:315)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:80)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:232)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at cat.amd.dbapi.persistence.db.managers.SessionFactoryManager.<clinit>(SessionFactoryManager.java:26)
+	at cat.amd.dbapi.persistence.db.managers.GroupManager.findGroup(GroupManager.java:53)
+	at cat.amd.dbapi.AppMain.runHibernate(AppMain.java:34)
+	at cat.amd.dbapi.AppMain.main(AppMain.java:86)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id bigint not null, description varchar(255), name varchar(255), pr' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 22 common frames omitted
+17:33:45.273 [cat.amd.dbapi.AppMain.main()] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "alter table User_Group add constraint FKu7t43i9usdwsfphdc73gcixx foreign key (group_id) references Group (group_id)" via JDBC [You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id)' at line 1]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table User_Group add constraint FKu7t43i9usdwsfphdc73gcixx foreign key (group_id) references Group (group_id)" via JDBC [You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id)' at line 1]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:574)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:514)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applyForeignKeys(AbstractSchemaMigrator.java:446)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:268)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at cat.amd.dbapi.persistence.db.managers.SessionFactoryManager.<clinit>(SessionFactoryManager.java:26)
+	at cat.amd.dbapi.persistence.db.managers.GroupManager.findGroup(GroupManager.java:53)
+	at cat.amd.dbapi.AppMain.runHibernate(AppMain.java:34)
+	at cat.amd.dbapi.AppMain.main(AppMain.java:86)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id)' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 21 common frames omitted
+17:34:57.726 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+17:34:57.796 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+17:34:58.104 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+17:34:58.246 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+17:34:58.252 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+17:34:58.253 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+17:34:58.253 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+17:34:58.256 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+17:34:58.258 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+17:35:00.245 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6287bddf] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+17:35:00.302 [cat.amd.dbapi.AppMain.main()] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "create table Group (group_id bigint not null, description varchar(255), name varchar(255), primary key (group_id)) engine=InnoDB" via JDBC [You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id bigint not null, description varchar(255), name varchar(255), pr' at line 1]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table Group (group_id bigint not null, description varchar(255), name varchar(255), primary key (group_id)) engine=InnoDB" via JDBC [You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id bigint not null, description varchar(255), name varchar(255), pr' at line 1]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:574)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:514)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.createTable(AbstractSchemaMigrator.java:315)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:80)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:232)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at cat.amd.dbapi.persistence.db.managers.SessionFactoryManager.<clinit>(SessionFactoryManager.java:26)
+	at cat.amd.dbapi.persistence.db.managers.GroupManager.findGroup(GroupManager.java:53)
+	at cat.amd.dbapi.AppMain.runHibernate(AppMain.java:34)
+	at cat.amd.dbapi.AppMain.main(AppMain.java:86)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id bigint not null, description varchar(255), name varchar(255), pr' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 22 common frames omitted
+17:35:00.366 [cat.amd.dbapi.AppMain.main()] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "alter table User_Group add constraint FKu7t43i9usdwsfphdc73gcixx foreign key (group_id) references Group (group_id)" via JDBC [You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id)' at line 1]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table User_Group add constraint FKu7t43i9usdwsfphdc73gcixx foreign key (group_id) references Group (group_id)" via JDBC [You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id)' at line 1]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:574)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:514)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applyForeignKeys(AbstractSchemaMigrator.java:446)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:268)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at cat.amd.dbapi.persistence.db.managers.SessionFactoryManager.<clinit>(SessionFactoryManager.java:26)
+	at cat.amd.dbapi.persistence.db.managers.GroupManager.findGroup(GroupManager.java:53)
+	at cat.amd.dbapi.AppMain.runHibernate(AppMain.java:34)
+	at cat.amd.dbapi.AppMain.main(AppMain.java:86)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id)' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 21 common frames omitted
+17:35:00.817 [cat.amd.dbapi.AppMain.main()] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1064, SQLState: 42000
+17:35:00.818 [cat.amd.dbapi.AppMain.main()] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group g1_0 where g1_0.name='Administrator'' at line 1
+17:35:00.824 [cat.amd.dbapi.AppMain.main()] ERROR c.a.d.p.db.managers.GroupManager - HibernateException trying to find Group Role{id=null, description='For administrators'}
+17:35:00.827 [cat.amd.dbapi.AppMain.main()] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1064, SQLState: 42000
+17:35:00.828 [cat.amd.dbapi.AppMain.main()] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group g1_0 where g1_0.name='Premium user'' at line 1
+17:35:00.828 [cat.amd.dbapi.AppMain.main()] ERROR c.a.d.p.db.managers.GroupManager - HibernateException trying to find Group Role{id=null, description='For paid users'}
+17:35:00.830 [cat.amd.dbapi.AppMain.main()] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1064, SQLState: 42000
+17:35:00.832 [cat.amd.dbapi.AppMain.main()] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group g1_0 where g1_0.name='Free user'' at line 1
+17:35:00.833 [cat.amd.dbapi.AppMain.main()] ERROR c.a.d.p.db.managers.GroupManager - HibernateException trying to find Group Role{id=null, description='For free users'}
+17:35:00.836 [cat.amd.dbapi.AppMain.main()] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1064, SQLState: 42000
+17:35:00.836 [cat.amd.dbapi.AppMain.main()] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group g1_0 where g1_0.name='Administrator'' at line 1
+17:35:00.838 [cat.amd.dbapi.AppMain.main()] ERROR c.a.d.p.db.managers.GroupManager - HibernateException trying to find Group Administrator
+17:35:00.874 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+17:35:01.476 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+17:35:42.802 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+17:36:10.570 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+17:36:10.628 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+17:36:10.859 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+17:36:10.977 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+17:36:10.982 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+17:36:10.982 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+17:36:10.982 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+17:36:10.982 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+17:36:10.984 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+17:36:12.515 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6bc307b7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+17:36:12.560 [cat.amd.dbapi.AppMain.main()] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "create table Group (group_id bigint not null, description varchar(255), name varchar(255), primary key (group_id)) engine=InnoDB" via JDBC [You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id bigint not null, description varchar(255), name varchar(255), pr' at line 1]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table Group (group_id bigint not null, description varchar(255), name varchar(255), primary key (group_id)) engine=InnoDB" via JDBC [You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id bigint not null, description varchar(255), name varchar(255), pr' at line 1]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:574)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:514)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.createTable(AbstractSchemaMigrator.java:315)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:80)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:232)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at cat.amd.dbapi.persistence.db.managers.SessionFactoryManager.<clinit>(SessionFactoryManager.java:26)
+	at cat.amd.dbapi.persistence.db.managers.GroupManager.findGroup(GroupManager.java:53)
+	at cat.amd.dbapi.AppMain.runHibernate(AppMain.java:34)
+	at cat.amd.dbapi.AppMain.main(AppMain.java:86)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id bigint not null, description varchar(255), name varchar(255), pr' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 22 common frames omitted
+17:36:13.317 [cat.amd.dbapi.AppMain.main()] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "alter table User_Group add constraint FKu7t43i9usdwsfphdc73gcixx foreign key (group_id) references Group (group_id)" via JDBC [You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id)' at line 1]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table User_Group add constraint FKu7t43i9usdwsfphdc73gcixx foreign key (group_id) references Group (group_id)" via JDBC [You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id)' at line 1]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:574)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:514)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applyForeignKeys(AbstractSchemaMigrator.java:446)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:268)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at cat.amd.dbapi.persistence.db.managers.SessionFactoryManager.<clinit>(SessionFactoryManager.java:26)
+	at cat.amd.dbapi.persistence.db.managers.GroupManager.findGroup(GroupManager.java:53)
+	at cat.amd.dbapi.AppMain.runHibernate(AppMain.java:34)
+	at cat.amd.dbapi.AppMain.main(AppMain.java:86)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group (group_id)' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 21 common frames omitted
+17:36:13.789 [cat.amd.dbapi.AppMain.main()] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1064, SQLState: 42000
+17:36:13.791 [cat.amd.dbapi.AppMain.main()] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group g1_0 where g1_0.name='Administrator'' at line 1
+17:36:13.797 [cat.amd.dbapi.AppMain.main()] ERROR c.a.d.p.db.managers.GroupManager - HibernateException trying to find Group Role{id=null, description='For administrators'}
+17:36:13.801 [cat.amd.dbapi.AppMain.main()] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1064, SQLState: 42000
+17:36:13.801 [cat.amd.dbapi.AppMain.main()] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group g1_0 where g1_0.name='Premium user'' at line 1
+17:36:13.802 [cat.amd.dbapi.AppMain.main()] ERROR c.a.d.p.db.managers.GroupManager - HibernateException trying to find Group Role{id=null, description='For paid users'}
+17:36:13.804 [cat.amd.dbapi.AppMain.main()] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1064, SQLState: 42000
+17:36:13.804 [cat.amd.dbapi.AppMain.main()] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group g1_0 where g1_0.name='Free user'' at line 1
+17:36:13.805 [cat.amd.dbapi.AppMain.main()] ERROR c.a.d.p.db.managers.GroupManager - HibernateException trying to find Group Role{id=null, description='For free users'}
+17:36:13.807 [cat.amd.dbapi.AppMain.main()] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1064, SQLState: 42000
+17:36:13.808 [cat.amd.dbapi.AppMain.main()] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Group g1_0 where g1_0.name='Administrator'' at line 1
+17:36:13.808 [cat.amd.dbapi.AppMain.main()] ERROR c.a.d.p.db.managers.GroupManager - HibernateException trying to find Group Administrator
+17:36:13.866 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+17:36:14.401 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+17:43:16.831 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+17:43:16.928 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+17:43:17.284 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+17:43:17.414 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+17:43:17.423 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+17:43:17.424 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+17:43:17.425 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+17:43:17.425 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+17:43:17.427 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+17:43:19.062 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@297b0446] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+17:43:19.283 [cat.amd.dbapi.AppMain.main()] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "alter table User_x_Group add constraint FKtqn7amnelwsg0f8nm5ilnlhfk foreign key (group_id) references User_group (group_id)" via JDBC [Failed to add the foreign key constraint. Missing index for constraint 'FKtqn7amnelwsg0f8nm5ilnlhfk' in the referenced table 'user_group']
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table User_x_Group add constraint FKtqn7amnelwsg0f8nm5ilnlhfk foreign key (group_id) references User_group (group_id)" via JDBC [Failed to add the foreign key constraint. Missing index for constraint 'FKtqn7amnelwsg0f8nm5ilnlhfk' in the referenced table 'user_group']
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:574)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:514)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applyForeignKeys(AbstractSchemaMigrator.java:446)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:268)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:315)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450)
+	at cat.amd.dbapi.persistence.db.managers.SessionFactoryManager.<clinit>(SessionFactoryManager.java:26)
+	at cat.amd.dbapi.persistence.db.managers.GroupManager.findGroup(GroupManager.java:53)
+	at cat.amd.dbapi.AppMain.runHibernate(AppMain.java:34)
+	at cat.amd.dbapi.AppMain.main(AppMain.java:86)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLException: Failed to add the foreign key constraint. Missing index for constraint 'FKtqn7amnelwsg0f8nm5ilnlhfk' in the referenced table 'user_group'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:770)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 21 common frames omitted
+17:45:11.963 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+17:45:12.020 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+17:45:12.262 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+17:45:12.377 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+17:45:12.384 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+17:45:12.384 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+17:45:12.385 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+17:45:12.386 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+17:45:12.389 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+17:45:13.906 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2164e932] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.

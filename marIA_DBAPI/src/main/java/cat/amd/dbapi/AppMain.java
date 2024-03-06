@@ -1,9 +1,8 @@
 package cat.amd.dbapi;
 
-import cat.amd.dbapi.persistence.db.entities.Role;
+import cat.amd.dbapi.persistence.db.entities.Group;
 import cat.amd.dbapi.persistence.db.entities.User;
-import cat.amd.dbapi.persistence.db.managers.ModelManager;
-import cat.amd.dbapi.persistence.db.managers.RoleManager;
+import cat.amd.dbapi.persistence.db.managers.GroupManager;
 import cat.amd.dbapi.persistence.db.managers.SessionFactoryManager;
 import cat.amd.dbapi.persistence.db.managers.UserManager;
 import org.apache.commons.cli.*;
@@ -28,18 +27,18 @@ public class AppMain {
      * Sets up and runs hibernate
      */
     public static void runHibernate() {
-        Role administrator = new Role(ROLE_ADMINISTRATOR_NAME, "For administrators");
-        Role premium = new Role(ROLE_PREMIUM_NAME, "For paid users");
-        Role free = new Role(ROLE_FREE_NAME, "For free users");
+        Group administrator = new Group(ROLE_ADMINISTRATOR_NAME, "For administrators");
+        Group premium = new Group(ROLE_PREMIUM_NAME, "For paid users");
+        Group free = new Group(ROLE_FREE_NAME, "For free users");
 
-        RoleManager.findRole(administrator);
-        RoleManager.findRole(premium);
-        RoleManager.findRole(free);
+        GroupManager.findGroup(administrator);
+        GroupManager.findGroup(premium);
+        GroupManager.findGroup(free);
 
         User admin = new User("admin", "-0", "admin@admin", "56Ur,)23Avc.");
-        Set<Role> roles = new HashSet<>();
-        roles.add(RoleManager.findRole(ROLE_ADMINISTRATOR_NAME));
-        admin.setRoles(roles);
+        Set<Group> groups = new HashSet<>();
+        groups.add(GroupManager.findGroup(ROLE_ADMINISTRATOR_NAME));
+        admin.setRoles(groups);
         UserManager.findUser(admin);
     }
 

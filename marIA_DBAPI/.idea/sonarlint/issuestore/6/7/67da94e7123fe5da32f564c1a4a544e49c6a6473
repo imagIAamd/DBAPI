@@ -1,0 +1,6 @@
+
+M	java:S106Ù"+Replace this use of System.out by a logger.(ïÓ›²ûÿÿÿÿ8¢¿Ž£á1
+m
+java:S1128"PRemove this unused import 'cat.amd.dbapi.persistence.db.entities.Administrator'.(¸Ã‘÷8¤¿Ž£á1
+]
+java:S1128"@Remove this unused import 'org.hibernate.annotations.Parameter'.(”Œ€å8¤¿Ž£á1

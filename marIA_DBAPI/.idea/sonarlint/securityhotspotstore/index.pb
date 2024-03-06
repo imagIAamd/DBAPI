@@ -38,3 +38,11 @@ Z
 	data/logs,9\0\900dc74957aab3278d9aeff6f62c60dae7726c1a
 x
 Hsrc/main/java/cat/amd/dbapi/persistence/db/managers/ResponseManager.java,2\7\277029aec9657cb9cb3406b340714b2c347152f4
+m
+=src/main/java/cat/amd/dbapi/persistence/db/entities/Role.java,0\b\0b0501811f5a7265f8d9cf3ca28769ebe5e9f4ad
+n
+>src/main/java/cat/amd/dbapi/persistence/db/entities/Group.java,6\b\6bd8a7e056be8c25ba7d84e2e9401ae417b0019d
+t
+Dsrc/main/java/cat/amd/dbapi/persistence/db/managers/RoleManager.java,3\b\3be54d4b3cb003d4288fd2cb042fa9b2c862b8e1
+u
+Esrc/main/java/cat/amd/dbapi/persistence/db/managers/GroupManager.java,4\d\4db6e8e35c46b70cbbb860e52418bd9302f76a92
