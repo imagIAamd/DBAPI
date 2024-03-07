@@ -2961,3 +2961,726 @@ Press "Enter" to stop it...
 22:42:47.271 [grizzly-http-server-0] WARN  c.a.d.endpoints.RequestController - user quote is at 0
 22:42:47.272 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
 22:43:03.363 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+21:44:26.955 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+21:44:27.037 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+21:44:27.445 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+21:44:27.604 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+21:44:27.614 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+21:44:27.615 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+21:44:27.615 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+21:44:27.616 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+21:44:27.620 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+21:44:30.899 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2268dc79] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+21:44:31.989 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+21:44:33.235 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+21:45:24.960 [grizzly-http-server-0] INFO  c.a.d.endpoints.RequestController - Received insert image request
+21:47:25.127 [grizzly-http-server-1] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+21:47:25.150 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 2 stored at: /root/DBAPI/marIA_DBAPI/~/secret/2/key.sek
+21:47:25.260 [grizzly-http-server-1] INFO  c.amd.dbapi.endpoints.UserController - User validated
+21:47:25.261 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4MDQ4NDUsInVzZXJJZCI6MiwiaWF0IjoxNzA5NzYxNjQ1fQ.A_OzHaj4FwbA1Oqop8hOj-VYJ06P-eswdkwXCszzSEI","nickname":"kilpepo","phone_number":"688916185","email":"juan@juan"},"message":"User successfully validated","status":"OK"}
+21:47:39.979 [grizzly-http-server-2] INFO  c.a.d.endpoints.RequestController - Received insert image request
+21:47:40.071 [grizzly-http-server-2] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+21:47:40.071 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+21:49:48.211 [grizzly-http-server-3] INFO  c.a.d.endpoints.RequestController - Received insert image request
+21:49:48.264 [grizzly-http-server-3] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+21:49:48.264 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+21:55:47.505 [grizzly-http-server-4] INFO  c.a.d.endpoints.RequestController - Received insert image request
+21:55:47.553 [grizzly-http-server-4] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+21:55:47.554 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+21:56:36.815 [grizzly-http-server-5] INFO  c.a.d.endpoints.RequestController - Received insert image request
+21:56:36.860 [grizzly-http-server-5] WARN  c.a.d.endpoints.RequestController - user quote is at 0
+21:56:36.860 [grizzly-http-server-5] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Quote is at 0","status":"Too Many Requests"}
+22:06:50.579 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+22:07:02.603 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+22:07:02.675 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+22:07:03.115 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22:07:03.276 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+22:07:03.286 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+22:07:03.287 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+22:07:03.288 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+22:07:03.288 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+22:07:03.292 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+22:07:06.558 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1d8abb85] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+22:07:07.803 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+22:07:08.875 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+22:24:06.477 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+22:24:06.520 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 2 stored at: /root/DBAPI/marIA_DBAPI/~/secret/2/key.sek
+22:24:06.627 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - User validated
+22:24:06.629 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4MDcwNDYsInVzZXJJZCI6MiwiaWF0IjoxNzA5NzYzODQ2fQ.kEhJiVZu06YpLW2f1uCAn7rPzcu6U4lLMJzWLc9gJb8","nickname":"kilpepo","phone_number":"688916185","email":"juan@juan"},"message":"User successfully validated","status":"OK"}
+22:24:31.730 [grizzly-http-server-1] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+22:24:31.746 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 2 stored at: /root/DBAPI/marIA_DBAPI/~/secret/2/key.sek
+22:24:31.760 [grizzly-http-server-1] INFO  c.amd.dbapi.endpoints.UserController - User validated
+22:24:31.760 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4MDcwNzEsInVzZXJJZCI6MiwiaWF0IjoxNzA5NzYzODcxfQ.oo8QM8g23aJgfSpU_pe_iKxKmgRskpnghPnFo8EfymE","nickname":"kilpepo","phone_number":"688916185","email":"juan@juan"},"message":"User successfully validated","status":"OK"}
+22:26:15.091 [grizzly-http-server-2] INFO  c.a.d.endpoints.RequestController - Received insert image request
+22:26:15.191 [grizzly-http-server-2] WARN  c.a.d.endpoints.RequestController - Unable to verify received authorization
+22:26:15.192 [grizzly-http-server-2] WARN  c.a.d.p.db.managers.CommonManager - The request is unauthorized
+22:26:15.192 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Unauthorized"}
+22:46:09.213 [grizzly-http-server-3] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+22:46:09.214 [grizzly-http-server-3] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 6430
+22:46:09.227 [grizzly-http-server-3] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+22:46:09.227 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"kilpepo","phone_number":"688916185","email":"juan@juan"},"message":"User successfully registered","status":"OK"}
+22:46:20.925 [grizzly-http-server-4] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+22:46:20.937 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Bad Request"}
+22:49:57.662 [grizzly-http-server-5] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+22:49:57.663 [grizzly-http-server-5] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 7326
+22:49:57.691 [grizzly-http-server-5] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+22:49:57.692 [grizzly-http-server-5] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"kilpepo","phone_number":"688916185","email":"juan@juan"},"message":"User successfully registered","status":"OK"}
+22:50:12.666 [grizzly-http-server-6] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+22:50:12.684 [grizzly-http-server-6] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Bad Request"}
+22:54:15.673 [grizzly-http-server-7] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+22:54:15.674 [grizzly-http-server-7] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 5808
+22:54:15.687 [grizzly-http-server-7] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+22:54:15.687 [grizzly-http-server-7] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"alex","phone_number":"688916185","email":"adasd"},"message":"User successfully registered","status":"OK"}
+22:54:29.707 [grizzly-http-server-8] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+22:54:29.720 [grizzly-http-server-8] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Bad Request"}
+22:57:39.514 [grizzly-http-server-9] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+22:57:39.515 [grizzly-http-server-9] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 2168
+22:57:39.529 [grizzly-http-server-9] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+22:57:39.530 [grizzly-http-server-9] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"alex","phone_number":"688916185","email":"alex.test"},"message":"User successfully registered","status":"OK"}
+22:57:46.600 [grizzly-http-server-10] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+22:57:46.613 [grizzly-http-server-10] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Bad Request"}
+23:01:01.291 [grizzly-http-server-11] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+23:01:01.292 [grizzly-http-server-11] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 7019
+23:01:01.305 [grizzly-http-server-11] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+23:01:01.305 [grizzly-http-server-11] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"alex","phone_number":"688916185","email":"adasd"},"message":"User successfully registered","status":"OK"}
+23:01:07.618 [grizzly-http-server-12] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+23:01:07.629 [grizzly-http-server-12] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Bad Request"}
+23:05:23.140 [grizzly-http-server-13] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+23:05:23.140 [grizzly-http-server-13] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 7553
+23:05:23.825 [grizzly-http-server-13] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+23:05:23.826 [grizzly-http-server-13] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"adaasd","phone_number":"6889161","email":"asdasdasd"},"message":"User successfully registered","status":"OK"}
+23:05:46.279 [grizzly-http-server-14] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+23:05:46.308 [grizzly-http-server-14] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 8 stored at: /root/DBAPI/marIA_DBAPI/~/secret/8/key.sek
+23:05:46.317 [grizzly-http-server-14] INFO  c.amd.dbapi.endpoints.UserController - User validated
+23:05:46.318 [grizzly-http-server-14] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4MDk1NDYsInVzZXJJZCI6OCwiaWF0IjoxNzA5NzY2MzQ2fQ.n_jGyA8d9bjg1ywcRIEQz8YrUNKv6wbOf45PjbGzvd4","nickname":"adaasd","phone_number":"6889161","email":"asdasdasd"},"message":"User successfully validated","status":"OK"}
+23:07:42.850 [grizzly-http-server-15] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+23:07:42.851 [grizzly-http-server-15] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 7583
+23:07:42.861 [grizzly-http-server-15] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+23:07:42.861 [grizzly-http-server-15] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"23423423","phone_number":"688916185","email":"688916185"},"message":"User successfully registered","status":"OK"}
+23:07:50.379 [grizzly-http-server-16] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+23:07:50.389 [grizzly-http-server-16] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Bad Request"}
+23:09:33.224 [grizzly-http-server-17] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+23:09:33.225 [grizzly-http-server-17] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 2118
+23:09:33.236 [grizzly-http-server-17] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+23:09:33.237 [grizzly-http-server-17] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"kilpepo","phone_number":"688916185","email":"juan@juan"},"message":"User successfully registered","status":"OK"}
+23:09:39.808 [grizzly-http-server-18] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+23:09:39.818 [grizzly-http-server-18] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Bad Request"}
+23:10:18.919 [grizzly-http-server-19] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+23:10:18.920 [grizzly-http-server-19] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 2198
+23:10:19.005 [grizzly-http-server-19] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+23:10:19.006 [grizzly-http-server-19] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"kilpepo","phone_number":"002153","email":"juan@juan"},"message":"User successfully registered","status":"OK"}
+23:10:30.470 [grizzly-http-server-20] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+23:10:30.480 [grizzly-http-server-20] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 9 stored at: /root/DBAPI/marIA_DBAPI/~/secret/9/key.sek
+23:10:30.489 [grizzly-http-server-20] INFO  c.amd.dbapi.endpoints.UserController - User validated
+23:10:30.489 [grizzly-http-server-20] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4MDk4MzAsInVzZXJJZCI6OSwiaWF0IjoxNzA5NzY2NjMwfQ.isQ9G_lQxZ4629f-e1IthfyyVdlScIrHzVtYveRQX8M","nickname":"kilpepo","phone_number":"002153","email":"juan@juan"},"message":"User successfully validated","status":"OK"}
+23:10:38.670 [grizzly-http-server-21] INFO  c.a.d.endpoints.RequestController - Received insert image request
+23:10:38.672 [grizzly-http-server-21] WARN  c.a.d.endpoints.RequestController - Unable to verify received authorization
+23:10:38.672 [grizzly-http-server-21] WARN  c.a.d.p.db.managers.CommonManager - The request is unauthorized
+23:10:38.672 [grizzly-http-server-21] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Unauthorized"}
+06:01:46.206 [grizzly-http-server-22] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 1 stored at: /root/DBAPI/marIA_DBAPI/~/secret/1/key.sek
+06:01:46.209 [grizzly-http-server-22] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4MzQ1MDYsInVzZXJJZCI6MSwiaWF0IjoxNzA5NzkxMzA2fQ.4lDwaEiXkWAYeUN_xGw0_iOF8tjMidERYExMMYvBB84"},"message":"Congratulations!","status":"OK"}
+06:01:46.460 [grizzly-http-server-23] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_get_list
+06:01:47.087 [grizzly-http-server-23] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":[{"nickname":"admin","groups":["Administrator"],"phone_number":"-0","plan":"premium","email":"admin@admin"},{"nickname":"kilpepo","groups":["Premium user"],"phone_number":"688916185","plan":"premium","email":"juan@juan"},{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex2","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex3","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex4","groups":["Administrator"],"phone_number":"-0","plan":"premium","email":"admin@admin"},{"nickname":"adaasd","groups":[],"phone_number":"6889161","plan":"free","email":"asdasdasd"},{"nickname":"kilpepo","groups":[],"phone_number":"002153","plan":"free","email":"juan@juan"}],"message":"OK","status":"OK"}
+06:01:58.503 [grizzly-http-server-24] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:38:15.738 [grizzly-http-server-25] WARN  c.a.d.p.db.managers.CommonManager - The request is unauthorized
+06:38:15.739 [grizzly-http-server-25] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Unauthorized"}
+06:39:15.641 [grizzly-http-server-26] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 1 stored at: /root/DBAPI/marIA_DBAPI/~/secret/1/key.sek
+06:39:15.643 [grizzly-http-server-26] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4MzY3NTUsInVzZXJJZCI6MSwiaWF0IjoxNzA5NzkzNTU1fQ.tu6AIhuH1LW9OHg6lvFzRO_8DaRGPD_bBijG6rm_6RQ"},"message":"Congratulations!","status":"OK"}
+06:39:38.011 [grizzly-http-server-27] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 1 stored at: /root/DBAPI/marIA_DBAPI/~/secret/1/key.sek
+06:39:38.012 [grizzly-http-server-27] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4MzY3NzgsInVzZXJJZCI6MSwiaWF0IjoxNzA5NzkzNTc4fQ.BoWboUUcLFFGTdsLe4uJV-e3KN5VVzEPMToBdF7uwlI"},"message":"Congratulations!","status":"OK"}
+06:39:56.765 [grizzly-http-server-28] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:39:56.781 [grizzly-http-server-28] WARN  c.a.d.p.db.managers.CommonManager - The request is unauthorized
+06:39:56.781 [grizzly-http-server-28] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Unauthorized"}
+06:41:12.077 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+06:41:32.646 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+06:41:32.874 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+06:41:33.654 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+06:41:34.016 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+06:41:34.060 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+06:41:34.061 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+06:41:34.062 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+06:41:34.063 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+06:41:34.067 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+06:41:37.595 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5a4d9192] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+06:41:38.762 [cat.amd.dbapi.AppMain.main()] ERROR c.a.d.p.db.managers.UserManager - Error finding user
+org.hibernate.NonUniqueResultException: Query did not return a unique result: 6 results were returned
+	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueElement(AbstractSelectionQuery.java:586)
+	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueResult(AbstractSelectionQuery.java:558)
+	at cat.amd.dbapi.persistence.db.managers.UserManager.findUser(UserManager.java:103)
+	at cat.amd.dbapi.AppMain.runHibernate(AppMain.java:40)
+	at cat.amd.dbapi.AppMain.main(AppMain.java:84)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:282)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+06:41:38.765 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+06:41:39.988 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+06:43:16.995 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+06:43:36.610 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+06:43:36.689 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+06:43:37.109 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+06:43:37.272 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+06:43:37.281 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+06:43:37.281 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+06:43:37.282 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+06:43:37.283 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+06:43:37.287 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+06:43:40.328 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@56ce4f22] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+06:43:41.367 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+06:43:42.503 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+06:44:01.829 [grizzly-http-server-0] ERROR c.a.d.p.db.managers.UserManager - Error trying to find user with email 'admin@admin'
+06:44:01.831 [grizzly-http-server-0] WARN  c.a.d.p.db.managers.CommonManager - The request is unauthorized
+06:44:01.834 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Unauthorized"}
+06:45:36.445 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+06:45:36.524 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+06:45:36.942 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+06:45:37.102 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+06:45:37.111 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+06:45:37.112 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+06:45:37.113 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+06:45:37.113 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+06:45:37.117 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+06:45:40.346 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@40b2f655] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+06:45:42.092 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+06:45:43.307 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+06:46:06.586 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 11 stored at: /root/DBAPI/marIA_DBAPI/~/secret/11/key.sek
+06:46:06.643 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4MzcxNjYsInVzZXJJZCI6MTEsImlhdCI6MTcwOTc5Mzk2Nn0.8IaGGVC_6Yb-uGwYCM_7UwhflfP4lSbWmfy61Ndpmsw"},"message":"Congratulations!","status":"OK"}
+06:46:43.315 [grizzly-http-server-1] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:46:44.262 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"premium"},"message":"Congratulations!","status":"OK"}
+06:46:49.796 [grizzly-http-server-2] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:46:49.937 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"premium"},"message":"Congratulations!","status":"OK"}
+06:46:54.026 [grizzly-http-server-3] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:46:54.243 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"free"},"message":"Congratulations!","status":"OK"}
+06:46:58.007 [grizzly-http-server-4] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:46:58.035 [grizzly-http-server-4] WARN  c.amd.dbapi.endpoints.UserController - Unable to update the requested user groups
+06:46:58.035 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Bad Request"}
+06:47:00.208 [grizzly-http-server-5] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:47:00.231 [grizzly-http-server-5] WARN  c.amd.dbapi.endpoints.UserController - Unable to update the requested user groups
+06:47:00.231 [grizzly-http-server-5] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Bad Request"}
+06:47:01.488 [grizzly-http-server-6] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:47:01.510 [grizzly-http-server-6] WARN  c.amd.dbapi.endpoints.UserController - Unable to update the requested user groups
+06:47:01.510 [grizzly-http-server-6] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Bad Request"}
+06:47:19.531 [grizzly-http-server-7] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:47:19.564 [grizzly-http-server-7] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"free"},"message":"Congratulations!","status":"OK"}
+06:47:24.846 [grizzly-http-server-8] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:47:24.996 [grizzly-http-server-8] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"premium"},"message":"Congratulations!","status":"OK"}
+06:47:27.905 [grizzly-http-server-9] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:47:27.955 [grizzly-http-server-9] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"premium"},"message":"Congratulations!","status":"OK"}
+06:47:28.829 [grizzly-http-server-10] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:47:28.882 [grizzly-http-server-10] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"premium"},"message":"Congratulations!","status":"OK"}
+06:47:29.929 [grizzly-http-server-11] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:47:29.982 [grizzly-http-server-11] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"premium"},"message":"Congratulations!","status":"OK"}
+06:47:30.653 [grizzly-http-server-12] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:47:30.699 [grizzly-http-server-12] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"premium"},"message":"Congratulations!","status":"OK"}
+06:47:32.385 [grizzly-http-server-13] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:47:32.427 [grizzly-http-server-13] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"premium"},"message":"Congratulations!","status":"OK"}
+06:47:35.363 [grizzly-http-server-14] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:47:35.553 [grizzly-http-server-14] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"free"},"message":"Congratulations!","status":"OK"}
+06:47:36.237 [grizzly-http-server-15] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:47:36.264 [grizzly-http-server-15] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"free"},"message":"Congratulations!","status":"OK"}
+06:47:36.900 [grizzly-http-server-16] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:47:36.926 [grizzly-http-server-16] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"free"},"message":"Congratulations!","status":"OK"}
+06:47:37.595 [grizzly-http-server-17] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:47:37.620 [grizzly-http-server-17] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"free"},"message":"Congratulations!","status":"OK"}
+06:48:08.228 [grizzly-http-server-18] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:48:08.258 [grizzly-http-server-18] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"free"},"message":"Congratulations!","status":"OK"}
+06:48:12.603 [grizzly-http-server-19] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:48:12.749 [grizzly-http-server-19] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"premium"},"message":"Congratulations!","status":"OK"}
+06:50:41.898 [grizzly-http-server-20] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 11 stored at: /root/DBAPI/marIA_DBAPI/~/secret/11/key.sek
+06:50:41.900 [grizzly-http-server-20] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4Mzc0NDEsInVzZXJJZCI6MTEsImlhdCI6MTcwOTc5NDI0MX0.-KwGE9NjAmjl13nsmqN2joAb4pcBfc6ziv3HRB6-Gpg"},"message":"Congratulations!","status":"OK"}
+06:50:42.304 [grizzly-http-server-21] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_get_list
+06:50:42.422 [grizzly-http-server-21] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":[{"nickname":"kilpepo","groups":[],"phone_number":"688916185","plan":"free","email":"juan@juan"},{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex2","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex3","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex4","groups":["Administrator"],"phone_number":"-0","plan":"premium","email":"admin@admin"},{"nickname":"adaasd","groups":["Premium user"],"phone_number":"6889161","plan":"premium","email":"asdasdasd"},{"nickname":"kilpepo","groups":[],"phone_number":"002153","plan":"free","email":"juan@juan"},{"nickname":"admin","groups":["Administrator"],"phone_number":"o7","plan":"premium","email":"admin@admin"}],"message":"OK","status":"OK"}
+06:50:48.776 [grizzly-http-server-22] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:50:48.993 [grizzly-http-server-22] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"premium"},"message":"Congratulations!","status":"OK"}
+06:50:51.707 [grizzly-http-server-23] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:50:51.929 [grizzly-http-server-23] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"free"},"message":"Congratulations!","status":"OK"}
+06:50:54.005 [grizzly-http-server-24] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:50:54.104 [grizzly-http-server-24] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"premium"},"message":"Congratulations!","status":"OK"}
+06:51:19.386 [grizzly-http-server-25] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 11 stored at: /root/DBAPI/marIA_DBAPI/~/secret/11/key.sek
+06:51:19.387 [grizzly-http-server-25] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4Mzc0NzksInVzZXJJZCI6MTEsImlhdCI6MTcwOTc5NDI3OX0.5vUIIHzF6uzirT6xtCGriXn5ZrQzrBsnmIOSCkKvms0"},"message":"Congratulations!","status":"OK"}
+06:51:19.514 [grizzly-http-server-26] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_get_list
+06:51:19.617 [grizzly-http-server-26] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":[{"nickname":"kilpepo","groups":["Premium user"],"phone_number":"688916185","plan":"premium","email":"juan@juan"},{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex2","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex3","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex4","groups":["Administrator"],"phone_number":"-0","plan":"premium","email":"admin@admin"},{"nickname":"adaasd","groups":["Premium user"],"phone_number":"6889161","plan":"premium","email":"asdasdasd"},{"nickname":"kilpepo","groups":[],"phone_number":"002153","plan":"free","email":"juan@juan"},{"nickname":"admin","groups":["Administrator"],"phone_number":"o7","plan":"premium","email":"admin@admin"}],"message":"OK","status":"OK"}
+06:52:41.973 [grizzly-http-server-27] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 11 stored at: /root/DBAPI/marIA_DBAPI/~/secret/11/key.sek
+06:52:41.974 [grizzly-http-server-27] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4Mzc1NjEsInVzZXJJZCI6MTEsImlhdCI6MTcwOTc5NDM2MX0.8p-b7gtipxPhuF24PAAJ-u8NuyE0Mymoaj0YKk-tulI"},"message":"Congratulations!","status":"OK"}
+06:52:42.234 [grizzly-http-server-28] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_get_list
+06:52:42.317 [grizzly-http-server-28] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":[{"nickname":"kilpepo","groups":["Premium user"],"phone_number":"688916185","plan":"premium","email":"juan@juan"},{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex2","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex3","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex4","groups":["Administrator"],"phone_number":"-0","plan":"premium","email":"admin@admin"},{"nickname":"adaasd","groups":["Premium user"],"phone_number":"6889161","plan":"premium","email":"asdasdasd"},{"nickname":"kilpepo","groups":[],"phone_number":"002153","plan":"free","email":"juan@juan"},{"nickname":"admin","groups":["Administrator"],"phone_number":"o7","plan":"premium","email":"admin@admin"}],"message":"OK","status":"OK"}
+06:52:45.001 [grizzly-http-server-29] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:52:45.161 [grizzly-http-server-29] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"free"},"message":"Congratulations!","status":"OK"}
+06:53:02.679 [grizzly-http-server-30] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 11 stored at: /root/DBAPI/marIA_DBAPI/~/secret/11/key.sek
+06:53:02.680 [grizzly-http-server-30] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4Mzc1ODIsInVzZXJJZCI6MTEsImlhdCI6MTcwOTc5NDM4Mn0.Z2lUoZxkfS6jX1fWgBjjx7Jni85g_Th2vPdnVLXJZkQ"},"message":"Congratulations!","status":"OK"}
+06:53:02.801 [grizzly-http-server-31] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_get_list
+06:53:02.876 [grizzly-http-server-31] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":[{"nickname":"kilpepo","groups":[],"phone_number":"688916185","plan":"free","email":"juan@juan"},{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex2","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex3","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex4","groups":["Administrator"],"phone_number":"-0","plan":"premium","email":"admin@admin"},{"nickname":"adaasd","groups":["Premium user"],"phone_number":"6889161","plan":"premium","email":"asdasdasd"},{"nickname":"kilpepo","groups":[],"phone_number":"002153","plan":"free","email":"juan@juan"},{"nickname":"admin","groups":["Administrator"],"phone_number":"o7","plan":"premium","email":"admin@admin"}],"message":"OK","status":"OK"}
+06:53:05.489 [grizzly-http-server-32] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+06:53:05.739 [grizzly-http-server-32] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"premium"},"message":"Congratulations!","status":"OK"}
+07:01:45.468 [grizzly-http-server-33] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+07:01:45.468 [grizzly-http-server-33] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 9222
+07:01:45.477 [grizzly-http-server-33] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+07:01:45.477 [grizzly-http-server-33] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"kilpepo","phone_number":"688916185","email":"juan@juan"},"message":"User successfully registered","status":"OK"}
+07:01:59.686 [grizzly-http-server-34] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+07:01:59.696 [grizzly-http-server-34] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Bad Request"}
+07:02:48.529 [grizzly-http-server-35] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+07:02:48.529 [grizzly-http-server-35] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 5740
+07:02:48.712 [grizzly-http-server-35] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+07:02:48.713 [grizzly-http-server-35] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"kilpepo","phone_number":"0","email":"juan@juan"},"message":"User successfully registered","status":"OK"}
+07:02:59.115 [grizzly-http-server-36] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+07:02:59.122 [grizzly-http-server-36] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 12 stored at: /root/DBAPI/marIA_DBAPI/~/secret/12/key.sek
+07:02:59.128 [grizzly-http-server-36] INFO  c.amd.dbapi.endpoints.UserController - User validated
+07:02:59.128 [grizzly-http-server-36] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4MzgxNzksInVzZXJJZCI6MTIsImlhdCI6MTcwOTc5NDk3OX0.TkDnm0N-3_sWfps0HB8TCKbWC4aOQhGwfVL-H-f32JM","nickname":"kilpepo","phone_number":"0","email":"juan@juan"},"message":"User successfully validated","status":"OK"}
+07:03:10.236 [grizzly-http-server-37] INFO  c.a.d.endpoints.RequestController - Received insert image request
+07:03:10.237 [grizzly-http-server-37] WARN  c.a.d.endpoints.RequestController - Unable to verify received authorization
+07:03:10.237 [grizzly-http-server-37] WARN  c.a.d.p.db.managers.CommonManager - The request is unauthorized
+07:03:10.237 [grizzly-http-server-37] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Unauthorized"}
+07:04:52.834 [grizzly-http-server-38] INFO  c.a.d.endpoints.RequestController - Received insert image request
+07:04:53.122 [grizzly-http-server-38] INFO  c.a.d.p.db.managers.ModelManager - New Model created with the name 'llava'
+07:04:53.639 [grizzly-http-server-38] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kilpepo'
+07:04:53.922 [grizzly-http-server-38] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '1'
+07:04:53.923 [grizzly-http-server-38] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+07:04:53.923 [grizzly-http-server-38] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":1},"message":"Request successfully inserted","status":"OK"}
+07:08:21.338 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+07:08:21.416 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+07:08:21.898 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+07:08:22.059 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+07:08:22.068 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+07:08:22.069 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+07:08:22.070 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+07:08:22.070 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+07:08:22.074 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+07:08:25.434 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4e245baf] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+07:08:26.350 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+07:08:27.443 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+07:08:58.623 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+07:08:58.635 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 2879
+07:08:58.655 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+07:08:58.658 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"alex","phone_number":"688916185","email":"alex.alex"},"message":"User successfully registered","status":"OK"}
+07:09:11.182 [grizzly-http-server-1] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+07:09:11.226 [grizzly-http-server-1] WARN  c.amd.dbapi.endpoints.UserController - The validation code doesn't match
+07:09:11.227 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Bad Request"}
+07:11:43.839 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+07:12:00.444 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+07:12:00.522 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+07:12:00.937 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+07:12:01.106 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+07:12:01.116 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+07:12:01.116 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+07:12:01.117 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+07:12:01.117 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+07:12:01.121 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+07:12:04.429 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3ef00e61] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+07:12:05.335 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+07:12:06.460 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+07:12:32.875 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+07:12:32.886 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 2615
+07:12:32.905 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+07:12:32.908 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"juancarlos","phone_number":"688916185","email":"carlos@juan"},"message":"User successfully registered","status":"OK"}
+07:12:44.998 [grizzly-http-server-1] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+07:12:45.040 [grizzly-http-server-1] WARN  c.amd.dbapi.endpoints.UserController - The validation code doesn't match
+07:12:45.041 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Bad Request"}
+07:14:52.662 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+07:14:52.741 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+07:14:53.143 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+07:14:53.312 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+07:14:53.321 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+07:14:53.322 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+07:14:53.322 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+07:14:53.322 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+07:14:53.327 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+07:14:56.307 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2df8c18b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+07:14:57.413 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+07:14:58.473 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+07:15:11.744 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+07:15:11.755 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 4527
+07:15:12.109 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+07:15:12.163 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"alex","phone_number":"688916185","email":"asdasd"},"message":"User successfully registered","status":"OK"}
+07:15:18.855 [grizzly-http-server-1] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+07:17:43.367 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+07:17:43.448 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+07:17:43.868 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+07:17:44.047 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+07:17:44.056 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+07:17:44.057 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+07:17:44.057 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+07:17:44.058 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+07:17:44.062 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+07:17:47.381 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@47892ac7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+07:17:48.391 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+07:17:49.475 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+07:17:57.458 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+07:17:57.468 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 1276
+07:17:57.496 [grizzly-http-server-0] ERROR c.a.d.p.db.managers.UserManager - Error finding user
+org.hibernate.NonUniqueResultException: Query did not return a unique result: 2 results were returned
+	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueElement(AbstractSelectionQuery.java:586)
+	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueResult(AbstractSelectionQuery.java:558)
+	at cat.amd.dbapi.persistence.db.managers.UserManager.findUser(UserManager.java:103)
+	at cat.amd.dbapi.endpoints.UserController.registerUser(UserController.java:71)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:146)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:189)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:176)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:93)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:478)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:400)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:81)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:261)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:240)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:697)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:367)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:190)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:535)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:515)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+07:17:57.503 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Bad Request"}
+07:20:28.660 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+07:20:28.740 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+07:20:29.154 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+07:20:29.315 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+07:20:29.324 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+07:20:29.325 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+07:20:29.326 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+07:20:29.326 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+07:20:29.330 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+07:20:32.651 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7130654] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+07:20:33.908 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+07:20:35.107 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+07:21:01.711 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+07:21:01.750 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 6630
+07:21:02.555 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+07:21:02.557 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"123","phone_number":"688916185","email":"123"},"message":"User successfully registered","status":"OK"}
+07:21:07.340 [grizzly-http-server-1] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+07:21:13.296 [grizzly-http-server-2] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+07:21:13.317 [grizzly-http-server-2] ERROR c.a.d.p.db.managers.UserManager - Error finding user
+org.hibernate.NonUniqueResultException: Query did not return a unique result: 2 results were returned
+	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueElement(AbstractSelectionQuery.java:586)
+	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueResult(AbstractSelectionQuery.java:558)
+	at cat.amd.dbapi.persistence.db.managers.UserManager.findUser(UserManager.java:103)
+	at cat.amd.dbapi.endpoints.UserController.registerUser(UserController.java:70)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:146)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:189)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:176)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:93)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:478)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:400)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:81)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:261)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:240)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:697)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:367)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:190)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:535)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:515)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+07:21:13.322 [grizzly-http-server-2] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 8278
+07:21:13.323 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Bad Request"}
+07:23:57.521 [grizzly-http-server-3] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+07:23:57.639 [grizzly-http-server-3] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 2331
+07:23:57.815 [grizzly-http-server-3] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+07:23:57.816 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"123","phone_number":"1","email":"123"},"message":"User successfully registered","status":"OK"}
+07:24:00.973 [grizzly-http-server-4] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+07:24:01.813 [grizzly-http-server-5] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+07:24:01.823 [grizzly-http-server-5] ERROR c.a.d.p.db.managers.UserManager - Error finding user
+org.hibernate.NonUniqueResultException: Query did not return a unique result: 2 results were returned
+	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueElement(AbstractSelectionQuery.java:586)
+	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueResult(AbstractSelectionQuery.java:558)
+	at cat.amd.dbapi.persistence.db.managers.UserManager.findUser(UserManager.java:103)
+	at cat.amd.dbapi.endpoints.UserController.registerUser(UserController.java:70)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:146)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:189)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:176)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:93)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:478)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:400)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:81)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:261)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:240)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:697)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:367)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:190)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:535)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:515)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+07:24:01.825 [grizzly-http-server-5] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 7629
+07:24:01.825 [grizzly-http-server-5] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Bad Request"}
+07:25:29.149 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+07:25:29.226 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+07:25:29.665 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+07:25:29.835 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+07:25:29.844 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+07:25:29.845 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+07:25:29.845 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+07:25:29.846 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+07:25:29.850 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+07:25:33.124 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@33d410a5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+07:25:34.214 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+07:25:35.352 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+13:41:05.085 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+13:41:05.097 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 6340
+13:41:05.331 [grizzly-http-server-0] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+13:41:05.334 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"hdsjhd","phone_number":"605937104","email":"sjhdshj"},"message":"User successfully registered","status":"OK"}
+13:45:19.737 [grizzly-http-server-1] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+13:45:19.738 [grizzly-http-server-1] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 3762
+13:45:19.809 [grizzly-http-server-1] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+13:45:19.810 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"xjxchjdh","phone_number":"620743774","email":"jdhjfh"},"message":"User successfully registered","status":"OK"}
+13:45:38.223 [grizzly-http-server-2] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+13:45:38.256 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 18 stored at: /root/DBAPI/marIA_DBAPI/~/secret/18/key.sek
+13:45:38.427 [grizzly-http-server-2] INFO  c.amd.dbapi.endpoints.UserController - User validated
+13:45:38.428 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4NjIzMzgsInVzZXJJZCI6MTgsImlhdCI6MTcwOTgxOTEzOH0.VKskK3d_cJx0P3abPZiw5BitkYCzdcwU2pm-EJLU9E8","nickname":"xjxchjdh","phone_number":"620743774","email":"jdhjfh"},"message":"User successfully validated","status":"OK"}
+13:50:49.021 [grizzly-http-server-3] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+13:50:49.022 [grizzly-http-server-3] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 5930
+13:50:49.248 [grizzly-http-server-3] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+13:50:49.249 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"fsfffd","phone_number":"644306702","email":"mdfmfh"},"message":"User successfully registered","status":"OK"}
+13:51:17.747 [grizzly-http-server-4] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+13:51:17.760 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 19 stored at: /root/DBAPI/marIA_DBAPI/~/secret/19/key.sek
+13:51:17.770 [grizzly-http-server-4] INFO  c.amd.dbapi.endpoints.UserController - User validated
+13:51:17.770 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4NjI2NzcsInVzZXJJZCI6MTksImlhdCI6MTcwOTgxOTQ3N30.hyYq_AjPaPHMZkHlinOSJEjV5fhhPsIHyEadWHiLbH4","nickname":"fsfffd","phone_number":"644306702","email":"mdfmfh"},"message":"User successfully validated","status":"OK"}
+14:04:52.195 [grizzly-http-server-5] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+14:04:52.196 [grizzly-http-server-5] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 6737
+14:04:52.392 [grizzly-http-server-5] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+14:04:52.393 [grizzly-http-server-5] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"jfhjdh","phone_number":"375454","email":"jshjfhj"},"message":"User successfully registered","status":"OK"}
+14:28:38.525 [grizzly-http-server-6] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 11 stored at: /root/DBAPI/marIA_DBAPI/~/secret/11/key.sek
+14:28:38.528 [grizzly-http-server-6] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4NjQ5MTgsInVzZXJJZCI6MTEsImlhdCI6MTcwOTgyMTcxOH0.EvBGllkE3IXnEF5DEKH4QqK4xukmN2LFc1-VOnjpMX0"},"message":"Congratulations!","status":"OK"}
+14:28:39.075 [grizzly-http-server-7] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_get_list
+14:28:40.402 [grizzly-http-server-7] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":[{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex2","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex3","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex4","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"adaasd","groups":[],"phone_number":"6889161","plan":"free","email":"asdasdasd"},{"nickname":"kilpepo","groups":[],"phone_number":"002153","plan":"free","email":"juan@juan"},{"nickname":"admin","groups":[],"phone_number":"o7","plan":"free","email":"admin@admin"},{"nickname":"kilpepo","groups":[],"phone_number":"0","plan":"free","email":"juan@juan"},{"nickname":"123","groups":[],"phone_number":"688916185","plan":"free","email":"123"},{"nickname":"123","groups":[],"phone_number":"1","plan":"free","email":"123"},{"nickname":"123","groups":[],"phone_number":"1","plan":"free","email":"123"},{"nickname":"hdsjhd","groups":[],"phone_number":"605937104","plan":"free","email":"sjhdshj"},{"nickname":"xjxchjdh","groups":[],"phone_number":"620743774","plan":"free","email":"jdhjfh"},{"nickname":"fsfffd","groups":[],"phone_number":"644306702","plan":"free","email":"mdfmfh"},{"nickname":"jfhjdh","groups":[],"phone_number":"375454","plan":"free","email":"jshjfhj"},{"nickname":"dani","groups":["Administrator"],"phone_number":"dani","plan":"premium","email":"null"},{"nickname":"dani","groups":[],"phone_number":"dani","plan":"free","email":"null"},{"nickname":"dani","groups":[],"phone_number":"dani","plan":"free","email":"null"}],"message":"OK","status":"OK"}
+14:29:04.194 [grizzly-http-server-8] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+14:29:18.014 [grizzly-http-server-9] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+14:29:36.509 [grizzly-http-server-10] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+14:29:36.510 [grizzly-http-server-10] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 8265
+14:29:36.517 [grizzly-http-server-10] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+14:29:36.518 [grizzly-http-server-10] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"dsjkd","phone_number":"688916185","email":"dsjjdh"},"message":"User successfully registered","status":"OK"}
+14:29:57.593 [grizzly-http-server-11] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+14:29:57.601 [grizzly-http-server-11] WARN  c.amd.dbapi.endpoints.UserController - The validation code doesn't match
+14:29:57.601 [grizzly-http-server-11] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Bad Request"}
+14:30:53.361 [grizzly-http-server-12] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+14:30:53.361 [grizzly-http-server-12] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 2984
+14:30:53.474 [grizzly-http-server-12] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+14:30:53.474 [grizzly-http-server-12] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"jghhjg","phone_number":"605937104","email":"jdfhjdf"},"message":"User successfully registered","status":"OK"}
+14:31:05.320 [grizzly-http-server-13] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+14:31:05.337 [grizzly-http-server-13] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 24 stored at: /root/DBAPI/marIA_DBAPI/~/secret/24/key.sek
+14:31:05.344 [grizzly-http-server-13] INFO  c.amd.dbapi.endpoints.UserController - User validated
+14:31:05.345 [grizzly-http-server-13] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4NjUwNjUsInVzZXJJZCI6MjQsImlhdCI6MTcwOTgyMTg2NX0.C_jSut-jWXdQ0EyOkGIImgei0c-7s-kTmuMSMSXGP58","nickname":"jghhjg","phone_number":"605937104","email":"jdfhjdf"},"message":"User successfully validated","status":"OK"}
+14:31:28.857 [grizzly-http-server-14] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 11 stored at: /root/DBAPI/marIA_DBAPI/~/secret/11/key.sek
+14:31:28.858 [grizzly-http-server-14] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4NjUwODgsInVzZXJJZCI6MTEsImlhdCI6MTcwOTgyMTg4OH0.ifhSIDrqhqJJTyKJkEdvxyRkVnf55lzgUnUSu39j7w0"},"message":"Congratulations!","status":"OK"}
+14:31:33.168 [grizzly-http-server-15] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_get_list
+14:31:33.345 [grizzly-http-server-15] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":[{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex2","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex3","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex4","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"adaasd","groups":[],"phone_number":"6889161","plan":"free","email":"asdasdasd"},{"nickname":"kilpepo","groups":[],"phone_number":"002153","plan":"free","email":"juan@juan"},{"nickname":"admin","groups":[],"phone_number":"o7","plan":"free","email":"admin@admin"},{"nickname":"kilpepo","groups":[],"phone_number":"0","plan":"free","email":"juan@juan"},{"nickname":"123","groups":[],"phone_number":"688916185","plan":"free","email":"123"},{"nickname":"123","groups":[],"phone_number":"1","plan":"free","email":"123"},{"nickname":"123","groups":[],"phone_number":"1","plan":"free","email":"123"},{"nickname":"xjxchjdh","groups":[],"phone_number":"620743774","plan":"free","email":"jdhjfh"},{"nickname":"fsfffd","groups":[],"phone_number":"644306702","plan":"free","email":"mdfmfh"},{"nickname":"jfhjdh","groups":[],"phone_number":"375454","plan":"free","email":"jshjfhj"},{"nickname":"dani","groups":["Administrator"],"phone_number":"dani","plan":"premium","email":"null"},{"nickname":"dani","groups":[],"phone_number":"dani","plan":"free","email":"null"},{"nickname":"dani","groups":[],"phone_number":"dani","plan":"free","email":"null"},{"nickname":"jghhjg","groups":[],"phone_number":"605937104","plan":"free","email":"jdfhjdf"}],"message":"OK","status":"OK"}
+14:31:42.702 [grizzly-http-server-16] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+14:36:18.040 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+14:36:18.114 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+14:36:18.579 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+14:36:18.737 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+14:36:18.747 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+14:36:18.747 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+14:36:18.748 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+14:36:18.748 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+14:36:18.752 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+14:36:22.481 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@183121d6] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+14:36:23.263 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+14:36:24.335 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+14:36:32.719 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 11 stored at: /root/DBAPI/marIA_DBAPI/~/secret/11/key.sek
+14:36:32.824 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4NjUzOTIsInVzZXJJZCI6MTEsImlhdCI6MTcwOTgyMjE5Mn0.fWbQB0h__ijKQiVnUrAwtkVEDhTCoy1cN0w4247xZKA"},"message":"Congratulations!","status":"OK"}
+14:36:36.390 [grizzly-http-server-1] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_get_list
+14:36:37.129 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":[{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex2","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex3","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex4","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"adaasd","groups":[],"phone_number":"6889161","plan":"free","email":"asdasdasd"},{"nickname":"kilpepo","groups":[],"phone_number":"002153","plan":"free","email":"juan@juan"},{"nickname":"admin","groups":[],"phone_number":"o7","plan":"free","email":"admin@admin"},{"nickname":"kilpepo","groups":[],"phone_number":"0","plan":"free","email":"juan@juan"},{"nickname":"123","groups":[],"phone_number":"688916185","plan":"free","email":"123"},{"nickname":"123","groups":[],"phone_number":"1","plan":"free","email":"123"},{"nickname":"123","groups":[],"phone_number":"1","plan":"free","email":"123"},{"nickname":"xjxchjdh","groups":[],"phone_number":"620743774","plan":"free","email":"jdhjfh"},{"nickname":"fsfffd","groups":[],"phone_number":"644306702","plan":"free","email":"mdfmfh"},{"nickname":"jfhjdh","groups":[],"phone_number":"375454","plan":"free","email":"jshjfhj"},{"nickname":"dani","groups":["Administrator"],"phone_number":"dani","plan":"premium","email":"null"},{"nickname":"dani","groups":[],"phone_number":"dani","plan":"free","email":"null"},{"nickname":"dani","groups":[],"phone_number":"dani","plan":"free","email":"null"},{"nickname":"jghhjg","groups":[],"phone_number":"605937104","plan":"free","email":"jdfhjdf"}],"message":"OK","status":"OK"}
+14:36:43.572 [grizzly-http-server-2] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+14:37:26.413 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/dbapi]
+14:37:36.819 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+14:37:36.896 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+14:37:37.370 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+14:37:37.537 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+14:37:37.547 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+14:37:37.547 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+14:37:37.548 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+14:37:37.548 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+14:37:37.552 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+14:37:40.824 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7a5b6ec2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+14:37:41.867 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+14:37:42.985 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+14:38:03.324 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 11 stored at: /root/DBAPI/marIA_DBAPI/~/secret/11/key.sek
+14:38:03.380 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4NjU0ODMsInVzZXJJZCI6MTEsImlhdCI6MTcwOTgyMjI4M30.24SwhEMXSoxUbP6ykkYgw0j6mFpxUS0ma5Ou9q9WEu0"},"message":"Congratulations!","status":"OK"}
+14:38:06.972 [grizzly-http-server-1] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_get_list
+14:38:07.769 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":[{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex2","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex3","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex4","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"adaasd","groups":[],"phone_number":"6889161","plan":"free","email":"asdasdasd"},{"nickname":"kilpepo","groups":[],"phone_number":"002153","plan":"free","email":"juan@juan"},{"nickname":"admin","groups":[],"phone_number":"o7","plan":"free","email":"admin@admin"},{"nickname":"kilpepo","groups":[],"phone_number":"0","plan":"free","email":"juan@juan"},{"nickname":"123","groups":[],"phone_number":"688916185","plan":"free","email":"123"},{"nickname":"123","groups":[],"phone_number":"1","plan":"free","email":"123"},{"nickname":"123","groups":[],"phone_number":"1","plan":"free","email":"123"},{"nickname":"xjxchjdh","groups":[],"phone_number":"620743774","plan":"free","email":"jdhjfh"},{"nickname":"fsfffd","groups":[],"phone_number":"644306702","plan":"free","email":"mdfmfh"},{"nickname":"jfhjdh","groups":[],"phone_number":"375454","plan":"free","email":"jshjfhj"},{"nickname":"dani","groups":["Administrator"],"phone_number":"dani","plan":"premium","email":"null"},{"nickname":"dani","groups":[],"phone_number":"dani","plan":"free","email":"null"},{"nickname":"dani","groups":[],"phone_number":"dani","plan":"free","email":"null"},{"nickname":"jghhjg","groups":[],"phone_number":"605937104","plan":"free","email":"jdfhjdf"}],"message":"OK","status":"OK"}
+14:38:13.789 [grizzly-http-server-2] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+14:41:21.285 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running hibernate...
+14:41:21.362 [cat.amd.dbapi.AppMain.main()] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.3.Final
+14:41:21.805 [cat.amd.dbapi.AppMain.main()] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+14:41:21.968 [cat.amd.dbapi.AppMain.main()] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+14:41:21.977 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+14:41:21.977 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/dbapi]
+14:41:21.978 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=admin}
+14:41:21.978 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+14:41:21.982 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 10 (min=1)
+14:41:25.128 [cat.amd.dbapi.AppMain.main()] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7b290005] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+14:41:26.029 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - Running server...
+14:41:27.135 [cat.amd.dbapi.AppMain.main()] INFO  cat.amd.dbapi.AppMain - App started with WADL available at http://127.0.0.1:8080/api/application.wadl
+Press "Enter" to stop it...
+14:42:19.821 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 11 stored at: /root/DBAPI/marIA_DBAPI/~/secret/11/key.sek
+14:42:19.878 [grizzly-http-server-0] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4NjU3MzksInVzZXJJZCI6MTEsImlhdCI6MTcwOTgyMjUzOX0.dAAtZDOAcfJcJadk8KvOW6KfDSr9YebngEiJhbtuzUY"},"message":"Congratulations!","status":"OK"}
+14:42:23.256 [grizzly-http-server-1] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_get_list
+14:42:24.098 [grizzly-http-server-1] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":[{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex2","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex3","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex4","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"adaasd","groups":[],"phone_number":"6889161","plan":"free","email":"asdasdasd"},{"nickname":"kilpepo","groups":[],"phone_number":"002153","plan":"free","email":"juan@juan"},{"nickname":"admin","groups":[],"phone_number":"o7","plan":"free","email":"admin@admin"},{"nickname":"kilpepo","groups":[],"phone_number":"0","plan":"free","email":"juan@juan"},{"nickname":"123","groups":[],"phone_number":"688916185","plan":"free","email":"123"},{"nickname":"123","groups":[],"phone_number":"1","plan":"free","email":"123"},{"nickname":"123","groups":[],"phone_number":"1","plan":"free","email":"123"},{"nickname":"xjxchjdh","groups":[],"phone_number":"620743774","plan":"free","email":"jdhjfh"},{"nickname":"fsfffd","groups":[],"phone_number":"644306702","plan":"free","email":"mdfmfh"},{"nickname":"jfhjdh","groups":[],"phone_number":"375454","plan":"free","email":"jshjfhj"},{"nickname":"dani","groups":["Administrator"],"phone_number":"dani","plan":"premium","email":"null"},{"nickname":"dani","groups":[],"phone_number":"dani","plan":"free","email":"null"},{"nickname":"dani","groups":[],"phone_number":"dani","plan":"free","email":"null"}],"message":"OK","status":"OK"}
+14:42:46.282 [grizzly-http-server-2] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+14:42:46.283 [grizzly-http-server-2] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 3346
+14:42:46.682 [grizzly-http-server-2] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+14:42:46.682 [grizzly-http-server-2] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"kfdnfn","phone_number":"605937104","email":"jfdjhfj"},"message":"User successfully registered","status":"OK"}
+14:42:53.931 [grizzly-http-server-3] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+14:42:54.335 [grizzly-http-server-3] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"premium"},"message":"Congratulations!","status":"OK"}
+14:42:59.876 [grizzly-http-server-4] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+14:42:59.888 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 25 stored at: /root/DBAPI/marIA_DBAPI/~/secret/25/key.sek
+14:42:59.895 [grizzly-http-server-4] INFO  c.amd.dbapi.endpoints.UserController - User validated
+14:42:59.896 [grizzly-http-server-4] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4NjU3NzksInVzZXJJZCI6MjUsImlhdCI6MTcwOTgyMjU3OX0.rHdoZ1TpXy-LpsckEUpUvQJoZEqTinHoojmNWgc5or4","nickname":"kfdnfn","phone_number":"605937104","email":"jfdjhfj"},"message":"User successfully validated","status":"OK"}
+14:43:27.913 [grizzly-http-server-5] INFO  c.a.d.endpoints.RequestController - Received insert image request
+14:43:27.982 [grizzly-http-server-5] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+14:43:28.307 [grizzly-http-server-5] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kfdnfn'
+14:43:28.523 [grizzly-http-server-5] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '2'
+14:43:28.523 [grizzly-http-server-5] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+14:43:28.523 [grizzly-http-server-5] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":2},"message":"Request successfully inserted","status":"OK"}
+14:45:15.776 [grizzly-http-server-6] INFO  c.a.d.endpoints.RequestController - Received insert image request
+14:45:15.824 [grizzly-http-server-6] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+14:45:15.911 [grizzly-http-server-6] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kfdnfn'
+14:45:16.155 [grizzly-http-server-6] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '3'
+14:45:16.156 [grizzly-http-server-6] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+14:45:16.156 [grizzly-http-server-6] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":3},"message":"Request successfully inserted","status":"OK"}
+14:47:15.883 [grizzly-http-server-7] INFO  c.a.d.endpoints.RequestController - Received insert image request
+14:47:15.920 [grizzly-http-server-7] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+14:47:16.111 [grizzly-http-server-7] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kfdnfn'
+14:47:16.417 [grizzly-http-server-7] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '4'
+14:47:16.417 [grizzly-http-server-7] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+14:47:16.417 [grizzly-http-server-7] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":4},"message":"Request successfully inserted","status":"OK"}
+14:49:15.454 [grizzly-http-server-8] INFO  c.a.d.endpoints.RequestController - Received insert image request
+14:49:15.487 [grizzly-http-server-8] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+14:49:15.656 [grizzly-http-server-8] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'kfdnfn'
+14:49:15.866 [grizzly-http-server-8] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '5'
+14:49:15.866 [grizzly-http-server-8] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+14:49:15.866 [grizzly-http-server-8] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":5},"message":"Request successfully inserted","status":"OK"}
+14:49:19.397 [grizzly-http-server-9] INFO  c.a.d.endpoints.ResponseController - Received insert response request with authorization : Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4NjU3NzksInVzZXJJZCI6MjUsImlhdCI6MTcwOTgyMjU3OX0.rHdoZ1TpXy-LpsckEUpUvQJoZEqTinHoojmNWgc5or4
+14:49:20.036 [grizzly-http-server-9] INFO  c.a.d.endpoints.ResponseController - Request successfully inserted
+14:49:20.037 [grizzly-http-server-9] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"request_id":5},"message":"Request successfully inserted","status":"OK"}
+14:50:28.534 [grizzly-http-server-10] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 11 stored at: /root/DBAPI/marIA_DBAPI/~/secret/11/key.sek
+14:50:28.535 [grizzly-http-server-10] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4NjYyMjgsInVzZXJJZCI6MTEsImlhdCI6MTcwOTgyMzAyOH0.-AiRvV8O5Wx6AKg90MDWEcqt5PCAtRkoPPrv96bLXKE"},"message":"Congratulations!","status":"OK"}
+14:50:31.944 [grizzly-http-server-11] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_get_list
+14:50:32.118 [grizzly-http-server-11] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":[{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex2","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex3","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex4","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"adaasd","groups":[],"phone_number":"6889161","plan":"free","email":"asdasdasd"},{"nickname":"kilpepo","groups":[],"phone_number":"002153","plan":"free","email":"juan@juan"},{"nickname":"admin","groups":[],"phone_number":"o7","plan":"free","email":"admin@admin"},{"nickname":"kilpepo","groups":["Premium user"],"phone_number":"0","plan":"premium","email":"juan@juan"},{"nickname":"123","groups":[],"phone_number":"688916185","plan":"free","email":"123"},{"nickname":"123","groups":[],"phone_number":"1","plan":"free","email":"123"},{"nickname":"123","groups":[],"phone_number":"1","plan":"free","email":"123"},{"nickname":"xjxchjdh","groups":[],"phone_number":"620743774","plan":"free","email":"jdhjfh"},{"nickname":"fsfffd","groups":[],"phone_number":"644306702","plan":"free","email":"mdfmfh"},{"nickname":"jfhjdh","groups":[],"phone_number":"375454","plan":"free","email":"jshjfhj"},{"nickname":"dani","groups":["Administrator"],"phone_number":"dani","plan":"premium","email":"null"},{"nickname":"dani","groups":[],"phone_number":"dani","plan":"free","email":"null"},{"nickname":"dani","groups":[],"phone_number":"dani","plan":"free","email":"null"},{"nickname":"kfdnfn","groups":[],"phone_number":"605937104","plan":"free","email":"jfdjhfj"}],"message":"OK","status":"OK"}
+14:51:04.079 [grizzly-http-server-12] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+14:51:04.106 [grizzly-http-server-12] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"free"},"message":"Congratulations!","status":"OK"}
+15:03:37.708 [grizzly-http-server-13] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+15:03:37.709 [grizzly-http-server-13] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 3477
+15:03:37.860 [grizzly-http-server-13] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+15:03:37.861 [grizzly-http-server-13] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"manel ","phone_number":"605937104","email":"prueba@gmail.com"},"message":"User successfully registered","status":"OK"}
+15:03:44.527 [grizzly-http-server-14] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+15:03:44.536 [grizzly-http-server-14] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 26 stored at: /root/DBAPI/marIA_DBAPI/~/secret/26/key.sek
+15:03:44.541 [grizzly-http-server-14] INFO  c.amd.dbapi.endpoints.UserController - User validated
+15:03:44.542 [grizzly-http-server-14] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4NjcwMjQsInVzZXJJZCI6MjYsImlhdCI6MTcwOTgyMzgyNH0.Fzc-wcD-3W29Ywx4iVaoPIzyp3BH4r3aQlZZG5tCxkw","nickname":"manel ","phone_number":"605937104","email":"prueba@gmail.com"},"message":"User successfully validated","status":"OK"}
+15:03:52.731 [grizzly-http-server-15] INFO  c.a.d.endpoints.RequestController - Received insert image request
+15:03:52.763 [grizzly-http-server-15] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+15:03:52.869 [grizzly-http-server-15] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'manel '
+15:03:53.016 [grizzly-http-server-15] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '6'
+15:03:53.017 [grizzly-http-server-15] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+15:03:53.017 [grizzly-http-server-15] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":6},"message":"Request successfully inserted","status":"OK"}
+15:03:56.165 [grizzly-http-server-16] INFO  c.a.d.endpoints.ResponseController - Received insert response request with authorization : Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4NjcwMjQsInVzZXJJZCI6MjYsImlhdCI6MTcwOTgyMzgyNH0.Fzc-wcD-3W29Ywx4iVaoPIzyp3BH4r3aQlZZG5tCxkw
+15:03:56.535 [grizzly-http-server-16] INFO  c.a.d.endpoints.ResponseController - Request successfully inserted
+15:03:56.535 [grizzly-http-server-16] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"request_id":6},"message":"Request successfully inserted","status":"OK"}
+15:22:19.430 [grizzly-http-server-17] INFO  c.a.d.endpoints.RequestController - Received insert image request
+15:22:19.477 [grizzly-http-server-17] WARN  c.a.d.endpoints.RequestController - Unable to verify received authorization
+15:22:19.477 [grizzly-http-server-17] WARN  c.a.d.p.db.managers.CommonManager - The request is unauthorized
+15:22:19.478 [grizzly-http-server-17] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Unauthorized"}
+15:22:30.826 [grizzly-http-server-18] INFO  c.a.d.endpoints.RequestController - Received insert image request
+15:22:30.826 [grizzly-http-server-18] WARN  c.a.d.endpoints.RequestController - Unable to verify received authorization
+15:22:30.827 [grizzly-http-server-18] WARN  c.a.d.p.db.managers.CommonManager - The request is unauthorized
+15:22:30.827 [grizzly-http-server-18] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Unauthorized"}
+15:22:46.152 [grizzly-http-server-19] INFO  c.a.d.endpoints.RequestController - Received insert image request
+15:22:46.152 [grizzly-http-server-19] WARN  c.a.d.endpoints.RequestController - Unable to verify received authorization
+15:22:46.153 [grizzly-http-server-19] WARN  c.a.d.p.db.managers.CommonManager - The request is unauthorized
+15:22:46.153 [grizzly-http-server-19] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Unauthorized"}
+15:24:23.620 [grizzly-http-server-20] INFO  c.a.d.endpoints.RequestController - Received insert image request
+15:24:23.620 [grizzly-http-server-20] WARN  c.a.d.endpoints.RequestController - Unable to verify received authorization
+15:24:23.621 [grizzly-http-server-20] WARN  c.a.d.p.db.managers.CommonManager - The request is unauthorized
+15:24:23.621 [grizzly-http-server-20] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Unauthorized"}
+15:24:25.325 [grizzly-http-server-21] INFO  c.a.d.endpoints.RequestController - Received insert image request
+15:24:25.325 [grizzly-http-server-21] WARN  c.a.d.endpoints.RequestController - Unable to verify received authorization
+15:24:25.325 [grizzly-http-server-21] WARN  c.a.d.p.db.managers.CommonManager - The request is unauthorized
+15:24:25.325 [grizzly-http-server-21] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Unauthorized"}
+15:28:40.597 [grizzly-http-server-22] INFO  c.amd.dbapi.endpoints.UserController - Received new user registration request
+15:28:40.598 [grizzly-http-server-22] INFO  c.amd.dbapi.endpoints.UserController - Received SMS code: 4215
+15:28:40.944 [grizzly-http-server-22] INFO  c.amd.dbapi.endpoints.UserController - User successfully registered
+15:28:40.945 [grizzly-http-server-22] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"nickname":"prueba","phone_number":"605937104","email":"prueba@gmail.com"},"message":"User successfully registered","status":"OK"}
+15:28:54.914 [grizzly-http-server-23] INFO  c.amd.dbapi.endpoints.UserController - Received new user validation request
+15:28:54.932 [grizzly-http-server-23] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 27 stored at: /root/DBAPI/marIA_DBAPI/~/secret/27/key.sek
+15:28:54.951 [grizzly-http-server-23] INFO  c.amd.dbapi.endpoints.UserController - User validated
+15:28:54.951 [grizzly-http-server-23] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4Njg1MzQsInVzZXJJZCI6MjcsImlhdCI6MTcwOTgyNTMzNH0.jhoQxe-OksjkPEDNdJ7KnvowfmaVH_spodY-UdMaPkU","nickname":"prueba","phone_number":"605937104","email":"prueba@gmail.com"},"message":"User successfully validated","status":"OK"}
+15:29:04.077 [grizzly-http-server-24] INFO  c.a.d.endpoints.RequestController - Received insert image request
+15:29:04.174 [grizzly-http-server-24] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+15:29:04.352 [grizzly-http-server-24] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'prueba'
+15:29:04.645 [grizzly-http-server-24] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '7'
+15:29:04.645 [grizzly-http-server-24] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+15:29:04.645 [grizzly-http-server-24] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":7},"message":"Request successfully inserted","status":"OK"}
+15:29:06.833 [grizzly-http-server-25] INFO  c.a.d.endpoints.ResponseController - Received insert response request with authorization : Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4Njg1MzQsInVzZXJJZCI6MjcsImlhdCI6MTcwOTgyNTMzNH0.jhoQxe-OksjkPEDNdJ7KnvowfmaVH_spodY-UdMaPkU
+15:29:06.965 [grizzly-http-server-25] INFO  c.a.d.endpoints.ResponseController - Request successfully inserted
+15:29:06.966 [grizzly-http-server-25] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"request_id":7},"message":"Request successfully inserted","status":"OK"}
+15:29:22.292 [grizzly-http-server-26] INFO  c.a.d.endpoints.RequestController - Received insert image request
+15:29:22.343 [grizzly-http-server-26] INFO  c.a.d.p.db.managers.ModelManager - Found Model with the name: llava
+15:29:22.475 [grizzly-http-server-26] INFO  c.a.d.p.db.managers.RequestManager - New request inserted from user 'prueba'
+15:29:22.771 [grizzly-http-server-26] INFO  c.a.d.p.db.managers.RequestManager - Updated image_path colum from request '8'
+15:29:22.772 [grizzly-http-server-26] INFO  c.a.d.endpoints.RequestController - request successfully inserted
+15:29:22.772 [grizzly-http-server-26] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"id":8},"message":"Request successfully inserted","status":"OK"}
+15:29:24.688 [grizzly-http-server-27] INFO  c.a.d.endpoints.ResponseController - Received insert response request with authorization : Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4Njg1MzQsInVzZXJJZCI6MjcsImlhdCI6MTcwOTgyNTMzNH0.jhoQxe-OksjkPEDNdJ7KnvowfmaVH_spodY-UdMaPkU
+15:29:25.172 [grizzly-http-server-27] INFO  c.a.d.endpoints.ResponseController - Request successfully inserted
+15:29:25.172 [grizzly-http-server-27] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"request_id":8},"message":"Request successfully inserted","status":"OK"}
+15:29:45.974 [grizzly-http-server-28] WARN  c.a.d.p.db.managers.CommonManager - The request is unauthorized
+15:29:45.975 [grizzly-http-server-28] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Unauthorized"}
+15:30:12.996 [grizzly-http-server-29] WARN  c.a.d.p.db.managers.CommonManager - The request is unauthorized
+15:30:12.997 [grizzly-http-server-29] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Unauthorized"}
+15:30:34.203 [grizzly-http-server-30] INFO  c.a.d.p.db.managers.CommonManager - Secret key for user 11 stored at: /root/DBAPI/marIA_DBAPI/~/secret/11/key.sek
+15:30:34.204 [grizzly-http-server-30] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"access_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDk4Njg2MzQsInVzZXJJZCI6MTEsImlhdCI6MTcwOTgyNTQzNH0.mxx7skdrlwgJICKATrnBYXKJ1Wmb9InaxVVxsahX8gk"},"message":"Congratulations!","status":"OK"}
+15:30:38.176 [grizzly-http-server-31] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_get_list
+15:30:38.739 [grizzly-http-server-31] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":[{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex2","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex3","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"alex4","groups":[],"phone_number":"-0","plan":"free","email":"admin@admin"},{"nickname":"adaasd","groups":[],"phone_number":"6889161","plan":"free","email":"asdasdasd"},{"nickname":"kilpepo","groups":[],"phone_number":"002153","plan":"free","email":"juan@juan"},{"nickname":"admin","groups":[],"phone_number":"o7","plan":"free","email":"admin@admin"},{"nickname":"kilpepo","groups":["Premium user"],"phone_number":"0","plan":"premium","email":"juan@juan"},{"nickname":"123","groups":[],"phone_number":"688916185","plan":"free","email":"123"},{"nickname":"123","groups":[],"phone_number":"1","plan":"free","email":"123"},{"nickname":"123","groups":[],"phone_number":"1","plan":"free","email":"123"},{"nickname":"xjxchjdh","groups":[],"phone_number":"620743774","plan":"free","email":"jdhjfh"},{"nickname":"fsfffd","groups":[],"phone_number":"644306702","plan":"free","email":"mdfmfh"},{"nickname":"jfhjdh","groups":[],"phone_number":"375454","plan":"free","email":"jshjfhj"},{"nickname":"dani","groups":["Administrator"],"phone_number":"dani","plan":"premium","email":"null"},{"nickname":"dani","groups":[],"phone_number":"dani","plan":"free","email":"null"},{"nickname":"dani","groups":[],"phone_number":"dani","plan":"free","email":"null"},{"nickname":"prueba","groups":[],"phone_number":"605937104","plan":"free","email":"prueba@gmail.com"}],"message":"OK","status":"OK"}
+15:30:53.548 [grizzly-http-server-32] INFO  c.amd.dbapi.endpoints.UserController - Received new request in /admin_change_plan
+15:30:53.867 [grizzly-http-server-32] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{"plan":"free"},"message":"Congratulations!","status":"OK"}
+15:38:32.728 [grizzly-http-server-33] INFO  c.a.d.endpoints.RequestController - Received insert image request
+15:38:32.730 [grizzly-http-server-33] WARN  c.a.d.endpoints.RequestController - Unable to verify received authorization
+15:38:32.731 [grizzly-http-server-33] WARN  c.a.d.p.db.managers.CommonManager - The request is unauthorized
+15:38:32.731 [grizzly-http-server-33] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Unauthorized"}
+15:39:03.343 [grizzly-http-server-34] INFO  c.a.d.endpoints.RequestController - Received insert image request
+15:39:03.345 [grizzly-http-server-34] WARN  c.a.d.endpoints.RequestController - Unable to verify received authorization
+15:39:03.345 [grizzly-http-server-34] WARN  c.a.d.p.db.managers.CommonManager - The request is unauthorized
+15:39:03.345 [grizzly-http-server-34] INFO  c.a.d.p.db.managers.CommonManager - Returning the following response: {"data":{},"message":"Bad request","status":"Unauthorized"}
