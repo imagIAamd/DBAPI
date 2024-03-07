@@ -68,10 +68,12 @@ public class UserController {
 
         user = new User(requestJson);
         LOGGER.info("Received SMS code: {}", requestJson.get(VALIDATION_CODE));
-        user.setValidationCode(requestJson.getInt(VALIDATION_CODE));
         if (UserManager.findUser(user) == null) {
             return CommonManager.buildBadRequestResponse();
         }
+
+        user.setValidationCode(requestJson.getInt(VALIDATION_CODE));
+        UserManager.updateUser(user);
 
         responseData.put(NICKNAME, user.getNickname())
                 .put(PHONE_NUMBER, user.getTelephone())
