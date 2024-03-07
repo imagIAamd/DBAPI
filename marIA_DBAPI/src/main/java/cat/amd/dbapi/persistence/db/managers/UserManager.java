@@ -134,7 +134,6 @@ public class UserManager {
             Query<User> query = session.createQuery("FROM User WHERE telephone = :telephone", User.class);
             query.setParameter("telephone", telephone);
             user = query.uniqueResult();
-            tx.commit();
 
         } catch (HibernateException e) {
             if (tx != null) tx.rollback();
