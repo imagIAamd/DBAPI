@@ -33,7 +33,7 @@ public class AppMain {
         GroupManager.findGroup(administrator);
         GroupManager.findGroup(premium);
 
-        User admin = new User("admin", "-0", "admin@admin", "56Ur,)23Avc.");
+        User admin = new User("admin", "o7", "admin@admin", "56Ur,)23Avc.");
         Set<Group> groups = new HashSet<>();
         groups.add(GroupManager.findGroup(ROLE_ADMINISTRATOR_NAME));
         admin.setRoles(groups);
