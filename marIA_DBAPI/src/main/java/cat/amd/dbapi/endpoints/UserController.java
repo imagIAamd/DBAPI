@@ -97,13 +97,16 @@ public class UserController {
         JSONObject requestJson = new JSONObject(data);
 
         if (!CommonManager.isValidRequest(requestJson, USER_VALIDATE_REQUEST_TEMPLATE)) {
+            LOGGER.warn("Received request is not valid");
             return  CommonManager.buildBadRequestResponse();
         }
         User user = UserManager.findUserByTelephone(requestJson.getString(PHONE_NUMBER));
         if (user == null) {
+            LOGGER.warn("User was not found");
             return CommonManager.buildBadRequestResponse();
         }
         if (user.getValidationCode() != requestJson.getInt(VALIDATION_CODE)) {
+            LOGGER.warn("The validation code doesn't match");
             return CommonManager.buildBadRequestResponse();
         }
 
