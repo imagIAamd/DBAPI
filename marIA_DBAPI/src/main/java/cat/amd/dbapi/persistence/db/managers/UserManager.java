@@ -180,8 +180,8 @@ public class UserManager {
      */
     public static void updateUser(User user) {
         Transaction tx = null;
-        Session session = SessionFactoryManager.getSessionFactory().openSession();
-        try {
+
+        try (Session session = SessionFactoryManager.getSessionFactory().openSession()) {
             tx = session.beginTransaction();
             session.merge(user);
             tx.commit();
@@ -189,8 +189,7 @@ public class UserManager {
         } catch (HibernateException e) {
             if (tx != null) tx.rollback();
             LOGGER.error("Error updating user", e);
-        } finally {
-            session.close();
+
         }
     }
 
